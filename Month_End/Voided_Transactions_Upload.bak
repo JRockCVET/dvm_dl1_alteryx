@@ -473,7 +473,7 @@ Table=Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.
     </Node>
     <Node ToolID="101">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="1362" y="306" />
+        <Position x="1470" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -490,6 +490,51 @@ order_id - Ascending</DefaultAnnotationText>
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="110">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Missing Transactions 2016 A.xlsx
+Table=`Voided Transactions$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Transaction Date" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="DateTime" />
+            <Field name="Type" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="V_String" />
+            <Field name="Status" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="MID" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="V_String" />
+            <Field name="Vet ID" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="Trace ID" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="Amount" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="Order #" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="V_String" />
+            <Field name="F9" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="Note" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="V_String" />
+            <Field name="F11" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="F12" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="F13" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="F14" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="F15" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="F16" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="F17" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="F18" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="F19" source="File: C:\alteryx\alteryx_workflows\dvm_alteryx\util\Missing Transactions 2016 A.xlsx|||`Voided Transactions$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
     </Node>
     <Node ToolID="111">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
@@ -527,6 +572,25 @@ order_id - Ascending</DefaultAnnotationText>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
+    <Node ToolID="112">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1014" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="1" field="voided_flag" size="2" type="Int16" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[voided_flag = 1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
     <Node ToolID="113">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
         <Position x="978" y="498" />
@@ -548,7 +612,7 @@ order_id - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="115">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="1434" y="306" />
+        <Position x="1542" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -606,7 +670,7 @@ and
     </Node>
     <Node ToolID="117">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1290" y="306" />
+        <Position x="1398" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -636,7 +700,7 @@ and
     </Node>
     <Node ToolID="143">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1218" y="306" />
+        <Position x="1326" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -688,15 +752,12 @@ and
         <Configuration>
           <FormulaFields>
             <FormulaField expression="4" field="relationship_type_id" size="2" type="Int16" />
-            <FormulaField expression="1" field="voided_flag" size="2" type="Int16" />
-            <FormulaField expression="if [payment_gateway_id]==7&#xA;then 7 &#xA;else&#xA;(if ([relationship_type_id]==1&#xA;or&#xA;[relationship_type_id]==3)&#xA;then 5985551&#xA;else 0&#xA;endif)&#xA;endif" field="merchant_number" size="50" type="V_WString" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>relationship_type_id = 4
-voided_flag = 1
-merchant_number = if [payment_gateway_i...</DefaultAnnotationText>
+          <DefaultAnnotationText><![CDATA[relationship_type_id = 4
+]]></DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -735,7 +796,7 @@ merchant_number = if [payment_gateway_i...</DefaultAnnotationText>
     </Node>
     <Node ToolID="153">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="1506" y="306" />
+        <Position x="1614" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -758,7 +819,7 @@ merchant_number = if [payment_gateway_i...</DefaultAnnotationText>
     </Node>
     <Node ToolID="155">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="1050" y="306" />
+        <Position x="1158" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -776,7 +837,7 @@ merchant_number = if [payment_gateway_i...</DefaultAnnotationText>
     </Node>
     <Node ToolID="158">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="1578" y="294" />
+        <Position x="1686" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -825,7 +886,7 @@ and
     </Node>
     <Node ToolID="161">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1122" y="306" />
+        <Position x="1230" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -852,9 +913,30 @@ and
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
+    <Node ToolID="162">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1086" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="if [payment_gateway_id]==7&#xA;then 7 &#xA;else&#xA;(if ([relationship_type_id]==1&#xA;or&#xA;[relationship_type_id]==3)&#xA;then 5985551&#xA;else 0&#xA;endif)&#xA;endif&#xA;" field="merchant_number" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>merchant_number = if [payment_gateway_id]==7
+then 7 
+else
+(if ([relationship_typ...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
     <Node ToolID="163">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1650" y="294" />
+        <Position x="1758" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -875,7 +957,7 @@ else
     </Node>
     <Node ToolID="164">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1722" y="294" />
+        <Position x="1830" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -903,7 +985,7 @@ else
     </Node>
     <Node ToolID="165">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1818" y="222" />
+        <Position x="1902" y="222" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -935,18 +1017,12 @@ else
     </Node>
     <Node ToolID="84">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1890" y="222" />
+        <Position x="1974" y="222" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="if [practice_relationship_type_name] = &quot;P_VBS&quot; then &#xA;&quot;VBS&quot; else &quot;CHASE&quot; endif" field="bank_abbreviation" size="20" type="V_WString" />
-            <FormulaField expression="Null()" field="trace_id" size="20" type="V_WString" />
-            <FormulaField expression="1" field="order_id_voided" size="2" type="Int16" />
-            <FormulaField expression="1" field="payment_transaction_type" size="2" type="Int16" />
-            <FormulaField expression="&quot;Alteryx&quot;" field="process_code" size="10" type="V_WString" />
-            <FormulaField expression="Null()" field="event_id" size="10" type="V_WString" />
-            <FormulaField expression="DateTimeNow()" field="order_voided_datetime" size="19" type="DateTime" />
+            <FormulaField expression="if [practice_relationship_type_name] = &quot;P_VBS&quot; then &#xA;&quot;VBS&quot; else &quot;CHASE&quot; endif" field="bank_abbreviation" size="1073741823" type="V_WString" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
@@ -958,9 +1034,66 @@ else
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
+    <Node ToolID="85">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="2046" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Null()" field="trace_id" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[trace_id = Null()
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="86">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="2118" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="1" field="order_is_voided" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[order_is_voided = 1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="87">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="2202" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="1" field="payment_transaction_type" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[payment_transaction_type = 1
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
     <Node ToolID="89">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1974" y="222" />
+        <Position x="2502" y="222" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1005,13 +1138,70 @@ else
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
-    <Node ToolID="93">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="2070" y="126" />
+    <Node ToolID="90">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="2274" y="222" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_6648_be20f4bd652149188496710c77080470_\Engine_10396_ffba977e59fd4c44a6cce384d6de5dc6_.yxdb</TempFile>
+          <FormulaFields>
+            <FormulaField expression="&quot;ALTERYX&quot;" field="process_code" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[process_code = "ALTERYX"
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="91">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="2358" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Null()" field="event_id" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[event_id = Null()
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="92">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="2430" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeNow()" field="order_voided_datetime" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[order_voided_datetime = DateTimeNow()
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="93">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="2574" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_5184_8303dc003b7d4345a8af2ef02636c2d2_\Engine_3336_bffe2929c90d4749a13f64381c874493_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -1033,64 +1223,16 @@ else
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
     </Node>
-    <Node ToolID="177">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="54" y="54" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Passwords />
-          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`</File>
-          <FormatSpecificOptions>
-            <FirstRowData>False</FirstRowData>
-            <ImportLine>1</ImportLine>
-          </FormatSpecificOptions>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>Missing_Transactions_2016_A.xlsx
-Table=`Voided Transactions$`</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
-        <MetaInfo connection="Output">
-          <RecordInfo>
-            <Field name="Transaction Date" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="DateTime" />
-            <Field name="Type" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="V_String" />
-            <Field name="Status" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="MID" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="V_String" />
-            <Field name="Vet ID" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="Trace ID" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="Amount" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="Order #" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="V_String" />
-            <Field name="F9" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="Note" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="V_String" />
-            <Field name="F11" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="F12" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="F13" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="F14" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="F15" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="F16" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="F17" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="F18" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="F19" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
-    </Node>
     <Node ToolID="169">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="2106" y="246" width="112.7585" height="19" />
+        <Position x="2609" y="94" width="493" height="259" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <Caption>Container 169</Caption>
           <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="True" />
-          <Folded value="True" />
+          <Disabled value="False" />
+          <Folded value="False" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -1101,7 +1243,7 @@ Table=`Voided Transactions$`</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="167">
           <GuiSettings Plugin="LockInGui.LockInStreamIn.LockInStreamIn">
-            <Position x="2131" y="374" />
+            <Position x="2634" y="222" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1120,7 +1262,7 @@ Temporary Table</DefaultAnnotationText>
         </Node>
         <Node ToolID="168">
           <GuiSettings Plugin="LockInGui.LockInOutput.LockInOutput">
-            <Position x="2311" y="386" />
+            <Position x="2814" y="234" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1139,7 +1281,7 @@ Temporary Table</DefaultAnnotationText>
         </Node>
         <Node ToolID="170">
           <GuiSettings Plugin="LockInGui.LockInDynamicOutput.LockInDynamicOutput">
-            <Position x="2443" y="350" />
+            <Position x="2946" y="198" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1155,7 +1297,7 @@ Temporary Table</DefaultAnnotationText>
         </Node>
         <Node ToolID="172">
           <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="2515" y="302" />
+            <Position x="3018" y="150" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1178,7 +1320,7 @@ Temporary Table</DefaultAnnotationText>
         </Node>
         <Node ToolID="173">
           <GuiSettings Plugin="LockInGui.LockInDynamicOutput.LockInDynamicOutput">
-            <Position x="2311" y="302" />
+            <Position x="2814" y="150" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1194,7 +1336,7 @@ Temporary Table</DefaultAnnotationText>
         </Node>
         <Node ToolID="174">
           <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="2407" y="290" />
+            <Position x="2910" y="138" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1222,7 +1364,7 @@ Temporary Table</DefaultAnnotationText>
         </Node>
         <Node ToolID="176">
           <GuiSettings Plugin="LockInGui.LockInSelect.LockInSelect">
-            <Position x="2215" y="374" />
+            <Position x="2718" y="222" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1336,8 +1478,16 @@ Temporary Table</DefaultAnnotationText>
       <Destination ToolID="115" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="110" Connection="Output" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="111" Connection="Output" />
       <Destination ToolID="150" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="112" Connection="Output" />
+      <Destination ToolID="162" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="113" Connection="Output" />
@@ -1357,7 +1507,7 @@ Temporary Table</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="150" Connection="Output" />
-      <Destination ToolID="155" Connection="Input" />
+      <Destination ToolID="112" Connection="Input" />
     </Connection>
     <Connection name="#2">
       <Origin ToolID="152" Connection="Output" />
@@ -1380,6 +1530,10 @@ Temporary Table</DefaultAnnotationText>
       <Destination ToolID="163" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="162" Connection="Output" />
+      <Destination ToolID="155" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="163" Connection="Output" />
       <Destination ToolID="164" Connection="Input" />
     </Connection>
@@ -1389,7 +1543,19 @@ Temporary Table</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="84" Connection="Output" />
-      <Destination ToolID="89" Connection="Input" />
+      <Destination ToolID="85" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="85" Connection="Output" />
+      <Destination ToolID="86" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="86" Connection="Output" />
+      <Destination ToolID="87" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="87" Connection="Output" />
+      <Destination ToolID="90" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="89" Connection="Output" />
@@ -1400,8 +1566,16 @@ Temporary Table</DefaultAnnotationText>
       <Destination ToolID="167" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="177" Connection="Output" />
-      <Destination ToolID="62" Connection="Input" />
+      <Origin ToolID="90" Connection="Output" />
+      <Destination ToolID="91" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="91" Connection="Output" />
+      <Destination ToolID="92" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="92" Connection="Output" />
+      <Destination ToolID="89" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="167" Connection="Output" />
