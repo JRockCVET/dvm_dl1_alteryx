@@ -57,7 +57,7 @@ Table=Select dvm.pharmacy.id As pharmacy_id, dvm.facility.id As facility_id, dvm
     </Node>
     <Node ToolID="5">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="150" y="162" />
+        <Position x="162" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -80,7 +80,7 @@ Table=Select dvm.pharmacy.id As pharmacy_id, dvm.facility.id As facility_id, dvm
     </Node>
     <Node ToolID="6">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="342" y="162" />
+        <Position x="414" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -125,7 +125,7 @@ Table=Select dvm.pharmacy.id As pharmacy_id, dvm.facility.id As facility_id, dvm
     </Node>
     <Node ToolID="9">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="246" y="162" />
+        <Position x="270" y="174" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -144,7 +144,7 @@ Table=Select dvm.pharmacy.id As pharmacy_id, dvm.facility.id As facility_id, dvm
     </Node>
     <Node ToolID="10">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="450" y="66" />
+        <Position x="570" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -170,9 +170,76 @@ Table=Select dvm.pharmacy.id As pharmacy_id, dvm.facility.id As facility_id, dvm
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
     </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="138" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_7976_f74267cf631846e7ada3d8eb97edd42a_\Engine_7624_cddc996d4cf84334b8e344a6d0044828_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="234" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_7976_f74267cf631846e7ada3d8eb97edd42a_\Engine_7624_0b57a346bce248f6a9e2565767dea171_.yxdb</TempFile>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="354" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_7976_f74267cf631846e7ada3d8eb97edd42a_\Engine_7624_bd4dc40c808144c88c438f451d5a8111_.yxdb</TempFile>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
     <Node ToolID="16">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="474" y="114" width="154" height="205" />
+        <Position x="654" y="126" width="154" height="205" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -190,7 +257,7 @@ Table=Select dvm.pharmacy.id As pharmacy_id, dvm.facility.id As facility_id, dvm
       <ChildNodes>
         <Node ToolID="11">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="499" y="158" />
+            <Position x="679" y="170" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -226,8 +293,16 @@ Table=pdmp_reporting.pharmacy_locations</DefaultAnnotationText>
       <Destination ToolID="5" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="5" Connection="True" />
       <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="True" />
+      <Destination ToolID="14" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="6" Connection="Output" />
@@ -236,6 +311,10 @@ Table=pdmp_reporting.pharmacy_locations</DefaultAnnotationText>
     <Connection>
       <Origin ToolID="6" Connection="Output" />
       <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="9" Connection="Output" />
