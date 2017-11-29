@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="618" y="186" />
+        <Position x="510" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -23,7 +23,7 @@
     </Node>
     <Node ToolID="4">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="810" y="186" />
+        <Position x="702" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -42,7 +42,7 @@
     </Node>
     <Node ToolID="5">
       <GuiSettings>
-        <Position x="714" y="186" />
+        <Position x="606" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -68,11 +68,11 @@
     </Node>
     <Node ToolID="6">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="918" y="54" />
+        <Position x="810" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_2904_92897e3d8d1c4d63b5e5c90dd011ca2f_\Engine_10212_3f3c064e77a24e25a76837a870d91905_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_8160_a90a7b821c76451aa6b09db3405f48c0_\Engine_10212_1a9362ddf58944648ea7a16cf2828f70_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -115,7 +115,7 @@
     </Node>
     <Node ToolID="9">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="1110" y="186" />
+        <Position x="1002" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -138,11 +138,11 @@
     </Node>
     <Node ToolID="11">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1758" y="294" />
+        <Position x="1650" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_2904_92897e3d8d1c4d63b5e5c90dd011ca2f_\Engine_10212_a3b679f3b5d7422986c833630440dd46_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_8160_a90a7b821c76451aa6b09db3405f48c0_\Engine_10212_82829451ba764b55963d72720cfd52ad_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -185,7 +185,7 @@
     </Node>
     <Node ToolID="13">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1014" y="186" />
+        <Position x="906" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -236,7 +236,7 @@
     </Node>
     <Node ToolID="16">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1278" y="282" />
+        <Position x="1170" y="282" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -255,7 +255,7 @@
     </Node>
     <Node ToolID="17">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="906" y="186" />
+        <Position x="798" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -274,7 +274,7 @@
     </Node>
     <Node ToolID="18">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1290" y="90" />
+        <Position x="1182" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -293,7 +293,7 @@
     </Node>
     <Node ToolID="19">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1386" y="90" />
+        <Position x="1278" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -312,7 +312,7 @@
     </Node>
     <Node ToolID="20">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1386" y="294" />
+        <Position x="1278" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -331,7 +331,7 @@
     </Node>
     <Node ToolID="21">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1482" y="294" />
+        <Position x="1374" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -350,7 +350,7 @@
     </Node>
     <Node ToolID="22">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1482" y="90" />
+        <Position x="1374" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -369,7 +369,7 @@
     </Node>
     <Node ToolID="23">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="534" y="186" />
+        <Position x="426" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -388,7 +388,7 @@
     </Node>
     <Node ToolID="24">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1674" y="90" />
+        <Position x="1566" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -420,7 +420,7 @@
     </Node>
     <Node ToolID="25">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1578" y="90" />
+        <Position x="1470" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -439,7 +439,7 @@
     </Node>
     <Node ToolID="26">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1674" y="294" />
+        <Position x="1566" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -474,7 +474,7 @@
     </Node>
     <Node ToolID="27">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1578" y="294" />
+        <Position x="1470" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -493,7 +493,7 @@
     </Node>
     <Node ToolID="28">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1758" y="90" />
+        <Position x="1650" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -512,11 +512,11 @@
     </Node>
     <Node ToolID="29">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1986" y="54" />
+        <Position x="1878" y="54" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_2904_92897e3d8d1c4d63b5e5c90dd011ca2f_\Engine_10212_655909b893664537830a7753738319b8_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_8160_a90a7b821c76451aa6b09db3405f48c0_\Engine_10212_0cf499172d274f2a9990584d5a3d555b_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -540,7 +540,7 @@
     </Node>
     <Node ToolID="30">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1842" y="90" />
+        <Position x="1734" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -559,7 +559,7 @@
     </Node>
     <Node ToolID="31">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1926" y="114" />
+        <Position x="1818" y="114" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -579,11 +579,11 @@ endif
     </Node>
     <Node ToolID="32">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="2106" y="66" />
+        <Position x="1998" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_2904_92897e3d8d1c4d63b5e5c90dd011ca2f_\Engine_10212_1c45d672576c4c7ebdb54955460b4aea_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_8160_a90a7b821c76451aa6b09db3405f48c0_\Engine_10212_e4d48442ed4342158caf305ce071217e_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -607,7 +607,7 @@ endif
     </Node>
     <Node ToolID="33">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="2010" y="114" />
+        <Position x="1902" y="114" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -670,24 +670,6 @@ Table=`Sheet1$`</DefaultAnnotationText>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
     </Node>
-    <Node ToolID="36">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-        <Position x="426" y="186" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <UniqueFields>
-            <Field field="sku_facility_key" />
-          </UniqueFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>Unique: sku_facility_key</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
-    </Node>
   </Nodes>
   <Connections>
     <Connection>
@@ -728,7 +710,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="14" Connection="Output" />
-      <Destination ToolID="36" Connection="Input" />
+      <Destination ToolID="23" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="16" Connection="Output" />
@@ -801,10 +783,6 @@ Table=`Sheet1$`</DefaultAnnotationText>
     <Connection>
       <Origin ToolID="35" Connection="Output" />
       <Destination ToolID="8" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="36" Connection="Unique" />
-      <Destination ToolID="23" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
