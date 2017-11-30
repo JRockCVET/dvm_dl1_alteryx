@@ -20,7 +20,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Caption>Load</Caption>
+          <Caption>Container 51</Caption>
           <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
           <Disabled value="False" />
           <Folded value="False" />
@@ -122,7 +122,7 @@ Temporary Table</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Caption>Preparation</Caption>
+          <Caption>Container 33</Caption>
           <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
           <Disabled value="False" />
           <Folded value="False" />
