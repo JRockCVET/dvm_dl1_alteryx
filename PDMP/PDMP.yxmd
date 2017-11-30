@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="618" y="186" />
+        <Position x="810" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -23,7 +23,7 @@
     </Node>
     <Node ToolID="4">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="810" y="186" />
+        <Position x="1002" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -42,7 +42,7 @@
     </Node>
     <Node ToolID="5">
       <GuiSettings>
-        <Position x="714" y="186" />
+        <Position x="906" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -66,37 +66,9 @@
       </Properties>
       <EngineSettings Macro="Cleanse.yxmc" />
     </Node>
-    <Node ToolID="6">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="918" y="54" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_2904_92897e3d8d1c4d63b5e5c90dd011ca2f_\Engine_10212_3f3c064e77a24e25a76837a870d91905_.yxdb</TempFile>
-          <TempFileDataProfiling />
-          <Layout>
-            <ViewMode>Single</ViewMode>
-            <ViewSize value="100" />
-            <View1>
-              <DefaultTab>Profile</DefaultTab>
-              <Hints>
-                <Table />
-              </Hints>
-            </View1>
-            <View2 />
-          </Layout>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
-    </Node>
     <Node ToolID="8">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="138" y="186" />
+        <Position x="246" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -115,7 +87,7 @@
     </Node>
     <Node ToolID="9">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="1110" y="186" />
+        <Position x="1302" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -138,11 +110,11 @@
     </Node>
     <Node ToolID="11">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1758" y="294" />
+        <Position x="1854" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_2904_92897e3d8d1c4d63b5e5c90dd011ca2f_\Engine_10212_a3b679f3b5d7422986c833630440dd46_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_1188_3689e7b3453e4c2e81220102b940470c_\Engine_10396_61fb47d4a44a44babdc657f849ccfb3f_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -166,18 +138,18 @@
     </Node>
     <Node ToolID="12">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="234" y="186" />
+        <Position x="342" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="5" field="facility_id" size="2" type="Int16" />
+            <FormulaField expression="if [facility] = &quot;VPA North&quot; then 5&#xA;else (if [facility] = &quot;Roadrunner&quot; then 7&#xA;else 0 endif)&#xA;endif" field="facility_id" size="2" type="Int16" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText><![CDATA[facility_id = 5
-]]></DefaultAnnotationText>
+          <DefaultAnnotationText>facility_id = if [facility] = "VPA North" then 5
+else (if [facility] = "Roadrunn...</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -185,7 +157,7 @@
     </Node>
     <Node ToolID="13">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1014" y="186" />
+        <Position x="1194" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -199,11 +171,13 @@
             <SelectField field="facility" selected="False" />
             <SelectField field="new_title" selected="False" />
             <SelectField field="flag_it" selected="True" />
-            <SelectField field="sku_facility_id" selected="True" />
             <SelectField field="ingredients" selected="False" />
             <SelectField field="temp_NDC" selected="True" />
             <SelectField field="dosage_uom" selected="True" />
             <SelectField field="sku_facility_key" selected="True" />
+            <SelectField field="product_group" selected="False" />
+            <SelectField field="sku_facility_id" selected="False" />
+            <SelectField field="shipping_date" selected="False" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
         </Configuration>
@@ -217,7 +191,7 @@
     </Node>
     <Node ToolID="14">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="330" y="186" />
+        <Position x="438" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -236,7 +210,7 @@
     </Node>
     <Node ToolID="16">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1278" y="282" />
+        <Position x="1398" y="282" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -255,7 +229,7 @@
     </Node>
     <Node ToolID="17">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="906" y="186" />
+        <Position x="1098" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -274,7 +248,7 @@
     </Node>
     <Node ToolID="18">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1290" y="90" />
+        <Position x="1386" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -293,7 +267,7 @@
     </Node>
     <Node ToolID="19">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1386" y="90" />
+        <Position x="1482" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -312,7 +286,7 @@
     </Node>
     <Node ToolID="20">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1386" y="294" />
+        <Position x="1482" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -331,7 +305,7 @@
     </Node>
     <Node ToolID="21">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1482" y="294" />
+        <Position x="1578" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -350,7 +324,7 @@
     </Node>
     <Node ToolID="22">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1482" y="90" />
+        <Position x="1578" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -369,18 +343,17 @@
     </Node>
     <Node ToolID="23">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="534" y="186" />
+        <Position x="630" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="&quot;38779246107&quot;" field="temp_NDC" size="1073741823" type="V_WString" />
+            <FormulaField expression="if ([facility_id] = 5 and [product_group] = &quot;GAB&quot;) then 38779246107 else&#xA;(if ([facility_id] = 7 and [product_group] = &quot;GAB&quot;) then 62991220408 else 0 endif) endif" field="temp_NDC" size="8" type="Double" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText><![CDATA[temp_NDC = "38779246107"
-]]></DefaultAnnotationText>
+          <DefaultAnnotationText>temp_NDC = if ([facility_id] = 5 and [product_group] = "GAB") then 38779246107 e...</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -388,7 +361,7 @@
     </Node>
     <Node ToolID="24">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1674" y="90" />
+        <Position x="1770" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -420,7 +393,7 @@
     </Node>
     <Node ToolID="25">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1578" y="90" />
+        <Position x="1674" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -439,7 +412,7 @@
     </Node>
     <Node ToolID="26">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1674" y="294" />
+        <Position x="1770" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -474,7 +447,7 @@
     </Node>
     <Node ToolID="27">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1578" y="294" />
+        <Position x="1674" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -493,7 +466,7 @@
     </Node>
     <Node ToolID="28">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1758" y="90" />
+        <Position x="1854" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -510,37 +483,9 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
-    <Node ToolID="29">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1986" y="54" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_2904_92897e3d8d1c4d63b5e5c90dd011ca2f_\Engine_10212_655909b893664537830a7753738319b8_.yxdb</TempFile>
-          <TempFileDataProfiling />
-          <Layout>
-            <ViewMode>Single</ViewMode>
-            <ViewSize value="100" />
-            <View1>
-              <DefaultTab>Profile</DefaultTab>
-              <Hints>
-                <Table />
-              </Hints>
-            </View1>
-            <View2 />
-          </Layout>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
-    </Node>
     <Node ToolID="30">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1842" y="90" />
+        <Position x="1938" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -559,7 +504,7 @@
     </Node>
     <Node ToolID="31">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1926" y="114" />
+        <Position x="2022" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -579,11 +524,11 @@ endif
     </Node>
     <Node ToolID="32">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="2106" y="66" />
+        <Position x="2202" y="42" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_2904_92897e3d8d1c4d63b5e5c90dd011ca2f_\Engine_10212_1c45d672576c4c7ebdb54955460b4aea_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_1188_3689e7b3453e4c2e81220102b940470c_\Engine_10396_5f4d528a801a4e538fc819e9bedf1369_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -607,7 +552,7 @@ endif
     </Node>
     <Node ToolID="33">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="2010" y="114" />
+        <Position x="2106" y="90" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -660,11 +605,20 @@ Table=`Sheet1$`</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
+            <Field name="order_id" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="item_id" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="shipping_date" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="DateTime" />
             <Field name="product_id" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="Double" />
             <Field name="sku" size="255" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="V_String" />
             <Field name="title" size="255" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="V_String" />
             <Field name="ingredients" size="255" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="product_group" size="255" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="external_dispensary" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="Double" />
             <Field name="facility" size="255" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="disp_NDC" size="255" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="prod_NDC" size="255" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="parent_NDC" size="255" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="temp_ndc" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="Double" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -672,7 +626,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
     </Node>
     <Node ToolID="36">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-        <Position x="426" y="186" />
+        <Position x="534" y="186" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -688,15 +642,62 @@ Table=`Sheet1$`</DefaultAnnotationText>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
     </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="150" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="order_id" selected="False" />
+            <SelectField field="item_id" selected="False" />
+            <SelectField field="shipping_date" selected="False" />
+            <SelectField field="external_dispensary" selected="False" />
+            <SelectField field="disp_NDC" selected="False" />
+            <SelectField field="prod_NDC" selected="False" />
+            <SelectField field="parent_NDC" selected="False" />
+            <SelectField field="temp_ndc" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="38">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="714" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>temp_NDC</Field>
+            <Operator>&gt;</Operator>
+            <Operands>
+              <Operand>0</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[temp_NDC] &gt; 0</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
   </Nodes>
   <Connections>
     <Connection>
       <Origin ToolID="3" Connection="Output" />
       <Destination ToolID="5" Connection="Input2" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="4" Connection="Output" />
-      <Destination ToolID="6" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="4" Connection="Output" />
@@ -760,7 +761,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="23" Connection="Output" />
-      <Destination ToolID="3" Connection="Input" />
+      <Destination ToolID="38" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="24" Connection="Output" />
@@ -784,10 +785,6 @@ Table=`Sheet1$`</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="30" Connection="Output" />
-      <Destination ToolID="29" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="30" Connection="Output" />
       <Destination ToolID="31" Connection="Input" />
     </Connection>
     <Connection>
@@ -800,11 +797,19 @@ Table=`Sheet1$`</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="35" Connection="Output" />
-      <Destination ToolID="8" Connection="Input" />
+      <Destination ToolID="37" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="36" Connection="Unique" />
       <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="37" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="38" Connection="True" />
+      <Destination ToolID="3" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
