@@ -8,7 +8,7 @@
       <Properties>
         <Configuration>
           <Passwords />
-          <File RecordLimit="" FileFormat="23">odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions</File>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions</File>
           <FormatSpecificOptions>
             <PreSQL />
             <NoProgress>True</NoProgress>
@@ -21,31 +21,31 @@
         <Annotation DisplayMode="0">
           <Name />
           <DefaultAnnotationText>DSN=prod_edw_odbc
-Table=Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions</DefaultAnnotationText>
+Table=Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="stl_voided_transactions_pk" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="Int64" />
-            <Field name="bank_abbreviation" size="10" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="V_WString" />
-            <Field name="transaction_header_fk" size="100" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="V_WString" />
-            <Field name="order_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="Int64" />
-            <Field name="order_is_voided" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="Int16" />
-            <Field name="trace_id" size="100" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="V_WString" />
-            <Field name="location_fk" size="100" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="V_WString" />
-            <Field name="practice_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="Int64" />
-            <Field name="transaction_date" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="DateTime" />
-            <Field name="payment_transaction_type" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="Int16" />
-            <Field name="merchant_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="Int64" />
-            <Field name="old_merchant_number" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="Int64" />
-            <Field name="amount" scale="2" size="21" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="FixedDecimal" />
-            <Field name="bank_note" size="500" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="V_WString" />
-            <Field name="process_code" size="2000" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="V_WString" />
-            <Field name="event_id" size="50" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="V_WString" />
-            <Field name="meta_create_datetime" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="DateTime" />
-            <Field name="meta_update_datetime" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="DateTime" />
-            <Field name="merchant_number" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="Int64" />
-            <Field name="order_voided_datetime" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="DateTime" />
+            <Field name="stl_voided_transactions_pk" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int64" />
+            <Field name="bank_abbreviation" size="10" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="V_WString" />
+            <Field name="transaction_header_fk" size="100" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="V_WString" />
+            <Field name="order_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int64" />
+            <Field name="order_is_voided" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int16" />
+            <Field name="trace_id" size="100" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="V_WString" />
+            <Field name="location_fk" size="100" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="V_WString" />
+            <Field name="practice_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int64" />
+            <Field name="transaction_date" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="DateTime" />
+            <Field name="payment_transaction_type" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int16" />
+            <Field name="merchant_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int64" />
+            <Field name="old_merchant_number" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int64" />
+            <Field name="amount" scale="2" size="21" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="FixedDecimal" />
+            <Field name="bank_note" size="500" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="V_WString" />
+            <Field name="process_code" size="2000" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="V_WString" />
+            <Field name="event_id" size="50" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="V_WString" />
+            <Field name="meta_create_datetime" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="DateTime" />
+            <Field name="meta_update_datetime" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="DateTime" />
+            <Field name="order_voided_datetime" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="DateTime" />
+            <Field name="merchant_number" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int64" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -133,14 +133,14 @@ Table=Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_t
           <MultiMetaInfo>
             <MetaInfo name="#2">
               <RecordInfo>
-                <Field name="stl_voided_transactions_pk" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="Int64" column="1" />
-                <Field name="order_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="Int32" column="2" />
-                <Field name="location_fk" size="100" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="V_WString" column="3" />
-                <Field name="practice_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="Int64" column="4" />
-                <Field name="transaction_date" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="DateTime" column="5" />
-                <Field name="merchant_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="Int64" column="6" />
-                <Field name="amount" scale="2" size="21" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="FixedDecimal" column="7" />
-                <Field name="bank_note" size="500" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_transactions" type="V_WString" column="8" />
+                <Field name="stl_voided_transactions_pk" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int64" column="1" />
+                <Field name="order_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int32" column="2" />
+                <Field name="location_fk" size="100" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="V_WString" column="3" />
+                <Field name="practice_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int64" column="4" />
+                <Field name="transaction_date" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="DateTime" column="5" />
+                <Field name="merchant_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int64" column="6" />
+                <Field name="amount" scale="2" size="21" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="FixedDecimal" column="7" />
+                <Field name="bank_note" size="500" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="V_WString" column="8" />
                 <Field name="Source" size="1073741823" source="Formula: 'Old'" type="V_WString" column="9" />
               </RecordInfo>
             </MetaInfo>
@@ -171,7 +171,7 @@ Table=Select edw.stl_dev.stl_voided_transactions.* From edw.stl_dev.stl_voided_t
     </Node>
     <Node ToolID="61">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="510" y="162" />
+        <Position x="522" y="162" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -233,7 +233,7 @@ stl_voided_transactions_pk = Null()
     </Node>
     <Node ToolID="65">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="582" y="162" />
+        <Position x="594" y="162" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -279,7 +279,7 @@ ELSE 0 ENDIF</Expression>
     </Node>
     <Node ToolID="68">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="654" y="162" />
+        <Position x="930" y="162" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -302,7 +302,7 @@ ELSE 0 ENDIF</Expression>
     </Node>
     <Node ToolID="69">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="726" y="162" />
+        <Position x="666" y="162" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -325,18 +325,20 @@ ELSE 0 ENDIF</Expression>
     </Node>
     <Node ToolID="71">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="798" y="150" />
+        <Position x="1026" y="162" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <OrderChanged value="False" />
           <CommaDecimal value="False" />
           <SelectFields>
+            <SelectField field="stl_voided_transactions_pk" selected="True" rename="original_pk" />
             <SelectField field="order_id" selected="True" />
             <SelectField field="transaction_date" selected="True" />
             <SelectField field="merchant_id" selected="True" />
             <SelectField field="Amount" selected="True" />
             <SelectField field="bank_note" selected="True" />
+            <SelectField field="new_id" selected="True" rename="stl_voided_transactions_pk" />
             <SelectField field="merchant_number" selected="True" />
             <SelectField field="MID" selected="True" />
             <SelectField field="*Unknown" selected="False" />
@@ -352,7 +354,7 @@ ELSE 0 ENDIF</Expression>
     </Node>
     <Node ToolID="76">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="690" y="306" />
+        <Position x="858" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -388,7 +390,7 @@ Table=Select edw.intgn.transaction_header.transaction_header_pk, edw.intgn.trans
     </Node>
     <Node ToolID="80">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="774" y="306" />
+        <Position x="942" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -409,7 +411,7 @@ Table=Select edw.intgn.transaction_header.transaction_header_pk, edw.intgn.trans
     </Node>
     <Node ToolID="81">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="882" y="210" />
+        <Position x="1122" y="210" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -439,7 +441,7 @@ Table=Select edw.intgn.transaction_header.transaction_header_pk, edw.intgn.trans
     </Node>
     <Node ToolID="96">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="966" y="498" />
+        <Position x="1134" y="498" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -479,7 +481,7 @@ Table=Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.
     </Node>
     <Node ToolID="101">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="1458" y="306" />
+        <Position x="1794" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -499,7 +501,7 @@ order_id - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="111">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="966" y="306" />
+        <Position x="1218" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -535,7 +537,7 @@ order_id - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="113">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1074" y="498" />
+        <Position x="1242" y="498" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -554,7 +556,7 @@ order_id - Ascending</DefaultAnnotationText>
     </Node>
     <Node ToolID="115">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="1530" y="306" />
+        <Position x="1890" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -612,7 +614,7 @@ and
     </Node>
     <Node ToolID="117">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1386" y="306" />
+        <Position x="1698" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -642,7 +644,7 @@ and
     </Node>
     <Node ToolID="143">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1314" y="306" />
+        <Position x="1602" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -688,7 +690,7 @@ and
     </Node>
     <Node ToolID="150">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1038" y="306" />
+        <Position x="1314" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -710,7 +712,7 @@ merchant_number = if [payment_gateway_i...</DefaultAnnotationText>
     </Node>
     <Node ToolID="152">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1158" y="498" />
+        <Position x="1326" y="498" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -741,7 +743,7 @@ merchant_number = if [payment_gateway_i...</DefaultAnnotationText>
     </Node>
     <Node ToolID="153">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="1602" y="306" />
+        <Position x="1986" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -764,7 +766,7 @@ merchant_number = if [payment_gateway_i...</DefaultAnnotationText>
     </Node>
     <Node ToolID="155">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-        <Position x="1146" y="306" />
+        <Position x="1410" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -782,7 +784,7 @@ merchant_number = if [payment_gateway_i...</DefaultAnnotationText>
     </Node>
     <Node ToolID="158">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-        <Position x="1674" y="294" />
+        <Position x="2082" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -831,7 +833,7 @@ and
     </Node>
     <Node ToolID="161">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1218" y="306" />
+        <Position x="1506" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -860,7 +862,7 @@ and
     </Node>
     <Node ToolID="163">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1746" y="294" />
+        <Position x="2178" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -881,7 +883,7 @@ else
     </Node>
     <Node ToolID="164">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1818" y="294" />
+        <Position x="2274" y="294" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -909,7 +911,7 @@ else
     </Node>
     <Node ToolID="165">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1914" y="222" />
+        <Position x="2370" y="222" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -941,14 +943,14 @@ else
     </Node>
     <Node ToolID="84">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1986" y="222" />
+        <Position x="2466" y="222" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FormulaFields>
             <FormulaField expression="if [practice_relationship_type_name] = &quot;P_VBS&quot; then &#xA;&quot;VBS&quot; else &quot;CHASE&quot; endif" field="bank_abbreviation" size="20" type="V_WString" />
             <FormulaField expression="Null()" field="trace_id" size="20" type="V_WString" />
-            <FormulaField expression="1" field="order_id_voided" size="2" type="Int16" />
+            <FormulaField expression="1" field="order_is_voided" size="2" type="Int16" />
             <FormulaField expression="1" field="payment_transaction_type" size="2" type="Int16" />
             <FormulaField expression="&quot;Alteryx&quot;" field="process_code" size="10" type="V_WString" />
             <FormulaField expression="Null()" field="event_id" size="10" type="V_WString" />
@@ -968,13 +970,15 @@ else
     </Node>
     <Node ToolID="89">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="2058" y="222" />
+        <Position x="2658" y="222" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <OrderChanged value="True" />
           <CommaDecimal value="False" />
           <SelectFields>
+            <SelectField field="original_pk" selected="True" rename="stl_voided_transactions_pk" />
+            <SelectField field="stl_voided_transactions_pk" selected="False" />
             <SelectField field="bank_abbreviation" selected="True" size="10" />
             <SelectField field="transaction_header_fk" selected="True" />
             <SelectField field="order_id" selected="True" type="Int64" size="8" />
@@ -999,7 +1003,7 @@ else
             <SelectField field="order_date" selected="False" />
             <SelectField field="practice_id" selected="False" />
             <SelectField field="transaction_header_pk" selected="False" rename="transaction_header_fk" />
-            <SelectField field="order_is_voided" selected="False" type="Int16" size="2" />
+            <SelectField field="order_is_voided" selected="False" />
             <SelectField field="merchant_number" selected="False" />
             <SelectField field="MID" selected="False" />
             <SelectField field="Right_bank_note" selected="False" />
@@ -1016,11 +1020,11 @@ else
     </Node>
     <Node ToolID="93">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="2142" y="78" />
+        <Position x="2754" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_6936_c700d790d6184befa3072d52de6bcd8a_\Engine_10396_3ac080ed1e6b41abbf24db11d0bf4510_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_10436_4f686e43db37475eba09f58a86bdc1a4_\Engine_10396_547777d1584645cfae2b46ed41de83a9_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -1061,9 +1065,6 @@ else
 Table=`Voided Transactions$`</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Transaction Date" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="DateTime" />
@@ -1090,9 +1091,58 @@ Table=`Voided Transactions$`</DefaultAnnotationText>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
     </Node>
+    <Node ToolID="178">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="834" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name />
+          <CreateField_Name>new_id</CreateField_Name>
+          <CreateField_Type>Int64</CreateField_Type>
+          <CreateField_Size>8</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>if [stl_voided_transactions_pk] &gt; 1 then 
+[stl_voided_transactions_pk] else
+(if [Row-1:new_id] &lt; 1 then
+([Row-1:stl_voided_transactions_pk] + 1)
+else [Row-1:new_id] + 1 endif) endif</Expression>
+          <GroupByFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>if [stl_voided_transactions_pk] &gt; 1 then 
+[stl_voided_transac...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="181">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="762" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="0">
+            <Field field="Source" order="Descending" />
+            <Field field="stl_voided_transactions_pk" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Source - Descending
+stl_voided_transactions_pk - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
     <Node ToolID="169">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="2166" y="234" width="493" height="259" />
+        <Position x="2730" y="198" width="346" height="175" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1110,7 +1160,7 @@ Table=`Voided Transactions$`</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="167">
           <GuiSettings Plugin="LockInGui.LockInStreamIn.LockInStreamIn">
-            <Position x="2191" y="362" />
+            <Position x="2755" y="242" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1129,7 +1179,7 @@ Temporary Table</DefaultAnnotationText>
         </Node>
         <Node ToolID="168">
           <GuiSettings Plugin="LockInGui.LockInOutput.LockInOutput">
-            <Position x="2371" y="374" />
+            <Position x="2947" y="254" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1146,113 +1196,31 @@ Temporary Table</DefaultAnnotationText>
           </Properties>
           <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInOutput" />
         </Node>
-        <Node ToolID="170">
-          <GuiSettings Plugin="LockInGui.LockInDynamicOutput.LockInDynamicOutput">
-            <Position x="2503" y="338" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OutputFields>Query</OutputFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInDynamicOutput" />
-        </Node>
-        <Node ToolID="172">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="2575" y="290" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_388_59ab2cd1ef1749fba4a4735fe500e074_\Engine_3336_be13190e58e146d991c01a6e0a8d932d_.yxdb</TempFile>
-              <Layout>
-                <View1>
-                  <Hints>
-                    <Table />
-                  </Hints>
-                </View1>
-              </Layout>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
-        </Node>
-        <Node ToolID="173">
-          <GuiSettings Plugin="LockInGui.LockInDynamicOutput.LockInDynamicOutput">
-            <Position x="2371" y="290" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OutputFields>Query</OutputFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInDynamicOutput" />
-        </Node>
-        <Node ToolID="174">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="2467" y="278" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_388_59ab2cd1ef1749fba4a4735fe500e074_\Engine_3336_84f8cdd9910d488db265e4b6f4b746a3_.yxdb</TempFile>
-              <TempFileDataProfiling />
-              <Layout>
-                <ViewMode>Single</ViewMode>
-                <ViewSize value="100" />
-                <View1>
-                  <DefaultTab>Profile</DefaultTab>
-                  <Hints>
-                    <Table />
-                  </Hints>
-                </View1>
-                <View2 />
-              </Layout>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
-        </Node>
         <Node ToolID="176">
           <GuiSettings Plugin="LockInGui.LockInSelect.LockInSelect">
-            <Position x="2275" y="362" />
+            <Position x="2851" y="242" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <OrderChanged value="False" />
               <CommaDecimal value="False" />
               <SelectFields>
+                <SelectField field="stl_voided_transactions_pk" selected="True" />
                 <SelectField field="bank_abbreviation" selected="True" />
                 <SelectField field="transaction_header_fk" selected="True" />
                 <SelectField field="order_id" selected="True" />
-                <SelectField field="order_is_voided" selected="True" />
                 <SelectField field="trace_id" selected="True" />
                 <SelectField field="location_fk" selected="True" />
                 <SelectField field="practice_id" selected="True" />
                 <SelectField field="transaction_date" selected="True" />
                 <SelectField field="payment_transaction_type" selected="True" />
                 <SelectField field="merchant_id" selected="True" />
-                <SelectField field="merchant_number" selected="True" />
                 <SelectField field="amount" selected="True" />
                 <SelectField field="bank_note" selected="True" />
                 <SelectField field="process_code" selected="True" />
                 <SelectField field="event_id" selected="True" />
+                <SelectField field="merchant_number" selected="True" />
+                <SelectField field="order_is_voided" selected="True" />
                 <SelectField field="*Unknown" selected="False" />
               </SelectFields>
             </Configuration>
@@ -1298,7 +1266,7 @@ Temporary Table</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="65" Connection="Output" />
-      <Destination ToolID="68" Connection="Input" />
+      <Destination ToolID="69" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="67" Connection="Output" />
@@ -1306,11 +1274,11 @@ Temporary Table</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="68" Connection="True" />
-      <Destination ToolID="69" Connection="Input" />
+      <Destination ToolID="71" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="69" Connection="True" />
-      <Destination ToolID="71" Connection="Input" />
+      <Destination ToolID="181" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="71" Connection="Output" />
@@ -1413,28 +1381,20 @@ Temporary Table</DefaultAnnotationText>
       <Destination ToolID="62" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="178" Connection="Output" />
+      <Destination ToolID="68" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="181" Connection="Output" />
+      <Destination ToolID="178" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="167" Connection="Output" />
       <Destination ToolID="176" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="168" Connection="Output" />
-      <Destination ToolID="170" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="170" Connection="Output" />
-      <Destination ToolID="172" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="173" Connection="Output" />
-      <Destination ToolID="174" Connection="Input" />
-    </Connection>
-    <Connection>
       <Origin ToolID="176" Connection="Output" />
       <Destination ToolID="168" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="176" Connection="Output" />
-      <Destination ToolID="173" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
