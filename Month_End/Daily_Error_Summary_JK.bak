@@ -7,7 +7,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_4272_6d623b71418f44eab7bd06f81b542118_\Engine_10396_c112cb63e5d64fe18d2082ae3e5327b8_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_5700_a152af0f6c4b4468b0c4aaa1d366ce7f_\Engine_10396_35847091f0f0489fa7533dbdcb95c9bd_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -167,14 +167,14 @@
     </Node>
     <Node ToolID="120">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="3054" y="594" width="271" height="175" />
+        <Position x="2921" y="334" width="112.7585" height="19" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <Caption>Container 120</Caption>
           <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="False" />
-          <Folded value="False" />
+          <Disabled value="True" />
+          <Folded value="True" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -185,7 +185,7 @@
       <ChildNodes>
         <Node ToolID="117">
           <GuiSettings Plugin="LockInGui.LockInStreamIn.LockInStreamIn">
-            <Position x="3079" y="638" />
+            <Position x="2946" y="378" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -204,12 +204,14 @@ Temporary Table</DefaultAnnotationText>
         </Node>
         <Node ToolID="118">
           <GuiSettings Plugin="LockInGui.LockInOutput.LockInOutput">
-            <Position x="3199" y="650" />
+            <Position x="3066" y="390" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <Table>stl_dev.st_daily_summary</Table>
-              <CreateMode>Overwrite</CreateMode>
+              <CreateMode>Delete</CreateMode>
+              <AppendMode>ByName</AppendMode>
+              <AppendFieldMode>All</AppendFieldMode>
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
@@ -874,7 +876,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
     </Node>
     <Node ToolID="101">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="53.99999" y="666" width="1152" height="605" />
+        <Position x="53.99999" y="666" width="1152" height="590" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -898,7 +900,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
             <Configuration>
               <Passwords />
               <CachedCosmeticName />
-              <File RecordLimit="" FileFormat="23">aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6</File>
+              <File RecordLimit="" FileFormat="23">aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month_id From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6</File>
               <FormatSpecificOptions>
                 <PreSQL />
                 <NoProgress>True</NoProgress>
@@ -911,7 +913,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
             <Annotation DisplayMode="0">
               <Name />
               <DefaultAnnotationText>aka:prod_edw_odbc
-Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6</DefaultAnnotationText>
+Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month_id From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
             <Dependencies>
@@ -919,12 +921,11 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
             </Dependencies>
             <MetaInfo connection="Output">
               <RecordInfo>
-                <Field name="stl_practices_pk" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="Int64" />
-                <Field name="error_code" size="2000" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="V_WString" />
-                <Field name="practice_report_status" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="Int32" />
-                <Field name="description" size="256" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="V_WString" />
-                <Field name="report_month" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="Int32" />
-                <Field name="report_year" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="Int32" />
+                <Field name="stl_practices_pk" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month_id From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="Int64" />
+                <Field name="error_code" size="2000" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month_id From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="V_WString" />
+                <Field name="practice_report_status" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month_id From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="Int32" />
+                <Field name="description" size="256" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month_id From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="V_WString" />
+                <Field name="report_month_id" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month_id From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="Int32" />
               </RecordInfo>
             </MetaInfo>
           </Properties>
@@ -1048,8 +1049,6 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
               <SelectFields>
                 <SelectField field="practice_report_status" selected="True" rename="report_status" />
                 <SelectField field="description" selected="True" rename="error_code_description" />
-                <SelectField field="report_month" selected="True" rename="month" />
-                <SelectField field="report_year" selected="True" rename="year" />
                 <SelectField field="*Unknown" selected="True" />
               </SelectFields>
             </Configuration>
@@ -1130,8 +1129,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
                 <SummarizeField field="error_code" action="GroupBy" rename="error_code" />
                 <SummarizeField field="error_code_description" action="GroupBy" rename="error_code_description" />
                 <SummarizeField field="report_status" action="GroupBy" rename="report_status" />
-                <SummarizeField field="year" action="GroupBy" rename="year" />
-                <SummarizeField field="month" action="GroupBy" rename="month" />
+                <SummarizeField field="report_month_id" action="GroupBy" rename="report_month_id" />
                 <SummarizeField field="stl_practices_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -1155,8 +1153,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
                 <SummarizeField field="error_code" action="GroupBy" rename="error_code" />
                 <SummarizeField field="error_code_description" action="GroupBy" rename="error_code_description" />
                 <SummarizeField field="report_status" action="GroupBy" rename="report_status" />
-                <SummarizeField field="month" action="GroupBy" rename="month" />
-                <SummarizeField field="year" action="GroupBy" rename="year" />
+                <SummarizeField field="report_month_id" action="GroupBy" rename="report_month_id" />
                 <SummarizeField field="stl_practices_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -1180,8 +1177,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
                 <SummarizeField field="error_code_description" action="GroupBy" rename="error_code_description" />
                 <SummarizeField field="error_code" action="GroupBy" rename="error_code" />
                 <SummarizeField field="report_status" action="GroupBy" rename="report_status" />
-                <SummarizeField field="month" action="GroupBy" rename="month" />
-                <SummarizeField field="year" action="GroupBy" rename="year" />
+                <SummarizeField field="report_month_id" action="GroupBy" rename="report_month_id" />
                 <SummarizeField field="stl_practices_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -1285,8 +1281,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
                 <SummarizeField field="error_code" action="GroupBy" rename="error_code" />
                 <SummarizeField field="error_code_description" action="GroupBy" rename="error_code_description" />
                 <SummarizeField field="report_status" action="GroupBy" rename="report_status" />
-                <SummarizeField field="year" action="GroupBy" rename="year" />
-                <SummarizeField field="month" action="GroupBy" rename="month" />
+                <SummarizeField field="report_month_id" action="GroupBy" rename="report_month_id" />
                 <SummarizeField field="stl_practices_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -1304,7 +1299,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_4272_6d623b71418f44eab7bd06f81b542118_\Engine_10396_3f38496530974212a7b84a90783bdad9_.yxdb</TempFile>
+              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_5700_a152af0f6c4b4468b0c4aaa1d366ce7f_\Engine_10396_80b53f373f1c42e1b2ecaa4bf7c3929d_.yxdb</TempFile>
               <Layout>
                 <View1>
                   <Hints>
@@ -1327,7 +1322,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_4272_6d623b71418f44eab7bd06f81b542118_\Engine_10396_9105f41311ad4a36ba1e80d992eb44bb_.yxdb</TempFile>
+              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_5700_a152af0f6c4b4468b0c4aaa1d366ce7f_\Engine_10396_c78e1d99d42846cea87e7056795b82c6_.yxdb</TempFile>
               <Layout>
                 <View1>
                   <Hints>
@@ -1350,7 +1345,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_4272_6d623b71418f44eab7bd06f81b542118_\Engine_10396_2843dbdcb1f046588f348176e4210f7d_.yxdb</TempFile>
+              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_5700_a152af0f6c4b4468b0c4aaa1d366ce7f_\Engine_10396_358188aad3eb4bd0b46cea25f16cb9fa_.yxdb</TempFile>
               <Layout>
                 <View1>
                   <Hints>
@@ -1373,7 +1368,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_4272_6d623b71418f44eab7bd06f81b542118_\Engine_10396_678563ad698e4b449ca8e1275beba93f_.yxdb</TempFile>
+              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_5700_a152af0f6c4b4468b0c4aaa1d366ce7f_\Engine_10396_13a1a47f757c43629e7a7d519bdfa99d_.yxdb</TempFile>
               <Layout>
                 <View1>
                   <Hints>
