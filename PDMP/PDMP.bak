@@ -110,7 +110,7 @@
     </Node>
     <Node ToolID="11">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1854" y="306" />
+        <Position x="2082" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -412,7 +412,7 @@ else (if [facility] = "Roadrunn...</DefaultAnnotationText>
     </Node>
     <Node ToolID="26">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1770" y="306" />
+        <Position x="1998" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -434,6 +434,9 @@ else (if [facility] = "Roadrunn...</DefaultAnnotationText>
             <SelectField field="description" selected="True" />
             <SelectField field="temp_NDC" selected="True" />
             <SelectField field="flag_it" selected="False" />
+            <SelectField field="25" selected="False" />
+            <SelectField field="50" selected="False" />
+            <SelectField field="d_20" selected="True" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
         </Configuration>
@@ -721,6 +724,64 @@ Table=`Sheet1$`</DefaultAnnotationText>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
     </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1758" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Contains([product_title], &quot;25mg&quot;,1)" field="25" size="2" type="Int16" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[25 = Contains([product_title], "25mg",1)
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1842" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Contains([product_title], &quot;50mg&quot;,1)" field="50" size="2" type="Int16" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[50 = Contains([product_title], "50mg",1)
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1926" y="306" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="if [25] == -1 then 25 else (if [50]== -1 then 50 else 0 endif)&#xA;endif" field="d_20" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[d_20 = if [25] == -1 then 25 else (if [50]== -1 then 50 else 0 endif)
+endif
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
   </Nodes>
   <Connections>
     <Connection>
@@ -809,7 +870,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="27" Connection="Output" />
-      <Destination ToolID="26" Connection="Input" />
+      <Destination ToolID="42" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="28" Connection="Output" />
@@ -842,6 +903,18 @@ Table=`Sheet1$`</DefaultAnnotationText>
     <Connection>
       <Origin ToolID="38" Connection="True" />
       <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="26" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>

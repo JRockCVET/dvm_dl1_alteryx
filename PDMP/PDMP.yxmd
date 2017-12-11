@@ -114,7 +114,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_9680_89ea7d13a88b463f8ecba3b0d09aa7ed_\Engine_10396_067f370866ad44048fe377d260886c3c_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_6556_51c63d5c0a86412e8c7544b809966ae1_\Engine_4520_10a57f141bd540b9a0e0f609da81e4b6_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -348,7 +348,7 @@ else (if [facility] = "Roadrunn...</DefaultAnnotationText>
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="if ([facility_id] = 5 and [product_group] = &quot;GAB&quot;) then 38779246107 else&#xA;(if ([facility_id] = 7 and [product_group] = &quot;GAB&quot;) then 62991220408 else &#xA;(if ([facility_id] = 6 and [product_group] = &quot;GAB&quot;) then 38779246107 &#xA;else &#xA;(if ([facility_id] = 5 and [product_group] = &quot;PPA&quot;) then 51927104300 else&#xA;(if ([facility_id] = 5 and [product_group] = &quot;TRA&quot;) then 51927132600 else&#xA;0&#xA;endif)&#xA;endif) &#xA;endif) &#xA;endif) &#xA;endif" field="temp_NDC" size="8" type="Double" />
+            <FormulaField expression="if ([facility_id] = 5 and [product_group] = &quot;GAB&quot;) then 38779246107 else&#xA;(if ([facility_id] = 7 and [product_group] = &quot;GAB&quot;) then 62991220408 else &#xA;(if ([facility_id] = 6 and [product_group] = &quot;GAB&quot;) then 38779246107 &#xA;else &#xA;(if ([facility_id] = 5 and [product_group] = &quot;PPA&quot;) then 51927104300 else&#xA;(if ([facility_id] = 5 and [product_group] = &quot;TRA&quot;) then 51927132600 else&#xA;(if ([facility_id] = 5 and [product_group] = &quot;PHE&quot;) then 49452519002 else&#xA;0&#xA;endif)&#xA;endif)&#xA;endif) &#xA;endif) &#xA;endif) &#xA;endif" field="temp_NDC" size="8" type="Double" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
@@ -531,7 +531,7 @@ endif
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_9680_89ea7d13a88b463f8ecba3b0d09aa7ed_\Engine_10396_bed42549b920404e86d2f900bc17980f_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_6556_51c63d5c0a86412e8c7544b809966ae1_\Engine_4520_1bd6f6fcdec84e54b6772eee75875d2e_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -619,8 +619,8 @@ Table=`Sheet1$`</DefaultAnnotationText>
             <Field name="external_dispensary" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="Double" />
             <Field name="facility" size="255" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="V_String" />
             <Field name="disp_NDC" size="255" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="V_String" />
-            <Field name="prod_NDC" size="255" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="V_String" />
-            <Field name="parent_NDC" size="255" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="prod_NDC" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="parent_NDC" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="Double" />
             <Field name="temp_ndc" source="File: D:\Users\croberts\Desktop\try_this.xlsx|||`Sheet1$`" type="Double" />
           </RecordInfo>
         </MetaInfo>
@@ -702,7 +702,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_9680_89ea7d13a88b463f8ecba3b0d09aa7ed_\Engine_10396_c8da83563c0b4af6a1b320cdc68f8b5b_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_6556_51c63d5c0a86412e8c7544b809966ae1_\Engine_4520_4eb7e8c0379d46a59d1f5e6d29fce817_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
