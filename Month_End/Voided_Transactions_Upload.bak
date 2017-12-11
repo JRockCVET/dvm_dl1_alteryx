@@ -95,7 +95,7 @@ Table=Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transacti
             <SelectField field="Status" selected="False" />
             <SelectField field="MID" selected="True" rename="merchant_id" type="Int64" size="8" />
             <SelectField field="Vet ID" selected="False" />
-            <SelectField field="Trace ID" selected="False" />
+            <SelectField field="Trace ID" selected="True" />
             <SelectField field="amount" selected="True" type="FixedDecimal" size="19.6" />
             <SelectField field="F9" selected="False" />
             <SelectField field="Note" selected="True" rename="bank_note" />
@@ -148,11 +148,12 @@ Table=Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transacti
               <RecordInfo>
                 <Field name="stl_voided_transactions_pk" source="Formula: Null()" type="Int64" column="1" />
                 <Field name="order_id" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Int32" column="2" />
-                <Field name="transaction_date" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="DateTime" column="5" />
+                <Field name="transaction_date" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="V_String" column="5" />
                 <Field name="merchant_id" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Int64" column="6" />
                 <Field name="Amount" scale="6" size="19" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="FixedDecimal" column="7" />
                 <Field name="bank_note" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="V_String" column="8" />
                 <Field name="Source" size="1073741823" source="Formula: 'New'" type="V_WString" column="9" />
+                <Field name="Trace ID" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" column="10" />
               </RecordInfo>
             </MetaInfo>
           </MultiMetaInfo>
@@ -338,6 +339,7 @@ ELSE 0 ENDIF</Expression>
             <SelectField field="merchant_id" selected="True" />
             <SelectField field="Amount" selected="True" />
             <SelectField field="bank_note" selected="True" />
+            <SelectField field="Trace ID" selected="True" />
             <SelectField field="new_id" selected="True" rename="stl_voided_transactions_pk" />
             <SelectField field="merchant_number" selected="True" />
             <SelectField field="MID" selected="True" />
@@ -849,6 +851,9 @@ and
             <SelectField field="practice_payment_gateway_id" selected="False" rename="payment_gateway_id" />
             <SelectField field="voided_flag" selected="True" />
             <SelectField field="bank_note" selected="True" />
+            <SelectField field="original_pk" selected="True" />
+            <SelectField field="Trace ID" selected="True" />
+            <SelectField field="stl_voided_transactions_pk" selected="True" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
         </Configuration>
@@ -949,7 +954,6 @@ else
         <Configuration>
           <FormulaFields>
             <FormulaField expression="if [practice_relationship_type_name] = &quot;P_VBS&quot; then &#xA;&quot;VBS&quot; else &quot;CHASE&quot; endif" field="bank_abbreviation" size="20" type="V_WString" />
-            <FormulaField expression="Null()" field="trace_id" size="20" type="V_WString" />
             <FormulaField expression="1" field="order_is_voided" size="2" type="Int16" />
             <FormulaField expression="1" field="payment_transaction_type" size="2" type="Int16" />
             <FormulaField expression="&quot;Alteryx&quot;" field="process_code" size="10" type="V_WString" />
@@ -970,20 +974,20 @@ else
     </Node>
     <Node ToolID="89">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="2658" y="222" />
+        <Position x="2574" y="222" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <OrderChanged value="True" />
           <CommaDecimal value="False" />
           <SelectFields>
-            <SelectField field="original_pk" selected="True" rename="stl_voided_transactions_pk" />
+            <SelectField field="original_pk" selected="False" rename="stl_voided_transactions_pk" />
             <SelectField field="stl_voided_transactions_pk" selected="False" />
             <SelectField field="bank_abbreviation" selected="True" size="10" />
             <SelectField field="transaction_header_fk" selected="True" />
             <SelectField field="order_id" selected="True" type="Int64" size="8" />
-            <SelectField field="order_id_voided" selected="True" rename="order_is_voided" />
-            <SelectField field="trace_id" selected="True" size="100" />
+            <SelectField field="order_is_voided" selected="True" />
+            <SelectField field="Trace ID" selected="True" rename="trace_id" />
             <SelectField field="location_fk" selected="True" />
             <SelectField field="location_id" selected="True" rename="practice_id" type="Int64" size="8" />
             <SelectField field="transaction_date" selected="True" />
@@ -997,13 +1001,14 @@ else
             <SelectField field="order_voided_datetime" selected="True" />
             <SelectField field="merged_merchant_numer" selected="True" rename="merchant_number" type="Int64" size="8" />
             <SelectField field="source_system_row_id" selected="False" />
+            <SelectField field="order_id_voided" selected="False" rename="order_is_voided" />
             <SelectField field="practice_relationship_type_name" selected="False" />
             <SelectField field="practice_payment_gateway_id" selected="False" />
             <SelectField field="Right_order_id" selected="False" />
             <SelectField field="order_date" selected="False" />
+            <SelectField field="trace_id" selected="False" size="100" />
             <SelectField field="practice_id" selected="False" />
             <SelectField field="transaction_header_pk" selected="False" rename="transaction_header_fk" />
-            <SelectField field="order_is_voided" selected="False" />
             <SelectField field="merchant_number" selected="False" />
             <SelectField field="MID" selected="False" />
             <SelectField field="Right_bank_note" selected="False" />
@@ -1020,11 +1025,11 @@ else
     </Node>
     <Node ToolID="93">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="2754" y="78" />
+        <Position x="2670" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_10436_4f686e43db37475eba09f58a86bdc1a4_\Engine_10396_547777d1584645cfae2b46ed41de83a9_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_3144_d7f8d70812e24d7597cd8363eae33303_\Engine_4520_fe6a54020f454c6ca23169ec6a0900ee_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -1067,7 +1072,7 @@ Table=`Voided Transactions$`</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Transaction Date" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="DateTime" />
+            <Field name="Transaction Date" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="V_String" />
             <Field name="Type" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="V_String" />
             <Field name="Status" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
             <Field name="MID" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="V_String" />
@@ -1140,13 +1145,13 @@ stl_voided_transactions_pk - Ascending</DefaultAnnotationText>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
     </Node>
-    <Node ToolID="169">
+    <Node ToolID="183">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="2730" y="198" width="346" height="175" />
+        <Position x="2742" y="162" width="154" height="190" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Caption>Container 169</Caption>
+          <Caption>Container 183</Caption>
           <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
           <Disabled value="False" />
           <Folded value="False" />
@@ -1158,79 +1163,39 @@ stl_voided_transactions_pk - Ascending</DefaultAnnotationText>
         </Annotation>
       </Properties>
       <ChildNodes>
-        <Node ToolID="167">
-          <GuiSettings Plugin="LockInGui.LockInStreamIn.LockInStreamIn">
-            <Position x="2755" y="242" />
+        <Node ToolID="182">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2767" y="206" />
           </GuiSettings>
           <Properties>
             <Configuration>
-              <Connection>prod_edw_indb</Connection>
-              <CreateMode>TempTable</CreateMode>
-              <Table />
+              <File MaxRecords="" FileFormat="23">aka:prod_edw_odbc|||stl.stl_voided_transactions</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <FormatSpecificOptions>
+                <DistStyle>Even</DistStyle>
+                <SortStyle>None</SortStyle>
+                <TransactionMessages>False</TransactionMessages>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <OutputOption>Append</OutputOption>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
-              <DefaultAnnotationText>Source=prod_edw_indb
-Temporary Table</DefaultAnnotationText>
+              <DefaultAnnotationText>aka:prod_edw_odbc
+Table=stl.stl_voided_transactions</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
           </Properties>
-          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInStreamIn" />
-        </Node>
-        <Node ToolID="168">
-          <GuiSettings Plugin="LockInGui.LockInOutput.LockInOutput">
-            <Position x="2947" y="254" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <Table>stl.stl_voided_transactions</Table>
-              <CreateMode>Append</CreateMode>
-              <AppendMode>ByName</AppendMode>
-              <AppendFieldMode>All</AppendFieldMode>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText>Table=stl.stl_voided_transactions</DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInOutput" />
-        </Node>
-        <Node ToolID="176">
-          <GuiSettings Plugin="LockInGui.LockInSelect.LockInSelect">
-            <Position x="2851" y="242" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="stl_voided_transactions_pk" selected="True" />
-                <SelectField field="bank_abbreviation" selected="True" />
-                <SelectField field="transaction_header_fk" selected="True" />
-                <SelectField field="order_id" selected="True" />
-                <SelectField field="trace_id" selected="True" />
-                <SelectField field="location_fk" selected="True" />
-                <SelectField field="practice_id" selected="True" />
-                <SelectField field="transaction_date" selected="True" />
-                <SelectField field="payment_transaction_type" selected="True" />
-                <SelectField field="merchant_id" selected="True" />
-                <SelectField field="amount" selected="True" />
-                <SelectField field="bank_note" selected="True" />
-                <SelectField field="process_code" selected="True" />
-                <SelectField field="event_id" selected="True" />
-                <SelectField field="merchant_number" selected="True" />
-                <SelectField field="order_is_voided" selected="True" />
-                <SelectField field="*Unknown" selected="False" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInSelect" />
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
       </ChildNodes>
     </Node>
@@ -1374,7 +1339,7 @@ Temporary Table</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="89" Connection="Output" />
-      <Destination ToolID="167" Connection="Input" />
+      <Destination ToolID="182" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="177" Connection="Output" />
@@ -1387,14 +1352,6 @@ Temporary Table</DefaultAnnotationText>
     <Connection>
       <Origin ToolID="181" Connection="Output" />
       <Destination ToolID="178" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="167" Connection="Output" />
-      <Destination ToolID="176" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="176" Connection="Output" />
-      <Destination ToolID="168" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
