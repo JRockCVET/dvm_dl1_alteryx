@@ -1,108 +1,13 @@
 <?xml version="1.0"?>
 <AlteryxDocument yxmdVer="11.3">
   <Nodes>
-    <Node ToolID="17">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1374" y="366" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <ByName_ErrorMode>Warning</ByName_ErrorMode>
-          <ByName_OutputMode>All</ByName_OutputMode>
-          <Mode>ByName</Mode>
-          <SetOutputOrder value="False" />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
-    </Node>
-    <Node ToolID="57">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1350" y="990" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <ByName_ErrorMode>Warning</ByName_ErrorMode>
-          <ByName_OutputMode>All</ByName_OutputMode>
-          <Mode>ByName</Mode>
-          <SetOutputOrder value="False" />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
-    </Node>
-    <Node ToolID="75">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1350" y="1434" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <ByName_ErrorMode>Warning</ByName_ErrorMode>
-          <ByName_OutputMode>All</ByName_OutputMode>
-          <Mode>ByName</Mode>
-          <SetOutputOrder value="False" />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
-    </Node>
-    <Node ToolID="85">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1350" y="1782" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <ByName_ErrorMode>Warning</ByName_ErrorMode>
-          <ByName_OutputMode>All</ByName_OutputMode>
-          <Mode>ByName</Mode>
-          <SetOutputOrder value="False" />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
-    </Node>
-    <Node ToolID="86">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="2286" y="822" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <ByName_ErrorMode>Warning</ByName_ErrorMode>
-          <ByName_OutputMode>All</ByName_OutputMode>
-          <Mode>ByName</Mode>
-          <SetOutputOrder value="False" />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
-    </Node>
     <Node ToolID="87">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="2406" y="810" />
+        <Position x="2886" y="698" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_9260_6a8e19f691954e779c7731175ee8fff8_\Engine_3336_0ebbcb5663ad4fc1bf0fae720963a985_.yxdb</TempFile>
+          <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_11280_062bcf14769b495fa682cba92fba333e_\Engine_2196_5aac62e50c6345a698716f9fc8b3ffa6_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -126,7 +31,7 @@
     </Node>
     <Node ToolID="97">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1350" y="2046" />
+        <Position x="1771" y="2202" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -143,9 +48,184 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
     </Node>
+    <Node ToolID="86">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="2694" y="650" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="85">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1770" y="1778" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="75">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1782" y="1418" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1759" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="1807" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="119">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="2826" y="662" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="source_table" selected="True" size="20" />
+            <SelectField field="requirement" selected="True" size="40" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="120">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="3054" y="602" width="276" height="175" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 120</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="117">
+          <GuiSettings Plugin="LockInGui.LockInStreamIn.LockInStreamIn">
+            <Position x="3079" y="646" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Connection>prod_edw_indb</Connection>
+              <CreateMode>TempTable</CreateMode>
+              <Table />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Source=prod_edw_indb
+Temporary Table</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInStreamIn" />
+        </Node>
+        <Node ToolID="118">
+          <GuiSettings Plugin="LockInGui.LockInOutput.LockInOutput">
+            <Position x="3199" y="658" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Table>stl.stl_daily_summary</Table>
+              <CreateMode>Delete</CreateMode>
+              <AppendMode>ByName</AppendMode>
+              <AppendFieldMode>All</AppendFieldMode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Table=stl.stl_daily_summary</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
     <Node ToolID="104">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="42" y="1938" width="721" height="322" />
+        <Position x="54" y="2066" width="721" height="518" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -163,13 +243,13 @@
       <ChildNodes>
         <Node ToolID="88">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="66.99999" y="1994" />
+            <Position x="79" y="2122" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <Passwords />
               <CachedCosmeticName />
-              <File RecordLimit="" FileFormat="23">aka:prod_edw_odbc|||Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code As error_code From edw.stl.stl_recon_issues ri</File>
+              <File RecordLimit="" FileFormat="23">aka:prod_edw_odbc|||Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code As error_code, edw.stl.stl_error_codes.description From edw.stl.stl_recon_issues ri Inner Join edw.stl.stl_orders On ri.order_id = edw.stl.stl_orders.order_id Inner Join edw.stl.stl_error_codes On edw.stl.stl_orders.error_code = edw.stl.stl_error_codes.error_code</File>
               <FormatSpecificOptions>
                 <PreSQL />
                 <NoProgress>True</NoProgress>
@@ -182,17 +262,15 @@
             <Annotation DisplayMode="0">
               <Name />
               <DefaultAnnotationText>aka:prod_edw_odbc
-Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code As error_code From edw.stl.stl_recon_issues ri</DefaultAnnotationText>
+Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code As error_code, edw.stl.stl_error_codes.description From edw.stl.stl_recon_issues ri Inner Join edw.stl.stl_orders On ri.order_id = edw.stl.stl_orders.order_id Inner Join edw.stl.stl_error_codes On edw.stl.stl_orders.error_code = edw.stl.stl_error_codes.error_code</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
             <MetaInfo connection="Output">
               <RecordInfo>
-                <Field name="stl_recon_issues_pk" source="File: aka:prod_edw_odbc|||Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code As error_code From edw.stl.stl_recon_issues ri" type="Int64" />
-                <Field name="recon_issue_status" source="File: aka:prod_edw_odbc|||Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code As error_code From edw.stl.stl_recon_issues ri" type="Int16" />
-                <Field name="error_code" size="15" source="File: aka:prod_edw_odbc|||Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code As error_code From edw.stl.stl_recon_issues ri" type="V_WString" />
+                <Field name="stl_recon_issues_pk" source="File: aka:prod_edw_odbc|||Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code As error_code, edw.stl.stl_error_codes.description From edw.stl.stl_recon_issues ri Inner Join edw.stl.stl_orders On ri.order_id = edw.stl.stl_orders.order_id Inner Join edw.stl.stl_error_codes On edw.stl.stl_orders.error_code = edw.stl.stl_error_codes.error_code" type="Int64" />
+                <Field name="recon_issue_status" source="File: aka:prod_edw_odbc|||Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code As error_code, edw.stl.stl_error_codes.description From edw.stl.stl_recon_issues ri Inner Join edw.stl.stl_orders On ri.order_id = edw.stl.stl_orders.order_id Inner Join edw.stl.stl_error_codes On edw.stl.stl_orders.error_code = edw.stl.stl_error_codes.error_code" type="Int16" />
+                <Field name="error_code" size="15" source="File: aka:prod_edw_odbc|||Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code As error_code, edw.stl.stl_error_codes.description From edw.stl.stl_recon_issues ri Inner Join edw.stl.stl_orders On ri.order_id = edw.stl.stl_orders.order_id Inner Join edw.stl.stl_error_codes On edw.stl.stl_orders.error_code = edw.stl.stl_error_codes.error_code" type="V_WString" />
+                <Field name="description" size="256" source="File: aka:prod_edw_odbc|||Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code As error_code, edw.stl.stl_error_codes.description From edw.stl.stl_recon_issues ri Inner Join edw.stl.stl_orders On ri.order_id = edw.stl.stl_orders.order_id Inner Join edw.stl.stl_error_codes On edw.stl.stl_orders.error_code = edw.stl.stl_error_codes.error_code" type="V_WString" />
               </RecordInfo>
             </MetaInfo>
           </Properties>
@@ -200,7 +278,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
         </Node>
         <Node ToolID="89">
           <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-            <Position x="343" y="1994" />
+            <Position x="355" y="2122" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -219,7 +297,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
         </Node>
         <Node ToolID="90">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="163" y="1994" />
+            <Position x="175" y="2122" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -238,13 +316,14 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
         </Node>
         <Node ToolID="91">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="247" y="1994" />
+            <Position x="259" y="2122" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <OrderChanged value="False" />
               <CommaDecimal value="False" />
               <SelectFields>
+                <SelectField field="description" selected="True" rename="error_code_description" />
                 <SelectField field="*Unknown" selected="True" />
               </SelectFields>
             </Configuration>
@@ -258,7 +337,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
         </Node>
         <Node ToolID="92">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="475" y="1994" />
+            <Position x="487" y="2122" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -281,7 +360,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
         </Node>
         <Node ToolID="93">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="583" y="1982" />
+            <Position x="595" y="2110" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -300,7 +379,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
         </Node>
         <Node ToolID="94">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="679" y="1982" />
+            <Position x="691" y="2110" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -320,7 +399,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
         </Node>
         <Node ToolID="95">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="583" y="2102" />
+            <Position x="595" y="2230" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -339,7 +418,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
         </Node>
         <Node ToolID="96">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="679" y="2102" />
+            <Position x="691" y="2230" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -347,6 +426,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
                 <SummarizeField field="source_table" action="GroupBy" rename="source_table" />
                 <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
                 <SummarizeField field="error_code" action="GroupBy" rename="error_code" />
+                <SummarizeField field="error_code_description" action="GroupBy" rename="error_code_description" />
                 <SummarizeField field="stl_practices_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -362,7 +442,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
     </Node>
     <Node ToolID="103">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="42" y="1638" width="721" height="295" />
+        <Position x="54" y="1682" width="721.0001" height="383" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -380,13 +460,13 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
       <ChildNodes>
         <Node ToolID="76">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="67" y="1694" />
+            <Position x="79.00005" y="1738" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <Passwords />
               <CachedCosmeticName />
-              <File RecordLimit="" FileFormat="23">aka:prod_edw_odbc|||Select t.stl_taxes_pk, t.tax_report_status, t.error_code From edw.stl.stl_taxes t</File>
+              <File RecordLimit="" FileFormat="23">aka:prod_edw_odbc|||Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_error_codes.description From edw.stl.stl_taxes t Inner Join edw.stl.stl_error_codes On t.error_code = edw.stl.stl_error_codes.error_code</File>
               <FormatSpecificOptions>
                 <PreSQL />
                 <NoProgress>True</NoProgress>
@@ -399,17 +479,15 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
             <Annotation DisplayMode="0">
               <Name />
               <DefaultAnnotationText>aka:prod_edw_odbc
-Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code From edw.stl.stl_taxes t</DefaultAnnotationText>
+Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_error_codes.description From edw.stl.stl_taxes t Inner Join edw.stl.stl_error_codes On t.error_code = edw.stl.stl_error_codes.error_code</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
             <MetaInfo connection="Output">
               <RecordInfo>
-                <Field name="stl_taxes_pk" source="File: aka:prod_edw_odbc|||Select t.stl_taxes_pk, t.tax_report_status, t.error_code From edw.stl.stl_taxes t" type="Int64" />
-                <Field name="tax_report_status" source="File: aka:prod_edw_odbc|||Select t.stl_taxes_pk, t.tax_report_status, t.error_code From edw.stl.stl_taxes t" type="Int32" />
-                <Field name="error_code" size="2000" source="File: aka:prod_edw_odbc|||Select t.stl_taxes_pk, t.tax_report_status, t.error_code From edw.stl.stl_taxes t" type="V_WString" />
+                <Field name="stl_taxes_pk" source="File: aka:prod_edw_odbc|||Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_error_codes.description From edw.stl.stl_taxes t Inner Join edw.stl.stl_error_codes On t.error_code = edw.stl.stl_error_codes.error_code" type="Int64" />
+                <Field name="tax_report_status" source="File: aka:prod_edw_odbc|||Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_error_codes.description From edw.stl.stl_taxes t Inner Join edw.stl.stl_error_codes On t.error_code = edw.stl.stl_error_codes.error_code" type="Int32" />
+                <Field name="error_code" size="2000" source="File: aka:prod_edw_odbc|||Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_error_codes.description From edw.stl.stl_taxes t Inner Join edw.stl.stl_error_codes On t.error_code = edw.stl.stl_error_codes.error_code" type="V_WString" />
+                <Field name="description" size="256" source="File: aka:prod_edw_odbc|||Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_error_codes.description From edw.stl.stl_taxes t Inner Join edw.stl.stl_error_codes On t.error_code = edw.stl.stl_error_codes.error_code" type="V_WString" />
               </RecordInfo>
             </MetaInfo>
           </Properties>
@@ -417,7 +495,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code From edw.stl.stl_
         </Node>
         <Node ToolID="77">
           <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-            <Position x="343" y="1694" />
+            <Position x="355" y="1738" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -436,7 +514,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code From edw.stl.stl_
         </Node>
         <Node ToolID="78">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="163" y="1694" />
+            <Position x="175" y="1738" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -455,13 +533,14 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code From edw.stl.stl_
         </Node>
         <Node ToolID="79">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="247" y="1694" />
+            <Position x="259" y="1738" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <OrderChanged value="False" />
               <CommaDecimal value="False" />
               <SelectFields>
+                <SelectField field="description" selected="True" rename="error_code_description" />
                 <SelectField field="*Unknown" selected="True" />
               </SelectFields>
             </Configuration>
@@ -475,7 +554,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code From edw.stl.stl_
         </Node>
         <Node ToolID="80">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="475" y="1694" />
+            <Position x="487" y="1738" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -498,7 +577,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code From edw.stl.stl_
         </Node>
         <Node ToolID="81">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="583" y="1682" />
+            <Position x="595" y="1726" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -517,7 +596,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code From edw.stl.stl_
         </Node>
         <Node ToolID="82">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="679" y="1682" />
+            <Position x="691" y="1726" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -537,7 +616,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code From edw.stl.stl_
         </Node>
         <Node ToolID="83">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="583" y="1802" />
+            <Position x="595" y="1846" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -556,7 +635,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code From edw.stl.stl_
         </Node>
         <Node ToolID="84">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="679" y="1802" />
+            <Position x="691.0001" y="1846" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -564,6 +643,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code From edw.stl.stl_
                 <SummarizeField field="source_table" action="GroupBy" rename="source_table" />
                 <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
                 <SummarizeField field="error_code" action="GroupBy" rename="error_code" />
+                <SummarizeField field="error_code_description" action="GroupBy" rename="error_code_description" />
                 <SummarizeField field="stl_practices_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -579,7 +659,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code From edw.stl.stl_
     </Node>
     <Node ToolID="102">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="42" y="1350" width="721" height="295" />
+        <Position x="54" y="1274" width="721.0001" height="398" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -597,13 +677,13 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code From edw.stl.stl_
       <ChildNodes>
         <Node ToolID="66">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="67" y="1406" />
+            <Position x="79.00002" y="1330" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <Passwords />
               <CachedCosmeticName />
-              <File RecordLimit="" FileFormat="23">aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status From edw.stl.stl_items i</File>
+              <File RecordLimit="" FileFormat="23">aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code</File>
               <FormatSpecificOptions>
                 <PreSQL />
                 <NoProgress>True</NoProgress>
@@ -616,17 +696,15 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code From edw.stl.stl_
             <Annotation DisplayMode="0">
               <Name />
               <DefaultAnnotationText>aka:prod_edw_odbc
-Table=Select i.stl_items_pk, i.error_code, i.item_report_status From edw.stl.stl_items i</DefaultAnnotationText>
+Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
             <MetaInfo connection="Output">
               <RecordInfo>
-                <Field name="stl_items_pk" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status From edw.stl.stl_items i" type="Int64" />
-                <Field name="error_code" size="2000" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status From edw.stl.stl_items i" type="V_WString" />
-                <Field name="item_report_status" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status From edw.stl.stl_items i" type="Int32" />
+                <Field name="stl_items_pk" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code" type="Int64" />
+                <Field name="error_code" size="2000" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code" type="V_WString" />
+                <Field name="item_report_status" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code" type="Int32" />
+                <Field name="description" size="256" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code" type="V_WString" />
               </RecordInfo>
             </MetaInfo>
           </Properties>
@@ -634,7 +712,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status From edw.stl.stl
         </Node>
         <Node ToolID="67">
           <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-            <Position x="343" y="1406" />
+            <Position x="355" y="1330" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -653,7 +731,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status From edw.stl.stl
         </Node>
         <Node ToolID="68">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="163" y="1406" />
+            <Position x="175" y="1330" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -672,13 +750,14 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status From edw.stl.stl
         </Node>
         <Node ToolID="69">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="247" y="1406" />
+            <Position x="259" y="1330" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <OrderChanged value="False" />
               <CommaDecimal value="False" />
               <SelectFields>
+                <SelectField field="description" selected="True" rename="error_code_description" />
                 <SelectField field="*Unknown" selected="True" />
               </SelectFields>
             </Configuration>
@@ -692,7 +771,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status From edw.stl.stl
         </Node>
         <Node ToolID="70">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="475" y="1406" />
+            <Position x="487" y="1330" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -715,7 +794,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status From edw.stl.stl
         </Node>
         <Node ToolID="71">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="583" y="1394" />
+            <Position x="595.0001" y="1318" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -734,7 +813,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status From edw.stl.stl
         </Node>
         <Node ToolID="72">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="679" y="1394" />
+            <Position x="691" y="1318" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -754,7 +833,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status From edw.stl.stl
         </Node>
         <Node ToolID="73">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="583" y="1514" />
+            <Position x="595" y="1438" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -773,7 +852,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status From edw.stl.stl
         </Node>
         <Node ToolID="74">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="679" y="1514" />
+            <Position x="691.0001" y="1438" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -781,6 +860,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status From edw.stl.stl
                 <SummarizeField field="source_table" action="GroupBy" rename="source_table" />
                 <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
                 <SummarizeField field="error_code" action="GroupBy" rename="error_code" />
+                <SummarizeField field="error_code_description" action="GroupBy" rename="error_code_description" />
                 <SummarizeField field="stl_practices_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -796,7 +876,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status From edw.stl.stl
     </Node>
     <Node ToolID="101">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="42" y="738" width="1057" height="607" />
+        <Position x="54" y="674" width="1152" height="605" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -814,13 +894,13 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status From edw.stl.stl
       <ChildNodes>
         <Node ToolID="43">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="66.99999" y="926" />
+            <Position x="79.00002" y="862" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <Passwords />
               <CachedCosmeticName />
-              <File RecordLimit="" FileFormat="23">aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw.stl.stl_practices p Where p.practice_report_status &lt;&gt; 6</File>
+              <File RecordLimit="" FileFormat="23">aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6</File>
               <FormatSpecificOptions>
                 <PreSQL />
                 <NoProgress>True</NoProgress>
@@ -833,17 +913,17 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status From edw.stl.stl
             <Annotation DisplayMode="0">
               <Name />
               <DefaultAnnotationText>aka:prod_edw_odbc
-Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw.stl.stl_practices p Where p.practice_report_status &lt;&gt; 6</DefaultAnnotationText>
+Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
             <MetaInfo connection="Output">
               <RecordInfo>
-                <Field name="stl_practices_pk" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw.stl.stl_practices p Where p.practice_report_status &lt;&gt; 6" type="Int64" />
-                <Field name="error_code" size="2000" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw.stl.stl_practices p Where p.practice_report_status &lt;&gt; 6" type="V_WString" />
-                <Field name="practice_report_status" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw.stl.stl_practices p Where p.practice_report_status &lt;&gt; 6" type="Int32" />
+                <Field name="stl_practices_pk" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="Int64" />
+                <Field name="error_code" size="2000" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="V_WString" />
+                <Field name="practice_report_status" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="Int32" />
+                <Field name="description" size="256" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="V_WString" />
+                <Field name="report_month" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="Int32" />
+                <Field name="report_year" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="Int32" />
               </RecordInfo>
             </MetaInfo>
           </Properties>
@@ -851,7 +931,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
         </Node>
         <Node ToolID="44">
           <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-            <Position x="343" y="926" />
+            <Position x="355" y="862" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -870,13 +950,13 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
         </Node>
         <Node ToolID="46">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="523" y="794" />
+            <Position x="535" y="730" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <Mode>Simple</Mode>
               <Simple>
-                <Field>practice_report_status</Field>
+                <Field>report_status</Field>
                 <Operator>=</Operator>
                 <Operands>
                   <Operand>1</Operand>
@@ -885,7 +965,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
-              <DefaultAnnotationText>[practice_report_status] = 1</DefaultAnnotationText>
+              <DefaultAnnotationText>[report_status] = 1</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
           </Properties>
@@ -893,13 +973,13 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
         </Node>
         <Node ToolID="47">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="511" y="914" />
+            <Position x="523" y="850" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <Mode>Simple</Mode>
               <Simple>
-                <Field>practice_report_status</Field>
+                <Field>report_status</Field>
                 <Operator>=</Operator>
                 <Operands>
                   <Operand>2</Operand>
@@ -908,7 +988,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
-              <DefaultAnnotationText>[practice_report_status] = 2</DefaultAnnotationText>
+              <DefaultAnnotationText>[report_status] = 2</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
           </Properties>
@@ -916,13 +996,13 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
         </Node>
         <Node ToolID="48">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="499" y="1106" />
+            <Position x="511" y="1042" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <Mode>Simple</Mode>
               <Simple>
-                <Field>practice_report_status</Field>
+                <Field>report_status</Field>
                 <Operator>=</Operator>
                 <Operands>
                   <Operand>3</Operand>
@@ -931,7 +1011,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
-              <DefaultAnnotationText>[practice_report_status] = 3</DefaultAnnotationText>
+              <DefaultAnnotationText>[report_status] = 3</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
           </Properties>
@@ -939,7 +1019,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
         </Node>
         <Node ToolID="49">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="163" y="926" />
+            <Position x="175.0001" y="862.0001" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -958,13 +1038,17 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
         </Node>
         <Node ToolID="50">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="247.0001" y="925.9999" />
+            <Position x="259.0001" y="861.9999" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <OrderChanged value="False" />
               <CommaDecimal value="False" />
               <SelectFields>
+                <SelectField field="practice_report_status" selected="True" rename="report_status" />
+                <SelectField field="description" selected="True" rename="error_code_description" />
+                <SelectField field="report_month" selected="True" rename="month" />
+                <SelectField field="report_year" selected="True" rename="year" />
                 <SelectField field="*Unknown" selected="True" />
               </SelectFields>
             </Configuration>
@@ -978,7 +1062,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
         </Node>
         <Node ToolID="51">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="931" y="782" />
+            <Position x="943" y="718" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -997,7 +1081,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
         </Node>
         <Node ToolID="52">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="619" y="902" />
+            <Position x="631" y="838" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1016,7 +1100,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
         </Node>
         <Node ToolID="53">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="607" y="1094" />
+            <Position x="619.0001" y="1030" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1035,13 +1119,18 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
         </Node>
         <Node ToolID="54">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="703" y="1094" />
+            <Position x="715" y="1030" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <SummarizeFields>
                 <SummarizeField field="source_table" action="GroupBy" rename="source_table" />
                 <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
+                <SummarizeField field="error_code" action="GroupBy" rename="error_code" />
+                <SummarizeField field="error_code_description" action="GroupBy" rename="error_code_description" />
+                <SummarizeField field="report_status" action="GroupBy" rename="report_status" />
+                <SummarizeField field="year" action="GroupBy" rename="year" />
+                <SummarizeField field="month" action="GroupBy" rename="month" />
                 <SummarizeField field="stl_practices_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -1055,13 +1144,18 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
         </Node>
         <Node ToolID="55">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="715" y="902" />
+            <Position x="727" y="838" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <SummarizeFields>
                 <SummarizeField field="source_table" action="GroupBy" rename="source_table" />
                 <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
+                <SummarizeField field="error_code" action="GroupBy" rename="error_code" />
+                <SummarizeField field="error_code_description" action="GroupBy" rename="error_code_description" />
+                <SummarizeField field="report_status" action="GroupBy" rename="report_status" />
+                <SummarizeField field="month" action="GroupBy" rename="month" />
+                <SummarizeField field="year" action="GroupBy" rename="year" />
                 <SummarizeField field="stl_practices_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -1075,53 +1169,18 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
         </Node>
         <Node ToolID="56">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="1015" y="782" />
+            <Position x="1027" y="718" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <SummarizeFields>
                 <SummarizeField field="source_table" action="GroupBy" rename="source_table" />
                 <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
-                <SummarizeField field="stl_practices_pk" action="Count" rename="Count" />
-              </SummarizeFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
-        </Node>
-        <Node ToolID="61">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="607" y="1214" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <FormulaFields>
-                <FormulaField expression="'practice_status_3_errors'" field="requirement" size="1073741823" type="V_WString" />
-              </FormulaFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText><![CDATA[requirement = 'practice_status_3_errors'
-]]></DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-        </Node>
-        <Node ToolID="62">
-          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="703" y="1214" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <SummarizeFields>
-                <SummarizeField field="source_table" action="GroupBy" rename="source_table" />
-                <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
+                <SummarizeField field="error_code_description" action="GroupBy" rename="error_code_description" />
                 <SummarizeField field="error_code" action="GroupBy" rename="error_code" />
+                <SummarizeField field="report_status" action="GroupBy" rename="report_status" />
+                <SummarizeField field="month" action="GroupBy" rename="month" />
+                <SummarizeField field="year" action="GroupBy" rename="year" />
                 <SummarizeField field="stl_practices_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -1135,7 +1194,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
         </Node>
         <Node ToolID="63">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="631" y="782" />
+            <Position x="643" y="718" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1154,7 +1213,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
         </Node>
         <Node ToolID="64">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="739" y="782" />
+            <Position x="751" y="718" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1173,7 +1232,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
         </Node>
         <Node ToolID="65">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="823" y="782" />
+            <Position x="835" y="718" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1196,7 +1255,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
         </Node>
         <Node ToolID="98">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="511" y="1022" />
+            <Position x="523" y="958" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1215,7 +1274,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
         </Node>
         <Node ToolID="99">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="607" y="1022" />
+            <Position x="619" y="958" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1223,6 +1282,10 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
                 <SummarizeField field="source_table" action="GroupBy" rename="source_table" />
                 <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
                 <SummarizeField field="error_code" action="GroupBy" rename="error_code" />
+                <SummarizeField field="error_code_description" action="GroupBy" rename="error_code_description" />
+                <SummarizeField field="report_status" action="GroupBy" rename="report_status" />
+                <SummarizeField field="year" action="GroupBy" rename="year" />
+                <SummarizeField field="month" action="GroupBy" rename="month" />
                 <SummarizeField field="stl_practices_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -1234,11 +1297,103 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
           </Properties>
           <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
         </Node>
+        <Node ToolID="112">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1122" y="722" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_11280_062bcf14769b495fa682cba92fba333e_\Engine_2196_50490069a66e4deaaf44b498c8b98d52_.yxdb</TempFile>
+              <Layout>
+                <View1>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="113">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="822" y="842" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_11280_062bcf14769b495fa682cba92fba333e_\Engine_2196_cbc41b0a40024a20981c98bd51d63b7a_.yxdb</TempFile>
+              <Layout>
+                <View1>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="114">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="714" y="962" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_11280_062bcf14769b495fa682cba92fba333e_\Engine_2196_8945104ae91c47ecbc80d797518fbe7f_.yxdb</TempFile>
+              <Layout>
+                <View1>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="115">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="810" y="1034" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_11280_062bcf14769b495fa682cba92fba333e_\Engine_2196_026a175875f4455c93f81957636db9d4_.yxdb</TempFile>
+              <Layout>
+                <View1>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
       </ChildNodes>
     </Node>
     <Node ToolID="100">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="42" y="18" width="1225" height="715" />
+        <Position x="54" y="54" width="1236" height="619" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1256,13 +1411,13 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
       <ChildNodes>
         <Node ToolID="3">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="67.00002" y="134" />
+            <Position x="79.00005" y="174" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <Passwords />
               <CachedCosmeticName />
-              <File RecordLimit="" FileFormat="23">aka:prod_edw_odbc|||Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o.error_code From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 6</File>
+              <File RecordLimit="" FileFormat="23">aka:prod_edw_odbc|||Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o.error_code, edw.stl.stl_error_codes.description From edw.stl.stl_orders o Inner Join edw.stl.stl_error_codes On o.error_code = edw.stl.stl_error_codes.error_code Where o.order_report_status &lt;&gt; 6</File>
               <FormatSpecificOptions>
                 <PreSQL />
                 <NoProgress>True</NoProgress>
@@ -1275,16 +1430,17 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status From edw
             <Annotation DisplayMode="0">
               <Name />
               <DefaultAnnotationText>aka:prod_edw_odbc
-Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o.error_code From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 6</DefaultAnnotationText>
+Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o.error_code, edw.stl.stl_error_codes.description From edw.stl.stl_orders o Inner Join edw.stl.stl_error_codes On o.error_code = edw.stl.stl_error_codes.error_code Where o.order_report_status &lt;&gt; 6</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
             <MetaInfo connection="Output">
               <RecordInfo>
-                <Field name="stl_orders_pk" source="File: aka:prod_edw_odbc|||Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o.error_code From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 6" type="Int64" />
-                <Field name="order_report_status" source="File: aka:prod_edw_odbc|||Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o.error_code From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 6" type="Int32" />
-                <Field name="order_date" source="File: aka:prod_edw_odbc|||Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o.error_code From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 6" type="DateTime" />
-                <Field name="order_id" source="File: aka:prod_edw_odbc|||Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o.error_code From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 6" type="Int32" />
-                <Field name="error_code" size="2000" source="File: aka:prod_edw_odbc|||Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o.error_code From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 6" type="V_WString" />
+                <Field name="stl_orders_pk" source="File: aka:prod_edw_odbc|||Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o.error_code, edw.stl.stl_error_codes.description From edw.stl.stl_orders o Inner Join edw.stl.stl_error_codes On o.error_code = edw.stl.stl_error_codes.error_code Where o.order_report_status &lt;&gt; 6" type="Int64" />
+                <Field name="order_report_status" source="File: aka:prod_edw_odbc|||Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o.error_code, edw.stl.stl_error_codes.description From edw.stl.stl_orders o Inner Join edw.stl.stl_error_codes On o.error_code = edw.stl.stl_error_codes.error_code Where o.order_report_status &lt;&gt; 6" type="Int32" />
+                <Field name="order_date" source="File: aka:prod_edw_odbc|||Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o.error_code, edw.stl.stl_error_codes.description From edw.stl.stl_orders o Inner Join edw.stl.stl_error_codes On o.error_code = edw.stl.stl_error_codes.error_code Where o.order_report_status &lt;&gt; 6" type="DateTime" />
+                <Field name="order_id" source="File: aka:prod_edw_odbc|||Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o.error_code, edw.stl.stl_error_codes.description From edw.stl.stl_orders o Inner Join edw.stl.stl_error_codes On o.error_code = edw.stl.stl_error_codes.error_code Where o.order_report_status &lt;&gt; 6" type="Int32" />
+                <Field name="error_code" size="2000" source="File: aka:prod_edw_odbc|||Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o.error_code, edw.stl.stl_error_codes.description From edw.stl.stl_orders o Inner Join edw.stl.stl_error_codes On o.error_code = edw.stl.stl_error_codes.error_code Where o.order_report_status &lt;&gt; 6" type="V_WString" />
+                <Field name="description" size="256" source="File: aka:prod_edw_odbc|||Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o.error_code, edw.stl.stl_error_codes.description From edw.stl.stl_orders o Inner Join edw.stl.stl_error_codes On o.error_code = edw.stl.stl_error_codes.error_code Where o.order_report_status &lt;&gt; 6" type="V_WString" />
               </RecordInfo>
             </MetaInfo>
           </Properties>
@@ -1292,7 +1448,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="4">
           <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-            <Position x="306.9999" y="134" />
+            <Position x="318" y="182" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1311,13 +1467,13 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="6">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="823" y="146" />
+            <Position x="558" y="122" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <Mode>Simple</Mode>
               <Simple>
-                <Field>order_report_status</Field>
+                <Field>report_status</Field>
                 <Operator>!=</Operator>
                 <Operands>
                   <Operand>4</Operand>
@@ -1326,7 +1482,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
-              <DefaultAnnotationText>[order_report_status] != 4</DefaultAnnotationText>
+              <DefaultAnnotationText>[report_status] != 4</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
           </Properties>
@@ -1334,13 +1490,13 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="7">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="451" y="242" />
+            <Position x="534" y="278" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <Mode>Simple</Mode>
               <Simple>
-                <Field>order_report_status</Field>
+                <Field>report_status</Field>
                 <Operator>=</Operator>
                 <Operands>
                   <Operand>1</Operand>
@@ -1349,7 +1505,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
-              <DefaultAnnotationText>[order_report_status] = 1</DefaultAnnotationText>
+              <DefaultAnnotationText>[report_status] = 1</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
           </Properties>
@@ -1357,13 +1513,13 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="8">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="499" y="482.0001" />
+            <Position x="534" y="518" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <Mode>Simple</Mode>
               <Simple>
-                <Field>order_report_status</Field>
+                <Field>report_status</Field>
                 <Operator>=</Operator>
                 <Operands>
                   <Operand>3</Operand>
@@ -1372,7 +1528,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
-              <DefaultAnnotationText>[order_report_status] = 3</DefaultAnnotationText>
+              <DefaultAnnotationText>[report_status] = 3</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
           </Properties>
@@ -1380,18 +1536,21 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="9">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="139" y="134" />
+            <Position x="151" y="173.9999" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <FormulaFields>
                 <FormulaField expression="'Orders'" field="source_table" size="1073741823" type="V_WString" />
+                <FormulaField expression="ToNumber(DateTimeFormat([order_date],&quot;%m&quot;))" field="month" size="4" type="Int32" />
+                <FormulaField expression="ToNumber(DateTimeFormat([order_date],&quot;%Y&quot;))" field="year" size="4" type="Int32" />
               </FormulaFields>
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
-              <DefaultAnnotationText><![CDATA[source_table = 'Orders'
-]]></DefaultAnnotationText>
+              <DefaultAnnotationText>source_table = 'Orders'
+month = ToNumber(DateTimeFormat([order_date],"%m"))
+year...</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
           </Properties>
@@ -1399,13 +1558,15 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="10">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="234.9999" y="134" />
+            <Position x="234" y="170" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <OrderChanged value="False" />
               <CommaDecimal value="False" />
               <SelectFields>
+                <SelectField field="order_report_status" selected="True" rename="report_status" />
+                <SelectField field="description" selected="True" rename="error_code_description" />
                 <SelectField field="*Unknown" selected="True" />
               </SelectFields>
             </Configuration>
@@ -1417,28 +1578,9 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
         </Node>
-        <Node ToolID="11">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="619" y="482" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <FormulaFields>
-                <FormulaField expression="'order_status_3'" field="requirement" size="1073741823" type="V_WString" />
-              </FormulaFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText><![CDATA[requirement = 'order_status_3'
-]]></DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-        </Node>
         <Node ToolID="12">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="571" y="158" />
+            <Position x="690" y="202" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1455,74 +1597,18 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
         </Node>
-        <Node ToolID="13">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="931.0001" y="205.9999" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <FormulaFields>
-                <FormulaField expression="'order_status_not_4'" field="requirement" size="1073741823" type="V_WString" />
-              </FormulaFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText><![CDATA[requirement = 'order_status_not_4'
-]]></DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-        </Node>
-        <Node ToolID="14">
-          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="715" y="482" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <SummarizeFields>
-                <SummarizeField field="source_table" action="GroupBy" rename="source_table" />
-                <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
-                <SummarizeField field="stl_orders_pk" action="Count" rename="Count" />
-              </SummarizeFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
-        </Node>
         <Node ToolID="15">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="691" y="158" />
+            <Position x="786" y="202" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <SummarizeFields>
                 <SummarizeField field="source_table" action="GroupBy" rename="source_table" />
                 <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
-                <SummarizeField field="stl_orders_pk" action="Count" rename="Count" />
-              </SummarizeFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
-        </Node>
-        <Node ToolID="16">
-          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="1027" y="206" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <SummarizeFields>
-                <SummarizeField field="source_table" action="GroupBy" rename="source_table" />
-                <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
+                <SummarizeField field="report_status" action="GroupBy" rename="report_status" />
+                <SummarizeField field="month" action="GroupBy" rename="month" />
+                <SummarizeField field="year" action="GroupBy" rename="year" />
                 <SummarizeField field="stl_orders_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -1536,7 +1622,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="19">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="571" y="362" />
+            <Position x="630" y="398" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1555,7 +1641,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="20">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="679" y="362" />
+            <Position x="726" y="398" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1574,7 +1660,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="24">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="847.0001" y="362" />
+            <Position x="918" y="398" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1593,13 +1679,16 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="25">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="943.0001" y="362" />
+            <Position x="1014" y="398" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <SummarizeFields>
                 <SummarizeField field="source_table" action="GroupBy" rename="source_table" />
                 <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
+                <SummarizeField field="report_status" action="GroupBy" rename="report_status" />
+                <SummarizeField field="year" action="GroupBy" rename="year" />
+                <SummarizeField field="month" action="GroupBy" rename="month" />
                 <SummarizeField field="stl_orders_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -1613,7 +1702,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="27">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="979.0001" y="61.99999" />
+            <Position x="798" y="98" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1632,7 +1721,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="28">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="1063" y="62.00002" />
+            <Position x="918" y="98.00003" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1640,6 +1729,10 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
                 <SummarizeField field="source_table" action="GroupBy" rename="source_table" />
                 <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
                 <SummarizeField field="error_code" action="GroupBy" rename="error_code" />
+                <SummarizeField field="error_code_description" action="GroupBy" rename="error_code_description" />
+                <SummarizeField field="report_status" action="GroupBy" rename="report_status" />
+                <SummarizeField field="month" action="GroupBy" rename="month" />
+                <SummarizeField field="year" action="GroupBy" rename="year" />
                 <SummarizeField field="stl_orders_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -1653,7 +1746,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="30">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="667" y="602" />
+            <Position x="726" y="542" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1672,7 +1765,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="31">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="751.0001" y="602" />
+            <Position x="822" y="542" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1680,6 +1773,10 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
                 <SummarizeField field="source_table" action="GroupBy" rename="source_table" />
                 <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
                 <SummarizeField field="error_code" action="GroupBy" rename="error_code" />
+                <SummarizeField field="error_code_description" action="GroupBy" rename="error_code_description" />
+                <SummarizeField field="report_status" action="GroupBy" rename="report_status" />
+                <SummarizeField field="month" action="GroupBy" rename="month" />
+                <SummarizeField field="year" action="GroupBy" rename="year" />
                 <SummarizeField field="stl_orders_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -1693,7 +1790,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="32">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1015" y="458" />
+            <Position x="1110" y="494" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1712,7 +1809,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="33">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="1099" y="458" />
+            <Position x="1206" y="494" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1720,6 +1817,10 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
                 <SummarizeField field="source_table" action="GroupBy" rename="source_table" />
                 <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
                 <SummarizeField field="error_code" action="GroupBy" rename="error_code" />
+                <SummarizeField field="error_code_description" action="GroupBy" rename="error_code_description" />
+                <SummarizeField field="report_status" action="GroupBy" rename="report_status" />
+                <SummarizeField field="month" action="GroupBy" rename="month" />
+                <SummarizeField field="year" action="GroupBy" rename="year" />
                 <SummarizeField field="stl_orders_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -1733,7 +1834,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="34">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="739" y="254" />
+            <Position x="882" y="298" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1752,7 +1853,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="35">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="823" y="254" />
+            <Position x="978" y="298" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1760,6 +1861,10 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
                 <SummarizeField field="source_table" action="GroupBy" rename="source_table" />
                 <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
                 <SummarizeField field="error_code" action="GroupBy" rename="error_code" />
+                <SummarizeField field="error_code_description" action="GroupBy" rename="error_code_description" />
+                <SummarizeField field="report_status" action="GroupBy" rename="report_status" />
+                <SummarizeField field="month" action="GroupBy" rename="month" />
+                <SummarizeField field="year" action="GroupBy" rename="year" />
                 <SummarizeField field="stl_orders_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -1773,7 +1878,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="36">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="907" y="74.00001" />
+            <Position x="690" y="110" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1793,7 +1898,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="37">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="667" y="254" />
+            <Position x="786" y="298" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1813,7 +1918,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="38">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="943.0001" y="458" />
+            <Position x="1014" y="494" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1833,7 +1938,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="39">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="571" y="614" />
+            <Position x="630" y="554" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1851,37 +1956,9 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
         </Node>
-        <Node ToolID="40">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="1183" y="374" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_9260_6a8e19f691954e779c7731175ee8fff8_\Engine_3336_2f929539fec746f4beae11d9cbeabef7_.yxdb</TempFile>
-              <TempFileDataProfiling />
-              <Layout>
-                <ViewMode>Single</ViewMode>
-                <ViewSize value="100" />
-                <View1>
-                  <DefaultTab>Profile</DefaultTab>
-                  <Hints>
-                    <Table />
-                  </Hints>
-                </View1>
-                <View2 />
-              </Layout>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
-        </Node>
         <Node ToolID="42">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="763" y="362" />
+            <Position x="822" y="398" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1906,29 +1983,41 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
     </Node>
   </Nodes>
   <Connections>
-    <Connection name="#1">
-      <Origin ToolID="17" Connection="Output" />
-      <Destination ToolID="86" Connection="Input" />
-    </Connection>
-    <Connection name="#2">
-      <Origin ToolID="57" Connection="Output" />
-      <Destination ToolID="86" Connection="Input" />
-    </Connection>
-    <Connection name="#3">
-      <Origin ToolID="75" Connection="Output" />
+    <Connection name="#5">
+      <Origin ToolID="97" Connection="Output" />
       <Destination ToolID="86" Connection="Input" />
     </Connection>
     <Connection name="#4">
       <Origin ToolID="85" Connection="Output" />
       <Destination ToolID="86" Connection="Input" />
     </Connection>
-    <Connection name="#5">
-      <Origin ToolID="97" Connection="Output" />
+    <Connection name="#3">
+      <Origin ToolID="75" Connection="Output" />
+      <Destination ToolID="86" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="57" Connection="Output" />
+      <Destination ToolID="86" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="17" Connection="Output" />
       <Destination ToolID="86" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="86" Connection="Output" />
       <Destination ToolID="87" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="86" Connection="Output" />
+      <Destination ToolID="119" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="119" Connection="Output" />
+      <Destination ToolID="117" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="117" Connection="Output" />
+      <Destination ToolID="118" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="88" Connection="Output" />
@@ -2083,10 +2172,6 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
       <Destination ToolID="53" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="48" Connection="True" />
-      <Destination ToolID="61" Connection="Input" />
-    </Connection>
-    <Connection>
       <Origin ToolID="49" Connection="Output" />
       <Destination ToolID="50" Connection="Input" />
     </Connection>
@@ -2106,6 +2191,10 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
       <Origin ToolID="53" Connection="Output" />
       <Destination ToolID="54" Connection="Input" />
     </Connection>
+    <Connection>
+      <Origin ToolID="54" Connection="Output" />
+      <Destination ToolID="115" Connection="Input" />
+    </Connection>
     <Connection name="#3" Wireless="True">
       <Origin ToolID="54" Connection="Output" />
       <Destination ToolID="57" Connection="Input" />
@@ -2118,17 +2207,17 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
       <Origin ToolID="56" Connection="Output" />
       <Destination ToolID="57" Connection="Input" />
     </Connection>
-    <Connection name="#5" Wireless="True">
-      <Origin ToolID="62" Connection="Output" />
-      <Destination ToolID="57" Connection="Input" />
-    </Connection>
     <Connection name="#4" Wireless="True">
       <Origin ToolID="99" Connection="Output" />
       <Destination ToolID="57" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="61" Connection="Output" />
-      <Destination ToolID="62" Connection="Input" />
+      <Origin ToolID="55" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="112" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="63" Connection="Output" />
@@ -2145,6 +2234,10 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
     <Connection>
       <Origin ToolID="98" Connection="Output" />
       <Destination ToolID="99" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="99" Connection="Output" />
+      <Destination ToolID="114" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="3" Connection="Output" />
@@ -2164,10 +2257,6 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
     </Connection>
     <Connection>
       <Origin ToolID="6" Connection="True" />
-      <Destination ToolID="13" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="6" Connection="True" />
       <Destination ToolID="36" Connection="Input" />
     </Connection>
     <Connection>
@@ -2177,10 +2266,6 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
     <Connection>
       <Origin ToolID="7" Connection="True" />
       <Destination ToolID="19" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="8" Connection="True" />
-      <Destination ToolID="11" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="8" Connection="True" />
@@ -2195,10 +2280,6 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
       <Destination ToolID="4" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="11" Connection="Output" />
-      <Destination ToolID="14" Connection="Input" />
-    </Connection>
-    <Connection>
       <Origin ToolID="12" Connection="Output" />
       <Destination ToolID="15" Connection="Input" />
     </Connection>
@@ -2206,20 +2287,8 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
       <Origin ToolID="12" Connection="Output" />
       <Destination ToolID="37" Connection="Input" />
     </Connection>
-    <Connection>
-      <Origin ToolID="13" Connection="Output" />
-      <Destination ToolID="16" Connection="Input" />
-    </Connection>
-    <Connection name="#3" Wireless="True">
-      <Origin ToolID="14" Connection="Output" />
-      <Destination ToolID="17" Connection="Input" />
-    </Connection>
     <Connection name="#1" Wireless="True">
       <Origin ToolID="15" Connection="Output" />
-      <Destination ToolID="17" Connection="Input" />
-    </Connection>
-    <Connection name="#2" Wireless="True">
-      <Origin ToolID="16" Connection="Output" />
       <Destination ToolID="17" Connection="Input" />
     </Connection>
     <Connection name="#4" Wireless="True">
@@ -2257,10 +2326,6 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
     <Connection>
       <Origin ToolID="24" Connection="Output" />
       <Destination ToolID="38" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="25" Connection="Output" />
-      <Destination ToolID="40" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="27" Connection="Output" />
