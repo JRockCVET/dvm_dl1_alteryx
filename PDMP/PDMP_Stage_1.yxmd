@@ -204,7 +204,7 @@ description = "Each"
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="if ([facility_id] = 5 and [product_group] = &quot;GAB&quot;) then 38779246107 else&#xA;(if ([facility_id] = 7 and [product_group] = &quot;GAB&quot;) then 62991220408 else &#xA;(if ([facility_id] = 6 and [product_group] = &quot;GAB&quot;) then 38779246107 &#xA;else &#xA;(if ([facility_id] = 5 and [product_group] = &quot;PPA&quot;) then 51927104300 else&#xA;(if ([facility_id] = 5 and [product_group] = &quot;TRA&quot;) then 51927132600 else&#xA;(if ([facility_id] = 5 and [product_group] = &quot;PHE&quot;) then 49452519002 else&#xA;0&#xA;endif)&#xA;endif)&#xA;endif) &#xA;endif) &#xA;endif) &#xA;endif" field="temp_NDC" size="4" type="Int32" />
+            <FormulaField expression="if ([facility_id] = 5 and [product_group] = &quot;GAB&quot;) then 38779246107 else&#xA;(if ([facility_id] = 7 and [product_group] = &quot;GAB&quot;) then 62991220408 else &#xA;(if ([facility_id] = 6 and [product_group] = &quot;GAB&quot;) then 38779246107 &#xA;else &#xA;(if ([facility_id] = 5 and [product_group] = &quot;PPA&quot;) then 51927104300 else&#xA;(if ([facility_id] = 5 and [product_group] = &quot;TRA&quot;) then 51927132600 else&#xA;(if ([facility_id] = 5 and [product_group] = &quot;PHE&quot;) then 49452519002 else&#xA;0&#xA;endif)&#xA;endif)&#xA;endif) &#xA;endif) &#xA;endif) &#xA;endif" field="temp_NDC" size="8" type="Int64" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
@@ -237,7 +237,7 @@ description = "Each"
             <SelectField field="header_code" selected="False" />
             <SelectField field="header_code_type" selected="True" />
             <SelectField field="description" selected="True" />
-            <SelectField field="temp_NDC" selected="True" type="Int32" size="4" />
+            <SelectField field="temp_NDC" selected="True" />
             <SelectField field="flag_it" selected="False" />
             <SelectField field="25" selected="False" />
             <SelectField field="50" selected="False" />
@@ -293,7 +293,7 @@ description = "Each"
             <SelectField field="per_uom" selected="True" />
             <SelectField field="header_code_type" selected="True" />
             <SelectField field="description" selected="True" />
-            <SelectField field="temp_NDC" selected="True" type="Int32" size="4" />
+            <SelectField field="temp_NDC" selected="True" />
             <SelectField field="25" selected="False" />
             <SelectField field="50" selected="False" />
             <SelectField field="d_20" selected="False" />
@@ -464,7 +464,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_9276_7a73f4de77f84f9392ab947d658600fc_\Engine_8528_584ad59bf35d429e85b84b18dcc30d80_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_11332_4e345bb4b4dd4da1935e0afaf397716f_\Engine_8528_3bc698cbb4854671bc7dc152d7d241fa_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
