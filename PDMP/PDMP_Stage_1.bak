@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="4">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="726" y="186" />
+        <Position x="726" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -24,7 +24,7 @@ dosage_uom = "mg"
     </Node>
     <Node ToolID="5">
       <GuiSettings>
-        <Position x="654" y="186" />
+        <Position x="654" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -50,7 +50,7 @@ dosage_uom = "mg"
     </Node>
     <Node ToolID="8">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="198" y="186" />
+        <Position x="198" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -71,7 +71,7 @@ else (if [f...</DefaultAnnotationText>
     </Node>
     <Node ToolID="9">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="882" y="186" />
+        <Position x="882" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -94,7 +94,7 @@ else (if [f...</DefaultAnnotationText>
     </Node>
     <Node ToolID="13">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="810" y="186" />
+        <Position x="810" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -128,7 +128,7 @@ else (if [f...</DefaultAnnotationText>
     </Node>
     <Node ToolID="14">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="294" y="186" />
+        <Position x="294" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -147,7 +147,7 @@ else (if [f...</DefaultAnnotationText>
     </Node>
     <Node ToolID="16">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="966" y="294" />
+        <Position x="966" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -173,7 +173,7 @@ description = "Millilitres"
     </Node>
     <Node ToolID="18">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="966" y="90" />
+        <Position x="966" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -199,12 +199,12 @@ description = "Each"
     </Node>
     <Node ToolID="23">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="474" y="186" />
+        <Position x="474" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="if ([facility_id] = 5 and [product_group] = &quot;GAB&quot;) then 38779246107 else&#xA;(if ([facility_id] = 7 and [product_group] = &quot;GAB&quot;) then 62991220408 else &#xA;(if ([facility_id] = 6 and [product_group] = &quot;GAB&quot;) then 38779246107 &#xA;else &#xA;(if ([facility_id] = 5 and [product_group] = &quot;PPA&quot;) then 51927104300 else&#xA;(if ([facility_id] = 5 and [product_group] = &quot;TRA&quot;) then 51927132600 else&#xA;(if ([facility_id] = 5 and [product_group] = &quot;PHE&quot;) then 49452519002 else&#xA;0&#xA;endif)&#xA;endif)&#xA;endif) &#xA;endif) &#xA;endif) &#xA;endif" field="temp_NDC" size="4" type="Int32" />
+            <FormulaField expression="if ([facility_id] = 5 and [product_group] = &quot;GAB&quot;) then 38779246107 else&#xA;(if ([facility_id] = 7 and [product_group] = &quot;GAB&quot;) then 62991220408 else &#xA;(if ([facility_id] = 6 and [product_group] = &quot;GAB&quot;) then 38779246107 &#xA;else &#xA;(if ([facility_id] = 5 and [product_group] = &quot;PPA&quot;) then 51927104300 else&#xA;(if ([facility_id] = 5 and [product_group] = &quot;TRA&quot;) then 51927132600 else&#xA;(if ([facility_id] = 5 and [product_group] = &quot;PHE&quot;) then 49452519002 else&#xA;0&#xA;endif)&#xA;endif)&#xA;endif) &#xA;endif) &#xA;endif) &#xA;endif" field="temp_NDC" size="8" type="Double" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
@@ -217,7 +217,7 @@ description = "Each"
     </Node>
     <Node ToolID="26">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1158" y="294" />
+        <Position x="1158" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -237,7 +237,7 @@ description = "Each"
             <SelectField field="header_code" selected="False" />
             <SelectField field="header_code_type" selected="True" />
             <SelectField field="description" selected="True" />
-            <SelectField field="temp_NDC" selected="True" type="Int32" size="4" />
+            <SelectField field="temp_NDC" selected="True" />
             <SelectField field="flag_it" selected="False" />
             <SelectField field="25" selected="False" />
             <SelectField field="50" selected="False" />
@@ -256,7 +256,7 @@ description = "Each"
     </Node>
     <Node ToolID="31">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1062" y="90" />
+        <Position x="1062" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -276,7 +276,7 @@ description = "Each"
     </Node>
     <Node ToolID="33">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1158" y="90" />
+        <Position x="1158" y="102" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -293,7 +293,7 @@ description = "Each"
             <SelectField field="per_uom" selected="True" />
             <SelectField field="header_code_type" selected="True" />
             <SelectField field="description" selected="True" />
-            <SelectField field="temp_NDC" selected="True" type="Int32" size="4" />
+            <SelectField field="temp_NDC" selected="True" />
             <SelectField field="25" selected="False" />
             <SelectField field="50" selected="False" />
             <SelectField field="d_20" selected="False" />
@@ -312,7 +312,7 @@ description = "Each"
     </Node>
     <Node ToolID="35">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="54" y="186" />
+        <Position x="54" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -329,6 +329,9 @@ description = "Each"
 Table=`Sheet1$`</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="order_id" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="Double" />
@@ -352,7 +355,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
     </Node>
     <Node ToolID="36">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
-        <Position x="378" y="186" />
+        <Position x="378" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -370,7 +373,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
     </Node>
     <Node ToolID="37">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="126" y="186" />
+        <Position x="126" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -398,7 +401,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
     </Node>
     <Node ToolID="38">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="558" y="186" />
+        <Position x="558" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -421,7 +424,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
     </Node>
     <Node ToolID="44">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1062" y="294" />
+        <Position x="1062" y="306" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -441,7 +444,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
     </Node>
     <Node ToolID="46">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1278" y="198" />
+        <Position x="1278" y="210" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -460,11 +463,11 @@ Table=`Sheet1$`</DefaultAnnotationText>
     </Node>
     <Node ToolID="47">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1410" y="54" />
+        <Position x="1410" y="66" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_9276_7a73f4de77f84f9392ab947d658600fc_\Engine_8528_584ad59bf35d429e85b84b18dcc30d80_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_12300_f116ac10adff430bb43eb14482e7dcbb_\Engine_8528_bcc44800b69941e0a6d1e80c88742b0a_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -488,7 +491,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
     </Node>
     <Node ToolID="48">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-        <Position x="1398" y="198" />
+        <Position x="1398" y="210" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -505,6 +508,9 @@ Table=`Sheet1$`</DefaultAnnotationText>
 Table=combined</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
     </Node>
@@ -609,7 +615,7 @@ Table=combined</DefaultAnnotationText>
     <LayoutType>Horizontal</LayoutType>
     <MetaInfo>
       <NameIsFileName value="True" />
-      <Name>PDMP_Stage_1</Name>
+      <Name>PDMP</Name>
       <Description />
       <RootToolName />
       <ToolVersion />
