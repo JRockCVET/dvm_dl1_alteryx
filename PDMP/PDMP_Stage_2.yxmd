@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="11.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="198" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Work.xlsx|||`combined$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>PDMP_Work.xlsx
+Table=`combined$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="product_id" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Work.xlsx|||`combined$`" type="Double" />
+            <Field name="sku" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Work.xlsx|||`combined$`" type="V_String" />
+            <Field name="product_title" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Work.xlsx|||`combined$`" type="V_String" />
+            <Field name="facility_id" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Work.xlsx|||`combined$`" type="Double" />
+            <Field name="sku_facility_key" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Work.xlsx|||`combined$`" type="V_String" />
+            <Field name="dosage" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Work.xlsx|||`combined$`" type="Double" />
+            <Field name="dosage_uom" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Work.xlsx|||`combined$`" type="V_String" />
+            <Field name="per_uom" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Work.xlsx|||`combined$`" type="V_String" />
+            <Field name="header_code_type" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Work.xlsx|||`combined$`" type="Double" />
+            <Field name="description" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Work.xlsx|||`combined$`" type="V_String" />
+            <Field name="temp_NDC" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Work.xlsx|||`combined$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="330" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">aka:prod_hera_odbc|||pdmp_reporting.product_dosage</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Append</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:prod_hera_odbc
+Table=pdmp_reporting.product_dosage</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>PDMP_Stage_2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

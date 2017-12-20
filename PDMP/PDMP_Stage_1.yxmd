@@ -317,7 +317,7 @@ description = "Each"
       <Properties>
         <Configuration>
           <Passwords />
-          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">D:\Users\croberts\Desktop\PDMP_Input.xlsx|||`Sheet1$`</File>
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`</File>
           <FormatSpecificOptions>
             <FirstRowData>False</FirstRowData>
             <ImportLine>1</ImportLine>
@@ -334,20 +334,20 @@ Table=`Sheet1$`</DefaultAnnotationText>
         </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="order_id" source="File: D:\Users\croberts\Desktop\PDMP_Input.xlsx|||`Sheet1$`" type="Double" />
-            <Field name="item_id" source="File: D:\Users\croberts\Desktop\PDMP_Input.xlsx|||`Sheet1$`" type="Double" />
-            <Field name="shipping_date" source="File: D:\Users\croberts\Desktop\PDMP_Input.xlsx|||`Sheet1$`" type="DateTime" />
-            <Field name="product_id" source="File: D:\Users\croberts\Desktop\PDMP_Input.xlsx|||`Sheet1$`" type="Double" />
-            <Field name="sku" size="255" source="File: D:\Users\croberts\Desktop\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
-            <Field name="title" size="255" source="File: D:\Users\croberts\Desktop\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
-            <Field name="ingredients" size="255" source="File: D:\Users\croberts\Desktop\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
-            <Field name="product_group" size="255" source="File: D:\Users\croberts\Desktop\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
-            <Field name="external_dispensary" source="File: D:\Users\croberts\Desktop\PDMP_Input.xlsx|||`Sheet1$`" type="Double" />
-            <Field name="facility" size="255" source="File: D:\Users\croberts\Desktop\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
-            <Field name="disp_NDC" size="255" source="File: D:\Users\croberts\Desktop\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
-            <Field name="prod_NDC" size="255" source="File: D:\Users\croberts\Desktop\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
-            <Field name="parent_NDC" size="255" source="File: D:\Users\croberts\Desktop\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
-            <Field name="temp_ndc" source="File: D:\Users\croberts\Desktop\PDMP_Input.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="order_id" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="item_id" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="shipping_date" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="DateTime" />
+            <Field name="product_id" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="sku" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="title" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="ingredients" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="product_group" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="external_dispensary" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="facility" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="disp_NDC" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="prod_NDC" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="parent_NDC" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="temp_ndc" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="Double" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -467,7 +467,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_8240_676993d085a344a6babf1e251ab62739_\Engine_8528_e71f051a55124808acb452e563ec664d_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_12300_f116ac10adff430bb43eb14482e7dcbb_\Engine_8528_bcc44800b69941e0a6d1e80c88742b0a_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -495,7 +495,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <File FileFormat="25" MaxRecords="">D:\Users\croberts\Desktop\PDMP_Work.xlsx|||combined</File>
+          <File FileFormat="25" MaxRecords="">C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Work.xlsx|||combined</File>
           <Passwords />
           <FormatSpecificOptions>
             <OutputOption>Overwrite</OutputOption>
