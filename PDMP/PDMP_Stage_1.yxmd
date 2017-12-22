@@ -109,7 +109,7 @@ else (if [f...</DefaultAnnotationText>
             <SelectField field="new_title" selected="False" />
             <SelectField field="flag_it" selected="True" />
             <SelectField field="ingredients" selected="False" />
-            <SelectField field="temp_NDC" selected="True" />
+            <SelectField field="temp_NDC" selected="True" type="V_String" size="21" />
             <SelectField field="dosage_uom" selected="True" />
             <SelectField field="sku_facility_key" selected="True" />
             <SelectField field="product_group" selected="False" />
@@ -204,7 +204,7 @@ description = "Each"
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField expression="if ([facility_id] = 5 and [product_group] = &quot;GAB&quot;) then 38779246107 else&#xA;(if ([facility_id] = 7 and [product_group] = &quot;GAB&quot;) then 62991220408 else &#xA;(if ([facility_id] = 6 and [product_group] = &quot;GAB&quot;) then 38779246107 &#xA;else &#xA;(if ([facility_id] = 5 and [product_group] = &quot;PPA&quot;) then 51927104300 else&#xA;(if ([facility_id] = 5 and [product_group] = &quot;TRA&quot;) then 51927132600 else&#xA;(if ([facility_id] = 5 and [product_group] = &quot;PHE&quot;) then 49452519002 else&#xA;0&#xA;endif)&#xA;endif)&#xA;endif) &#xA;endif) &#xA;endif) &#xA;endif" field="temp_NDC" size="8" type="Int64" />
+            <FormulaField expression="if ([facility_id] = 5 and [product_group] = &quot;GAB&quot;) then 38779246107 else&#xA;(if ([facility_id] = 5 and [product_group] = &quot;ALP&quot;) then 67253090310 else&#xA;(if ([facility_id] = 7 and [product_group] = &quot;GAB&quot;) then 62991220408 else &#xA;(if ([facility_id] = 6 and [product_group] = &quot;GAB&quot;) then 38779246107 &#xA;else &#xA;(if ([facility_id] = 5 and [product_group] = &quot;PPA&quot;) then 51927104300 else&#xA;(if ([facility_id] = 5 and [product_group] = &quot;TRA&quot;) then 51927132600 else&#xA;(if ([facility_id] = 5 and [product_group] = &quot;PHE&quot;) then 49452519002 else&#xA;0&#xA;endif)&#xA;endif)&#xA;endif)&#xA;endif) &#xA;endif)&#xA;endif)&#xA;endif" field="temp_NDC" size="8" type="Int64" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
@@ -342,8 +342,8 @@ Table=`Sheet1$`</DefaultAnnotationText>
             <Field name="external_dispensary" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="Double" />
             <Field name="facility" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
             <Field name="disp_NDC" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
-            <Field name="prod_NDC" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
-            <Field name="parent_NDC" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="prod_NDC" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="parent_NDC" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="Double" />
             <Field name="temp_ndc" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\PDMP\PDMP_Input.xlsx|||`Sheet1$`" type="Double" />
           </RecordInfo>
         </MetaInfo>
@@ -464,7 +464,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_11332_4e345bb4b4dd4da1935e0afaf397716f_\Engine_8528_3bc698cbb4854671bc7dc152d7d241fa_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_1732_3b993ee5fcbb4a0693f664db02856d7f_\Engine_8528_8fa9e55154084a8896bc9eae4d1388fc_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
