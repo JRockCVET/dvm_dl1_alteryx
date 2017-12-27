@@ -14,9 +14,9 @@
         </Annotation>
       </Properties>
     </Node>
-    <Node ToolID="51">
+    <Node ToolID="54">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="1098" y="186" width="265" height="175" />
+        <Position x="1074" y="174" width="156" height="190" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -32,93 +32,45 @@
         </Annotation>
       </Properties>
       <ChildNodes>
-        <Node ToolID="49">
-          <GuiSettings Plugin="LockInGui.LockInStreamIn.LockInStreamIn">
-            <Position x="1123" y="230" />
+        <Node ToolID="53">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1099" y="218" />
           </GuiSettings>
           <Properties>
             <Configuration>
-              <Connection>prod_edw_indb</Connection>
-              <CreateMode>TempTable</CreateMode>
-              <Table />
+              <File MaxRecords="" FileFormat="23">aka:prod_edw_odbc|||stl.vbs_deposit_exceptions</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <FormatSpecificOptions>
+                <DistStyle>Even</DistStyle>
+                <SortStyle>None</SortStyle>
+                <TransactionMessages>False</TransactionMessages>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <OutputOption>Append</OutputOption>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
-              <DefaultAnnotationText>Source=prod_edw_indb
-Temporary Table</DefaultAnnotationText>
+              <DefaultAnnotationText>aka:prod_edw_odbc
+Table=stl.vbs_deposit_exceptions</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <MetaInfo connection="Output">
-              <RecordInfo LockIn="True">
-                <Field name="transaction_type" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="exception_report_status" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="batch_id" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="batch_date" source="In-DB:DB=prod_edw_indb;" type="DateTime" />
-                <Field name="location_fk" size="100" source="In-DB:DB=prod_edw_indb;" type="V_WString" />
-                <Field name="practice_id" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="merchant_number" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="relationship_type_id" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="report_month_id" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="report_month" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="report_year" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="deposit_exception_amount" scale="6" size="19" source="In-DB:DB=prod_edw_indb;" type="FixedDecimal" />
-                <Field name="exception_id" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="exception_note" size="128" source="In-DB:DB=prod_edw_indb;" type="V_String" />
-                <Field name="source_system_id" size="10" source="In-DB:DB=prod_edw_indb;" type="V_WString" />
-                <Field name="source_system_row_id" size="20" source="In-DB:DB=prod_edw_indb;" type="V_WString" />
-                <Field name="process_code" size="2000" source="In-DB:DB=prod_edw_indb;" type="V_WString" />
-                <Field name="event_id" size="50" source="In-DB:DB=prod_edw_indb;" type="V_WString" />
-              </RecordInfo>
-            </MetaInfo>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
           </Properties>
-          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInStreamIn" />
-        </Node>
-        <Node ToolID="50">
-          <GuiSettings Plugin="LockInGui.LockInOutput.LockInOutput">
-            <Position x="1231" y="230" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <Table>edw.stl.vbs_deposit_exceptions</Table>
-              <CreateMode>Append</CreateMode>
-              <AppendMode>ByName</AppendMode>
-              <AppendFieldMode>All</AppendFieldMode>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText>Table=edw.stl.vbs_deposit_exceptions</DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-            <MetaInfo connection="Output">
-              <RecordInfo LockIn="True">
-                <Field name="transaction_type" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="exception_report_status" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="batch_id" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="batch_date" source="In-DB:DB=prod_edw_indb;" type="DateTime" />
-                <Field name="location_fk" size="100" source="In-DB:DB=prod_edw_indb;" type="V_WString" />
-                <Field name="practice_id" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="merchant_number" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="relationship_type_id" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="report_month_id" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="report_month" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="report_year" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="deposit_exception_amount" scale="6" size="19" source="In-DB:DB=prod_edw_indb;" type="FixedDecimal" />
-                <Field name="exception_id" source="In-DB:DB=prod_edw_indb;" type="Int32" />
-                <Field name="exception_note" size="128" source="In-DB:DB=prod_edw_indb;" type="V_String" />
-                <Field name="source_system_id" size="10" source="In-DB:DB=prod_edw_indb;" type="V_WString" />
-                <Field name="source_system_row_id" size="20" source="In-DB:DB=prod_edw_indb;" type="V_WString" />
-                <Field name="process_code" size="2000" source="In-DB:DB=prod_edw_indb;" type="V_WString" />
-                <Field name="event_id" size="50" source="In-DB:DB=prod_edw_indb;" type="V_WString" />
-              </RecordInfo>
-            </MetaInfo>
-          </Properties>
-          <EngineSettings EngineDll="LockInEngine.dll" EngineDllEntryPoint="AlteryxLockInOutput" />
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
       </ChildNodes>
     </Node>
     <Node ToolID="33">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="52.99999" y="70" width="985" height="822" />
+        <Position x="53.99998" y="53.99998" width="985" height="822" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -136,7 +88,7 @@ Temporary Table</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="18">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="642" y="234.0001" />
+            <Position x="643" y="218.0001" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -186,11 +138,11 @@ Temporary Table</DefaultAnnotationText>
         </Node>
         <Node ToolID="20">
           <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="954" y="114" />
+            <Position x="955" y="97.99998" />
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_7768_f8f09522268647da998e7a6712befca6_\Engine_10396_4e5a2367603d4178b85d61181f7d20a4_.yxdb</TempFile>
+              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_13824_083e11b648d14af1b14a26c679c31e6d_\Engine_4520_ff148505371b44b9a288f6d317dd7f78_.yxdb</TempFile>
               <TempFileDataProfiling />
               <Layout>
                 <ViewMode>Single</ViewMode>
@@ -214,7 +166,7 @@ Temporary Table</DefaultAnnotationText>
         </Node>
         <Node ToolID="26">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="858" y="234" />
+            <Position x="859" y="218" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -280,7 +232,7 @@ Temporary Table</DefaultAnnotationText>
         </Node>
         <Node ToolID="19">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="77.99999" y="293.9998" />
+            <Position x="78.99998" y="277.9998" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -319,7 +271,7 @@ Table=Select edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship
         </Node>
         <Node ToolID="37">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-            <Position x="366.0002" y="198" />
+            <Position x="367.0002" y="182" />
           </GuiSettings>
           <Properties>
             <Configuration joinByRecordPos="False">
@@ -406,7 +358,7 @@ Table=Select edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship
         </Node>
         <Node ToolID="43">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="270" y="294" />
+            <Position x="186" y="270" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -438,7 +390,7 @@ Table=Select edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship
         </Node>
         <Node ToolID="44">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="546.0001" y="222.0002" />
+            <Position x="547.0001" y="206.0002" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -497,7 +449,7 @@ Table=Select edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship
         </Node>
         <Node ToolID="46">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="462" y="222" />
+            <Position x="463" y="206" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -539,7 +491,7 @@ Table=Select edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship
         </Node>
         <Node ToolID="47">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="738" y="234" />
+            <Position x="739" y="218" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -606,7 +558,7 @@ ToString([report_...</DefaultAnnotationText>
         </Node>
         <Node ToolID="52">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="89.99996" y="126.0001" />
+            <Position x="90.99995" y="110.0001" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -623,9 +575,6 @@ ToString([report_...</DefaultAnnotationText>
 Table=`Sheet1$`</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
             <MetaInfo connection="Output">
               <RecordInfo>
                 <Field name="merchant_number" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Deposit_Exceptions.xlsx|||`Sheet1$`" type="Double" />
@@ -645,10 +594,6 @@ Table=`Sheet1$`</DefaultAnnotationText>
   </Nodes>
   <Connections>
     <Connection>
-      <Origin ToolID="49" Connection="Output" />
-      <Destination ToolID="50" Connection="Input" />
-    </Connection>
-    <Connection>
       <Origin ToolID="18" Connection="Output" />
       <Destination ToolID="47" Connection="Input" />
     </Connection>
@@ -658,7 +603,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="26" Connection="Output" />
-      <Destination ToolID="49" Connection="Input" />
+      <Destination ToolID="53" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="19" Connection="Output" />
@@ -752,6 +697,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
       <Wiz_ShowOutput value="True" />
       <Wiz_OpenOutputTools>
         <Tool ToolId="20" Selected="False" />
+        <Tool ToolId="53" Selected="True" />
       </Wiz_OpenOutputTools>
       <Wiz_OutputMessage />
       <Wiz_NoOutputFilesMessage />
