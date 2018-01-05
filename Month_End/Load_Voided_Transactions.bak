@@ -46,7 +46,6 @@ Table=Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transacti
             <Field name="meta_update_datetime" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="DateTime" />
             <Field name="order_voided_datetime" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="DateTime" />
             <Field name="merchant_number" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int64" />
-            <Field name="report_month_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -148,13 +147,13 @@ Table=Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transacti
             <MetaInfo name="#1">
               <RecordInfo>
                 <Field name="stl_voided_transactions_pk" source="Formula: Null()" type="Int64" column="1" />
-                <Field name="order_id" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="Int32" column="2" />
-                <Field name="transaction_date" size="255" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="V_String" column="5" />
-                <Field name="merchant_id" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="Int64" column="6" />
-                <Field name="Amount" scale="6" size="19" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="FixedDecimal" column="7" />
-                <Field name="bank_note" size="255" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="V_String" column="8" />
+                <Field name="order_id" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Int32" column="2" />
+                <Field name="transaction_date" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="V_String" column="5" />
+                <Field name="merchant_id" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Int64" column="6" />
+                <Field name="Amount" scale="6" size="19" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="FixedDecimal" column="7" />
+                <Field name="bank_note" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="V_String" column="8" />
                 <Field name="Source" size="1073741823" source="Formula: 'New'" type="V_WString" column="9" />
-                <Field name="Trace ID" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="Double" column="10" />
+                <Field name="Trace ID" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" column="10" />
               </RecordInfo>
             </MetaInfo>
           </MultiMetaInfo>
@@ -975,7 +974,7 @@ else
     </Node>
     <Node ToolID="89">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="2706" y="222" />
+        <Position x="2574" y="222" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1013,7 +1012,6 @@ else
             <SelectField field="merchant_number" selected="False" />
             <SelectField field="MID" selected="False" />
             <SelectField field="Right_bank_note" selected="False" />
-            <SelectField field="report_month_id" selected="True" />
             <SelectField field="*Unknown" selected="True" />
           </SelectFields>
         </Configuration>
@@ -1027,11 +1025,11 @@ else
     </Node>
     <Node ToolID="93">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="3006" y="78" />
+        <Position x="2670" y="78" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_11324_2c40129700114447b6ca3bfdfa7b8244_\Engine_11916_58df0384b749418a91f71bc981394e3f_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_3144_d7f8d70812e24d7597cd8363eae33303_\Engine_4520_fe6a54020f454c6ca23169ec6a0900ee_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -1052,6 +1050,51 @@ else
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="177">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Missing_Transactions_2016_A.xlsx
+Table=`Voided Transactions$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Transaction Date" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="V_String" />
+            <Field name="Type" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="V_String" />
+            <Field name="Status" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="MID" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="V_String" />
+            <Field name="Vet ID" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="Trace ID" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="Amount" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="Order #" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="V_String" />
+            <Field name="F9" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="Note" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="V_String" />
+            <Field name="F11" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="F12" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="F13" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="F14" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="F15" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="F16" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="F17" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="F18" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
+            <Field name="F19" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Missing_Transactions_2016_A.xlsx|||`Voided Transactions$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
     </Node>
     <Node ToolID="178">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
@@ -1102,111 +1145,16 @@ stl_voided_transactions_pk - Ascending</DefaultAnnotationText>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
     </Node>
-    <Node ToolID="184">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="2586" y="222" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <FormulaFields>
-            <FormulaField expression="DateTimeFormat([transaction_date],&quot;%Y%m%d&quot;)" field="report_month_id" size="1073741823" type="V_WString" />
-          </FormulaFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText><![CDATA[report_month_id = DateTimeFormat([transaction_date],"%Y%m%d")
-]]></DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-    </Node>
-    <Node ToolID="185">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="2658" y="102" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_11324_2c40129700114447b6ca3bfdfa7b8244_\Engine_11916_416e0a1b2f404e5ab2325f7426e7b9ad_.yxdb</TempFile>
-          <TempFileDataProfiling />
-          <Layout>
-            <ViewMode>Single</ViewMode>
-            <ViewSize value="100" />
-            <View1>
-              <DefaultTab>Profile</DefaultTab>
-              <Hints>
-                <Table />
-              </Hints>
-            </View1>
-            <View2 />
-          </Layout>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
-    </Node>
-    <Node ToolID="186">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="54" y="54" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Passwords />
-          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`</File>
-          <FormatSpecificOptions>
-            <FirstRowData>False</FirstRowData>
-            <ImportLine>1</ImportLine>
-          </FormatSpecificOptions>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>Missing - Voided Transactions.xlsx
-Table=`Voided Transactions$`</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
-        <MetaInfo connection="Output">
-          <RecordInfo>
-            <Field name="Transaction Date" size="255" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="V_String" />
-            <Field name="Type" size="255" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="V_String" />
-            <Field name="Status" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="MID" size="255" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="V_String" />
-            <Field name="Vet ID" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="Trace ID" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="Amount" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="Order #" size="255" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="V_String" />
-            <Field name="F9" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="Note" size="255" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="V_String" />
-            <Field name="F11" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="F12" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="F13" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="F14" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="F15" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="F16" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="F17" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="F18" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="F19" source="File: D:\Users\jkoelker\Desktop\Missing - Voided Transactions.xlsx|||`Voided Transactions$`" type="Double" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
-    </Node>
     <Node ToolID="183">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="2970" y="162" width="112.7585" height="19" />
+        <Position x="2742" y="162" width="154" height="190" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <Caption>Container 183</Caption>
           <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="True" />
-          <Folded value="True" />
+          <Disabled value="False" />
+          <Folded value="False" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -1217,7 +1165,7 @@ Table=`Voided Transactions$`</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="182">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="2995" y="206" />
+            <Position x="2767" y="206" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1243,6 +1191,9 @@ Table=`Voided Transactions$`</DefaultAnnotationText>
 Table=stl.stl_voided_transactions</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
         </Node>
@@ -1380,7 +1331,7 @@ Table=stl.stl_voided_transactions</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="84" Connection="Output" />
-      <Destination ToolID="184" Connection="Input" />
+      <Destination ToolID="89" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="89" Connection="Output" />
@@ -1391,24 +1342,16 @@ Table=stl.stl_voided_transactions</DefaultAnnotationText>
       <Destination ToolID="182" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="177" Connection="Output" />
+      <Destination ToolID="62" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="178" Connection="Output" />
       <Destination ToolID="68" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="181" Connection="Output" />
       <Destination ToolID="178" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="184" Connection="Output" />
-      <Destination ToolID="89" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="184" Connection="Output" />
-      <Destination ToolID="185" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="186" Connection="Output" />
-      <Destination ToolID="62" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
@@ -1429,7 +1372,7 @@ Table=stl.stl_voided_transactions</DefaultAnnotationText>
     <LayoutType>Horizontal</LayoutType>
     <MetaInfo>
       <NameIsFileName value="True" />
-      <Name>Load_Voided_Transactions</Name>
+      <Name>Voided_Transactions_Upload</Name>
       <Description />
       <RootToolName />
       <ToolVersion />
