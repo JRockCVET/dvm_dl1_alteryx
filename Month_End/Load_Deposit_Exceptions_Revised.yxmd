@@ -1,0 +1,574 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="11.3">
+  <Nodes>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1290" y="186" width="66.86784" height="19" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Load</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="53">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="1315" y="230" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:prod_edw_odbc|||stl.vbs_deposit_exceptions</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <FormatSpecificOptions>
+                <DistStyle>Even</DistStyle>
+                <SortStyle>None</SortStyle>
+                <TransactionMessages>False</TransactionMessages>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <OutputOption>Append</OutputOption>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:prod_edw_odbc
+Table=stl.vbs_deposit_exceptions</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="-3.814697E-06" y="81.9995" width="1218" height="635.0005" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Preparation</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="65.99998" y="270" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <CachedCosmeticName />
+              <File RecordLimit="" FileFormat="23">aka:prod_edw_odbc|||Select o.merchant_number, o.relationship_type_id, o.report_model_id, o.location_fk, o.practice_id, o.merchant_code, o.ship_date, o.report_month, o.report_year, 'Old' As source From edw.stl.stl_orders o Where o.report_model_id = 4 And o.report_month_id &gt; 201710 And o.order_report_status &lt;&gt; 4</File>
+              <FormatSpecificOptions>
+                <PreSQL />
+                <NoProgress>True</NoProgress>
+                <CacheData>False</CacheData>
+                <TableStyle>Quoted</TableStyle>
+                <ReadUncommitted>False</ReadUncommitted>
+                <PostSQL />
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:prod_edw_odbc
+Table=Select o.merchant_number, o.relationship_type_id, o.report_model_id, o.location_fk, o.practice_id, o.merchant_code, o.ship_date, o.report_month, o.report_year, 'Old' As source From edw.stl.stl_orders o Where o.report_model_id = 4 And o.report_month_id &gt; 201710 And o.order_report_status &lt;&gt; 4</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="merchant_number" source="File: aka:prod_edw_odbc|||Select o.merchant_number, o.relationship_type_id, o.report_model_id, o.location_fk, o.practice_id, o.merchant_code, o.ship_date, o.report_month, o.report_year, 'Old' As source From edw.stl.stl_orders o Where o.report_model_id = 4 And o.report_month_id &gt; 201710 And o.order_report_status &lt;&gt; 4" type="Int64" />
+                <Field name="relationship_type_id" source="File: aka:prod_edw_odbc|||Select o.merchant_number, o.relationship_type_id, o.report_model_id, o.location_fk, o.practice_id, o.merchant_code, o.ship_date, o.report_month, o.report_year, 'Old' As source From edw.stl.stl_orders o Where o.report_model_id = 4 And o.report_month_id &gt; 201710 And o.order_report_status &lt;&gt; 4" type="Int32" />
+                <Field name="report_model_id" source="File: aka:prod_edw_odbc|||Select o.merchant_number, o.relationship_type_id, o.report_model_id, o.location_fk, o.practice_id, o.merchant_code, o.ship_date, o.report_month, o.report_year, 'Old' As source From edw.stl.stl_orders o Where o.report_model_id = 4 And o.report_month_id &gt; 201710 And o.order_report_status &lt;&gt; 4" type="Int32" />
+                <Field name="location_fk" size="100" source="File: aka:prod_edw_odbc|||Select o.merchant_number, o.relationship_type_id, o.report_model_id, o.location_fk, o.practice_id, o.merchant_code, o.ship_date, o.report_month, o.report_year, 'Old' As source From edw.stl.stl_orders o Where o.report_model_id = 4 And o.report_month_id &gt; 201710 And o.order_report_status &lt;&gt; 4" type="V_WString" />
+                <Field name="practice_id" source="File: aka:prod_edw_odbc|||Select o.merchant_number, o.relationship_type_id, o.report_model_id, o.location_fk, o.practice_id, o.merchant_code, o.ship_date, o.report_month, o.report_year, 'Old' As source From edw.stl.stl_orders o Where o.report_model_id = 4 And o.report_month_id &gt; 201710 And o.order_report_status &lt;&gt; 4" type="Int32" />
+                <Field name="merchant_code" size="50" source="File: aka:prod_edw_odbc|||Select o.merchant_number, o.relationship_type_id, o.report_model_id, o.location_fk, o.practice_id, o.merchant_code, o.ship_date, o.report_month, o.report_year, 'Old' As source From edw.stl.stl_orders o Where o.report_model_id = 4 And o.report_month_id &gt; 201710 And o.order_report_status &lt;&gt; 4" type="V_WString" />
+                <Field name="ship_date" source="File: aka:prod_edw_odbc|||Select o.merchant_number, o.relationship_type_id, o.report_model_id, o.location_fk, o.practice_id, o.merchant_code, o.ship_date, o.report_month, o.report_year, 'Old' As source From edw.stl.stl_orders o Where o.report_model_id = 4 And o.report_month_id &gt; 201710 And o.order_report_status &lt;&gt; 4" type="DateTime" />
+                <Field name="report_month" source="File: aka:prod_edw_odbc|||Select o.merchant_number, o.relationship_type_id, o.report_model_id, o.location_fk, o.practice_id, o.merchant_code, o.ship_date, o.report_month, o.report_year, 'Old' As source From edw.stl.stl_orders o Where o.report_model_id = 4 And o.report_month_id &gt; 201710 And o.order_report_status &lt;&gt; 4" type="Int32" />
+                <Field name="report_year" source="File: aka:prod_edw_odbc|||Select o.merchant_number, o.relationship_type_id, o.report_model_id, o.location_fk, o.practice_id, o.merchant_code, o.ship_date, o.report_month, o.report_year, 'Old' As source From edw.stl.stl_orders o Where o.report_model_id = 4 And o.report_month_id &gt; 201710 And o.order_report_status &lt;&gt; 4" type="Int32" />
+                <Field name="source" size="3" source="File: aka:prod_edw_odbc|||Select o.merchant_number, o.relationship_type_id, o.report_model_id, o.location_fk, o.practice_id, o.merchant_code, o.ship_date, o.report_month, o.report_year, 'Old' As source From edw.stl.stl_orders o Where o.report_model_id = 4 And o.report_month_id &gt; 201710 And o.order_report_status &lt;&gt; 4" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="43">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="162" y="270" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="report_month_id" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="52">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="25" y="125.9995" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Deposit_Exceptions.xlsx|||`Sheet1$`</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Deposit_Exceptions.xlsx
+Table=`Sheet1$`</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="merchant_number" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Deposit_Exceptions.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="report_month" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Deposit_Exceptions.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="report_year" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Deposit_Exceptions.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="deposit_exception_amount" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Deposit_Exceptions.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="exception_note" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Deposit_Exceptions.xlsx|||`Sheet1$`" type="V_String" />
+                <Field name="batch_id" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Deposit_Exceptions.xlsx|||`Sheet1$`" type="Double" />
+                <Field name="batch_date" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Deposit_Exceptions.xlsx|||`Sheet1$`" type="Date" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="57">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="150" y="126" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="&quot;New&quot;" field="source" size="5" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText><![CDATA[source = "New"
+]]></DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="69">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+            <Position x="378.0002" y="209.9999" />
+          </GuiSettings>
+          <Properties>
+            <Configuration joinByRecordPos="False">
+              <JoinInfo connection="Left">
+                <Field field="merchant_number" />
+              </JoinInfo>
+              <JoinInfo connection="Right">
+                <Field field="merchant_number" />
+              </JoinInfo>
+              <SelectConfiguration>
+                <Configuration outputConnection="Join">
+                  <OrderChanged value="False" />
+                  <CommaDecimal value="False" />
+                  <SelectFields>
+                    <SelectField field="Right_merchant_number" selected="True" rename="Right_merchant_number" />
+                    <SelectField field="Right_report_month" selected="True" rename="Right_report_month" />
+                    <SelectField field="Right_report_year" selected="True" rename="Right_report_year" />
+                    <SelectField field="Right_source" selected="True" rename="Right_source" />
+                    <SelectField field="*Unknown" selected="True" />
+                  </SelectFields>
+                </Configuration>
+              </SelectConfiguration>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+        </Node>
+        <Node ToolID="70">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="246" y="125.9999" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="merchant_number" selected="True" type="Int64" size="8" />
+                <SelectField field="report_month" selected="True" type="Int32" size="4" />
+                <SelectField field="report_year" selected="True" type="Int32" size="4" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="71">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="462.0001" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="merchant_number" action="GroupBy" rename="merchant_number" />
+                <SummarizeField field="report_month" action="GroupBy" rename="report_month" />
+                <SummarizeField field="report_year" action="GroupBy" rename="report_year" />
+                <SummarizeField field="deposit_exception_amount" action="GroupBy" rename="deposit_exception_amount" />
+                <SummarizeField field="exception_note" action="GroupBy" rename="exception_note" />
+                <SummarizeField field="batch_id" action="GroupBy" rename="batch_id" />
+                <SummarizeField field="batch_date" action="GroupBy" rename="batch_date" />
+                <SummarizeField field="source" action="GroupBy" rename="source" />
+                <SummarizeField field="relationship_type_id" action="GroupBy" rename="relationship_type_id" />
+                <SummarizeField field="report_model_id" action="GroupBy" rename="report_model_id" />
+                <SummarizeField field="location_fk" action="GroupBy" rename="location_fk" />
+                <SummarizeField field="practice_id" action="GroupBy" rename="practice_id" />
+                <SummarizeField field="merchant_code" action="GroupBy" rename="merchant_code" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="75">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+            <Position x="558" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SortInfo locale="0">
+                <Field field="merchant_number" order="Ascending" />
+                <Field field="merchant_code" order="Ascending" />
+              </SortInfo>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>merchant_number - Ascending
+merchant_code - Ascending</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+        </Node>
+        <Node ToolID="76">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="750" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>merchant_number</UpdateField_Name>
+              <CreateField_Name>Merchant_Code_Flag</CreateField_Name>
+              <CreateField_Type>Int16</CreateField_Type>
+              <CreateField_Size>2</CreateField_Size>
+              <OtherRows>Empty</OtherRows>
+              <NumRows value="1" />
+              <Expression>if [Flag_It] = 0 then 1
+else
+(if [Flag_It] = 1 and [merchant_code] = "4-4-10-FIRST_DATA"
+then 1
+else
+0
+endif)
+endif</Expression>
+              <GroupByFields />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>if [Flag_It] = 0 then 1
+else
+(if [Flag_It] = 1 and [merchant_...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="77">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+            <Position x="654" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UpdateField value="False" />
+              <UpdateField_Name>merchant_number</UpdateField_Name>
+              <CreateField_Name>Flag_It</CreateField_Name>
+              <CreateField_Type>Int16</CreateField_Type>
+              <CreateField_Size>2</CreateField_Size>
+              <OtherRows>Empty</OtherRows>
+              <NumRows value="1" />
+              <Expression>if [merchant_number] != [Row-1:merchant_number] and
+[deposit_exception_amount] != [Row-1:deposit_exception_amount]
+and [merchant_number] != [Row+1:merchant_number] and
+[deposit_exception_amount] != [Row+1:deposit_exception_amount]
+then 0
+else 1
+endif</Expression>
+              <GroupByFields />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>if [merchant_number] != [Row-1:merchant_number] and
+[deposit_...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+        </Node>
+        <Node ToolID="78">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="846" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Field>Merchant_Code_Flag</Field>
+                <Operator>=</Operator>
+                <Operands>
+                  <Operand>1</Operand>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[Merchant_Code_Flag] = 1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="79">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1134" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="transaction_type" selected="True" />
+                <SelectField field="exception_report_status" selected="True" />
+                <SelectField field="batch_id" selected="True" />
+                <SelectField field="batch_date" selected="True" />
+                <SelectField field="location_fk" selected="True" />
+                <SelectField field="practice_id" selected="True" />
+                <SelectField field="merchant_number" selected="True" />
+                <SelectField field="relationship_type_id" selected="True" />
+                <SelectField field="report_month_id" selected="True" type="Int32" size="4" />
+                <SelectField field="report_month" selected="True" />
+                <SelectField field="report_year" selected="True" />
+                <SelectField field="deposit_exception_amount" selected="True" type="FixedDecimal" size="19.6" />
+                <SelectField field="exception_id" selected="True" />
+                <SelectField field="exception_note" selected="True" size="128" />
+                <SelectField field="source_system_id" selected="True" size="10" />
+                <SelectField field="source_system_row_id" selected="False" size="20" />
+                <SelectField field="process_code" selected="True" />
+                <SelectField field="event_id" selected="True" size="50" />
+                <SelectField field="merchant_code" selected="True" />
+                <SelectField field="source" selected="False" />
+                <SelectField field="report_model_id" selected="False" />
+                <SelectField field="Flag_It" selected="False" />
+                <SelectField field="Merchant_Code_Flag" selected="False" />
+                <SelectField field="report_month_conversion" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="80">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="1038" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="if [report_month] &lt;= 10&#xA;then (&quot;0&quot; + &#xA;ToString([report_month]))&#xA;else ToString([report_month])&#xA;endif" field="report_month_conversion" size="50" type="V_WString" />
+                <FormulaField expression="ToString([report_year])&#xA;+ &#xA;[report_month_conversion]" field="report_month_id" size="20" type="V_WString" />
+                <FormulaField expression="1" field="transaction_type" size="2" type="Int16" />
+                <FormulaField expression="2" field="exception_report_status" size="2" type="Int16" />
+                <FormulaField expression="6" field="exception_id" size="2" type="Int16" />
+                <FormulaField expression="&quot;Alteryx&quot;" field="source_system_id" size="30" type="V_WString" />
+                <FormulaField expression="&quot;AX&quot;" field="event_id" size="10" type="V_WString" />
+                <FormulaField expression="&quot;Alteryx&quot;" field="process_code" size="100" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>report_month_conversion = if [report_month] &lt;= 10
+then ("0" + 
+ToString([report_...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="81">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="942" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="if [report_month] &lt;= 10&#xA;then (&quot;0&quot; + &#xA;ToString([report_month]))&#xA;else ToString([report_month])&#xA;endif" field="report_month_conversion" size="50" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>report_month_conversion = if [report_month] &lt;= 10
+then ("0" + 
+ToString([report_...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="43" Connection="Output" />
+      <Destination ToolID="69" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="70" Connection="Output" />
+      <Destination ToolID="69" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="57" Connection="Output" />
+      <Destination ToolID="70" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="69" Connection="Join" />
+      <Destination ToolID="71" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="71" Connection="Output" />
+      <Destination ToolID="75" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="75" Connection="Output" />
+      <Destination ToolID="77" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="76" Connection="Output" />
+      <Destination ToolID="78" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="77" Connection="Output" />
+      <Destination ToolID="76" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="78" Connection="True" />
+      <Destination ToolID="81" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="79" Connection="Output" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="80" Connection="Output" />
+      <Destination ToolID="79" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="81" Connection="Output" />
+      <Destination ToolID="80" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Load_Deposit_Exceptions_Revised</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="False" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
