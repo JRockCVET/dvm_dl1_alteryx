@@ -3,11 +3,11 @@
   <Nodes>
     <Node ToolID="87">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="2886" y="690" />
+        <Position x="2886" y="698" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_4272_6d623b71418f44eab7bd06f81b542118_\Engine_10396_c112cb63e5d64fe18d2082ae3e5327b8_.yxdb</TempFile>
+          <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_11280_062bcf14769b495fa682cba92fba333e_\Engine_2196_5aac62e50c6345a698716f9fc8b3ffa6_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -31,7 +31,7 @@
     </Node>
     <Node ToolID="97">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1771" y="2194" />
+        <Position x="1771" y="2202" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -50,7 +50,7 @@
     </Node>
     <Node ToolID="86">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="2694" y="642" />
+        <Position x="2694" y="650" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -69,7 +69,7 @@
     </Node>
     <Node ToolID="85">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1770" y="1770" />
+        <Position x="1770" y="1778" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -88,7 +88,7 @@
     </Node>
     <Node ToolID="75">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1782" y="1410" />
+        <Position x="1782" y="1418" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -107,7 +107,7 @@
     </Node>
     <Node ToolID="57">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1759" y="814" />
+        <Position x="1759" y="822" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -126,7 +126,7 @@
     </Node>
     <Node ToolID="17">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="1807" y="190" />
+        <Position x="1807" y="198" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -145,7 +145,7 @@
     </Node>
     <Node ToolID="119">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="2826" y="654" />
+        <Position x="2826" y="662" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -167,7 +167,7 @@
     </Node>
     <Node ToolID="120">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="3054" y="594" width="271" height="175" />
+        <Position x="3054" y="602" width="276" height="175" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -185,7 +185,7 @@
       <ChildNodes>
         <Node ToolID="117">
           <GuiSettings Plugin="LockInGui.LockInStreamIn.LockInStreamIn">
-            <Position x="3079" y="638" />
+            <Position x="3079" y="646" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -204,16 +204,18 @@ Temporary Table</DefaultAnnotationText>
         </Node>
         <Node ToolID="118">
           <GuiSettings Plugin="LockInGui.LockInOutput.LockInOutput">
-            <Position x="3199" y="650" />
+            <Position x="3199" y="658" />
           </GuiSettings>
           <Properties>
             <Configuration>
-              <Table>stl_dev.st_daily_summary</Table>
-              <CreateMode>Overwrite</CreateMode>
+              <Table>stl.stl_daily_summary</Table>
+              <CreateMode>Delete</CreateMode>
+              <AppendMode>ByName</AppendMode>
+              <AppendFieldMode>All</AppendFieldMode>
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
-              <DefaultAnnotationText>Table=stl_dev.st_daily_summary</DefaultAnnotationText>
+              <DefaultAnnotationText>Table=stl.stl_daily_summary</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
           </Properties>
@@ -223,7 +225,7 @@ Temporary Table</DefaultAnnotationText>
     </Node>
     <Node ToolID="104">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="53.99997" y="2058" width="721" height="518" />
+        <Position x="54" y="2066" width="721" height="518" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -241,7 +243,7 @@ Temporary Table</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="88">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="78.99997" y="2114" />
+            <Position x="79" y="2122" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -276,7 +278,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
         </Node>
         <Node ToolID="89">
           <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-            <Position x="355" y="2114" />
+            <Position x="355" y="2122" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -295,7 +297,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
         </Node>
         <Node ToolID="90">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="175" y="2114" />
+            <Position x="175" y="2122" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -314,7 +316,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
         </Node>
         <Node ToolID="91">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="259" y="2114" />
+            <Position x="259" y="2122" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -335,7 +337,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
         </Node>
         <Node ToolID="92">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="487" y="2114" />
+            <Position x="487" y="2122" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -358,7 +360,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
         </Node>
         <Node ToolID="93">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="595" y="2102" />
+            <Position x="595" y="2110" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -377,7 +379,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
         </Node>
         <Node ToolID="94">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="691" y="2102" />
+            <Position x="691" y="2110" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -397,7 +399,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
         </Node>
         <Node ToolID="95">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="595" y="2222" />
+            <Position x="595" y="2230" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -416,7 +418,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
         </Node>
         <Node ToolID="96">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="691" y="2222" />
+            <Position x="691" y="2230" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -440,7 +442,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
     </Node>
     <Node ToolID="103">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="54" y="1674" width="721.0001" height="383" />
+        <Position x="54" y="1682" width="721.0001" height="383" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -458,7 +460,7 @@ Table=Select ri.stl_recon_issues_pk, ri.recon_issue_status, ri.recon_issue_code 
       <ChildNodes>
         <Node ToolID="76">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="79.00002" y="1730" />
+            <Position x="79.00005" y="1738" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -493,7 +495,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_erro
         </Node>
         <Node ToolID="77">
           <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-            <Position x="355" y="1730" />
+            <Position x="355" y="1738" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -512,7 +514,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_erro
         </Node>
         <Node ToolID="78">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="175" y="1730" />
+            <Position x="175" y="1738" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -531,7 +533,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_erro
         </Node>
         <Node ToolID="79">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="259" y="1730" />
+            <Position x="259" y="1738" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -552,7 +554,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_erro
         </Node>
         <Node ToolID="80">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="487" y="1730" />
+            <Position x="487" y="1738" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -575,7 +577,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_erro
         </Node>
         <Node ToolID="81">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="595" y="1718" />
+            <Position x="595" y="1726" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -594,7 +596,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_erro
         </Node>
         <Node ToolID="82">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="691" y="1718" />
+            <Position x="691" y="1726" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -614,7 +616,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_erro
         </Node>
         <Node ToolID="83">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="595" y="1838" />
+            <Position x="595" y="1846" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -633,7 +635,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_erro
         </Node>
         <Node ToolID="84">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="691.0001" y="1838" />
+            <Position x="691.0001" y="1846" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -657,7 +659,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_erro
     </Node>
     <Node ToolID="102">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="53.99999" y="1266" width="721.0001" height="398" />
+        <Position x="54" y="1274" width="721.0001" height="398" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -675,7 +677,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_erro
       <ChildNodes>
         <Node ToolID="66">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="78.99999" y="1322" />
+            <Position x="79.00002" y="1330" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -710,7 +712,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
         </Node>
         <Node ToolID="67">
           <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-            <Position x="355" y="1322" />
+            <Position x="355" y="1330" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -729,7 +731,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
         </Node>
         <Node ToolID="68">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="175" y="1322" />
+            <Position x="175" y="1330" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -748,7 +750,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
         </Node>
         <Node ToolID="69">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="259" y="1322" />
+            <Position x="259" y="1330" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -769,7 +771,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
         </Node>
         <Node ToolID="70">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="487" y="1322" />
+            <Position x="487" y="1330" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -792,7 +794,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
         </Node>
         <Node ToolID="71">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="595.0001" y="1310" />
+            <Position x="595.0001" y="1318" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -811,7 +813,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
         </Node>
         <Node ToolID="72">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="691" y="1310" />
+            <Position x="691" y="1318" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -831,7 +833,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
         </Node>
         <Node ToolID="73">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="595" y="1430" />
+            <Position x="595" y="1438" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -850,7 +852,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
         </Node>
         <Node ToolID="74">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="691.0001" y="1430" />
+            <Position x="691.0001" y="1438" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -874,7 +876,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
     </Node>
     <Node ToolID="101">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="53.99999" y="666" width="1152" height="605" />
+        <Position x="54" y="674" width="1152" height="605" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -892,7 +894,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
       <ChildNodes>
         <Node ToolID="43">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="78.99999" y="854" />
+            <Position x="79.00002" y="862" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -914,9 +916,6 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
 Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
             <MetaInfo connection="Output">
               <RecordInfo>
                 <Field name="stl_practices_pk" source="File: aka:prod_edw_odbc|||Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl.stl_error_codes.description, p.report_month, p.report_year From edw.stl.stl_practices p Inner Join edw.stl.stl_error_codes On p.error_code = edw.stl.stl_error_codes.error_code Where p.practice_report_status &lt;&gt; 6" type="Int64" />
@@ -932,7 +931,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="44">
           <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-            <Position x="355" y="854" />
+            <Position x="355" y="862" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -951,7 +950,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="46">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="535" y="722" />
+            <Position x="535" y="730" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -974,7 +973,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="47">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="523" y="842" />
+            <Position x="523" y="850" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -997,7 +996,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="48">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="511" y="1034" />
+            <Position x="511" y="1042" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1020,7 +1019,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="49">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="175.0001" y="854.0001" />
+            <Position x="175.0001" y="862.0001" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1039,7 +1038,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="50">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="259.0001" y="853.9999" />
+            <Position x="259.0001" y="861.9999" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1063,7 +1062,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="51">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="943" y="710" />
+            <Position x="943" y="718" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1082,7 +1081,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="52">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="631" y="830" />
+            <Position x="631" y="838" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1101,7 +1100,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="53">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="619.0001" y="1022" />
+            <Position x="619.0001" y="1030" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1120,7 +1119,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="54">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="715" y="1022" />
+            <Position x="715" y="1030" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1145,7 +1144,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="55">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="727" y="830" />
+            <Position x="727" y="838" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1170,7 +1169,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="56">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="1027" y="710" />
+            <Position x="1027" y="718" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1195,7 +1194,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="63">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="643" y="710" />
+            <Position x="643" y="718" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1214,7 +1213,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="64">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="751" y="710" />
+            <Position x="751" y="718" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1233,7 +1232,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="65">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="835" y="710" />
+            <Position x="835" y="718" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1256,7 +1255,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="98">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="523" y="950" />
+            <Position x="523" y="958" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1275,7 +1274,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="99">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="619" y="950" />
+            <Position x="619" y="958" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1300,11 +1299,11 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="112">
           <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="1122" y="714" />
+            <Position x="1122" y="722" />
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_4272_6d623b71418f44eab7bd06f81b542118_\Engine_10396_3f38496530974212a7b84a90783bdad9_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_11280_062bcf14769b495fa682cba92fba333e_\Engine_2196_50490069a66e4deaaf44b498c8b98d52_.yxdb</TempFile>
               <Layout>
                 <View1>
                   <Hints>
@@ -1323,11 +1322,11 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="113">
           <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="822" y="834" />
+            <Position x="822" y="842" />
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_4272_6d623b71418f44eab7bd06f81b542118_\Engine_10396_9105f41311ad4a36ba1e80d992eb44bb_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_11280_062bcf14769b495fa682cba92fba333e_\Engine_2196_cbc41b0a40024a20981c98bd51d63b7a_.yxdb</TempFile>
               <Layout>
                 <View1>
                   <Hints>
@@ -1346,11 +1345,11 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="114">
           <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="714" y="954" />
+            <Position x="714" y="962" />
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_4272_6d623b71418f44eab7bd06f81b542118_\Engine_10396_2843dbdcb1f046588f348176e4210f7d_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_11280_062bcf14769b495fa682cba92fba333e_\Engine_2196_8945104ae91c47ecbc80d797518fbe7f_.yxdb</TempFile>
               <Layout>
                 <View1>
                   <Hints>
@@ -1369,11 +1368,11 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
         </Node>
         <Node ToolID="115">
           <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="810" y="1026" />
+            <Position x="810" y="1034" />
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_4272_6d623b71418f44eab7bd06f81b542118_\Engine_10396_678563ad698e4b449ca8e1275beba93f_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_11280_062bcf14769b495fa682cba92fba333e_\Engine_2196_026a175875f4455c93f81957636db9d4_.yxdb</TempFile>
               <Layout>
                 <View1>
                   <Hints>
@@ -1394,7 +1393,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
     </Node>
     <Node ToolID="100">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="54" y="45.99999" width="1236" height="619" />
+        <Position x="54" y="54" width="1236" height="619" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1412,7 +1411,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
       <ChildNodes>
         <Node ToolID="3">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="79.00002" y="166" />
+            <Position x="79.00005" y="174" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1434,9 +1433,6 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
 Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o.error_code, edw.stl.stl_error_codes.description From edw.stl.stl_orders o Inner Join edw.stl.stl_error_codes On o.error_code = edw.stl.stl_error_codes.error_code Where o.order_report_status &lt;&gt; 6</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
             <MetaInfo connection="Output">
               <RecordInfo>
                 <Field name="stl_orders_pk" source="File: aka:prod_edw_odbc|||Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o.error_code, edw.stl.stl_error_codes.description From edw.stl.stl_orders o Inner Join edw.stl.stl_error_codes On o.error_code = edw.stl.stl_error_codes.error_code Where o.order_report_status &lt;&gt; 6" type="Int64" />
@@ -1452,7 +1448,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="4">
           <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
-            <Position x="318" y="174" />
+            <Position x="318" y="182" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1471,7 +1467,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="6">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="558" y="114" />
+            <Position x="558" y="122" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1494,7 +1490,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="7">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="534" y="270" />
+            <Position x="534" y="278" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1517,7 +1513,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="8">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="534" y="510" />
+            <Position x="534" y="518" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1540,7 +1536,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="9">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="151" y="165.9999" />
+            <Position x="151" y="173.9999" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1562,7 +1558,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="10">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="234" y="162" />
+            <Position x="234" y="170" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1584,7 +1580,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="12">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="690" y="194" />
+            <Position x="690" y="202" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1603,7 +1599,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="15">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="786" y="194" />
+            <Position x="786" y="202" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1626,7 +1622,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="19">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="630" y="390" />
+            <Position x="630" y="398" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1645,7 +1641,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="20">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="726" y="390" />
+            <Position x="726" y="398" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1664,7 +1660,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="24">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="918" y="390" />
+            <Position x="918" y="398" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1683,7 +1679,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="25">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="1014" y="390" />
+            <Position x="1014" y="398" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1706,7 +1702,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="27">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="798" y="89.99999" />
+            <Position x="798" y="98" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1725,7 +1721,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="28">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="918" y="90.00002" />
+            <Position x="918" y="98.00003" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1750,7 +1746,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="30">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="726" y="534" />
+            <Position x="726" y="542" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1769,7 +1765,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="31">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="822" y="534" />
+            <Position x="822" y="542" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1794,7 +1790,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="32">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1110" y="486" />
+            <Position x="1110" y="494" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1813,7 +1809,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="33">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="1206" y="486" />
+            <Position x="1206" y="494" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1838,7 +1834,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="34">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="882" y="290" />
+            <Position x="882" y="298" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1857,7 +1853,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="35">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="978" y="290" />
+            <Position x="978" y="298" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1882,7 +1878,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="36">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="690" y="102" />
+            <Position x="690" y="110" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1902,7 +1898,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="37">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="786" y="290" />
+            <Position x="786" y="298" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1922,7 +1918,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="38">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="1014" y="486" />
+            <Position x="1014" y="494" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1942,7 +1938,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="39">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="630" y="546" />
+            <Position x="630" y="554" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1962,7 +1958,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="42">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="822" y="390" />
+            <Position x="822" y="398" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2386,7 +2382,7 @@ year...</DefaultAnnotationText>
     <LayoutType>Horizontal</LayoutType>
     <MetaInfo>
       <NameIsFileName value="True" />
-      <Name>Daily_Error_Summary_JK</Name>
+      <Name>Daily_Error_Summary</Name>
       <Description />
       <RootToolName />
       <ToolVersion />
