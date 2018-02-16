@@ -3,11 +3,11 @@
   <Nodes>
     <Node ToolID="87">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="2886" y="698" />
+        <Position x="2526" y="690" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_11280_062bcf14769b495fa682cba92fba333e_\Engine_2196_5aac62e50c6345a698716f9fc8b3ffa6_.yxdb</TempFile>
+          <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_630b7ad7ef84434395d1ee582b288397_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -50,7 +50,7 @@
     </Node>
     <Node ToolID="86">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="2694" y="650" />
+        <Position x="2418" y="654" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -145,7 +145,7 @@
     </Node>
     <Node ToolID="119">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="2826" y="662" />
+        <Position x="2586" y="654" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -165,16 +165,118 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
+    <Node ToolID="121">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="2670" y="654" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>report_status</Field>
+            <Operator>!=</Operator>
+            <Operands>
+              <Operand>4</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[report_status] != 4</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="122">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="2766" y="642" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Field>report_status</Field>
+            <Operator>!=</Operator>
+            <Operands>
+              <Operand>7</Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[report_status] != 7</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="123">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="2838" y="606" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_31962231e6ad4e04961d79a056e98c46_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="124">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1878" y="1422" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_38852133d4c149278277770586b094c5_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
     <Node ToolID="120">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="3054" y="602" width="276" height="175" />
+        <Position x="3054" y="602" width="112.7585" height="19" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <Caption>Container 120</Caption>
           <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="False" />
-          <Folded value="False" />
+          <Disabled value="True" />
+          <Folded value="True" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -659,7 +761,7 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_erro
     </Node>
     <Node ToolID="102">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="54" y="1274" width="721.0001" height="398" />
+        <Position x="54" y="1286" width="816" height="416" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -677,13 +779,13 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_erro
       <ChildNodes>
         <Node ToolID="66">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="79.00002" y="1330" />
+            <Position x="79" y="1330" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <Passwords />
               <CachedCosmeticName />
-              <File RecordLimit="" FileFormat="23">aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code</File>
+              <File RecordLimit="" FileFormat="23">aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description, i.report_month, i.report_year From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code</File>
               <FormatSpecificOptions>
                 <PreSQL />
                 <NoProgress>True</NoProgress>
@@ -696,15 +798,20 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_erro
             <Annotation DisplayMode="0">
               <Name />
               <DefaultAnnotationText>aka:prod_edw_odbc
-Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code</DefaultAnnotationText>
+Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description, i.report_month, i.report_year From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
             <MetaInfo connection="Output">
               <RecordInfo>
-                <Field name="stl_items_pk" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code" type="Int64" />
-                <Field name="error_code" size="2000" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code" type="V_WString" />
-                <Field name="item_report_status" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code" type="Int32" />
-                <Field name="description" size="256" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code" type="V_WString" />
+                <Field name="stl_items_pk" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description, i.report_month, i.report_year From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code" type="Int64" />
+                <Field name="error_code" size="2000" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description, i.report_month, i.report_year From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code" type="V_WString" />
+                <Field name="item_report_status" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description, i.report_month, i.report_year From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code" type="Int32" />
+                <Field name="description" size="256" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description, i.report_month, i.report_year From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code" type="V_WString" />
+                <Field name="report_month" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description, i.report_month, i.report_year From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code" type="Int16" />
+                <Field name="report_year" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description, i.report_month, i.report_year From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code" type="Int16" />
               </RecordInfo>
             </MetaInfo>
           </Properties>
@@ -757,7 +864,10 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
               <OrderChanged value="False" />
               <CommaDecimal value="False" />
               <SelectFields>
+                <SelectField field="item_report_status" selected="True" rename="report_status" />
                 <SelectField field="description" selected="True" rename="error_code_description" />
+                <SelectField field="report_month" selected="True" rename="month" />
+                <SelectField field="report_year" selected="True" rename="year" />
                 <SelectField field="*Unknown" selected="True" />
               </SelectFields>
             </Configuration>
@@ -777,7 +887,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
             <Configuration>
               <Mode>Simple</Mode>
               <Simple>
-                <Field>item_report_status</Field>
+                <Field>report_status</Field>
                 <Operator>=</Operator>
                 <Operands>
                   <Operand>3</Operand>
@@ -786,50 +896,11 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
-              <DefaultAnnotationText>[item_report_status] = 3</DefaultAnnotationText>
+              <DefaultAnnotationText>[report_status] = 3</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-        </Node>
-        <Node ToolID="71">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="595.0001" y="1318" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <FormulaFields>
-                <FormulaField expression="'item_status_3'" field="requirement" size="1073741823" type="V_WString" />
-              </FormulaFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText><![CDATA[requirement = 'item_status_3'
-]]></DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-        </Node>
-        <Node ToolID="72">
-          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="691" y="1318" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <SummarizeFields>
-                <SummarizeField field="source_table" action="GroupBy" rename="source_table" />
-                <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
-                <SummarizeField field="stl_practices_pk" action="Count" rename="Count" />
-              </SummarizeFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
         </Node>
         <Node ToolID="73">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
@@ -861,6 +932,9 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
                 <SummarizeField field="requirement" action="GroupBy" rename="requirement" />
                 <SummarizeField field="error_code" action="GroupBy" rename="error_code" />
                 <SummarizeField field="error_code_description" action="GroupBy" rename="error_code_description" />
+                <SummarizeField field="report_status" action="GroupBy" rename="report_status" />
+                <SummarizeField field="year" action="GroupBy" rename="year" />
+                <SummarizeField field="month" action="GroupBy" rename="month" />
                 <SummarizeField field="stl_practices_pk" action="Count" rename="Count" />
               </SummarizeFields>
             </Configuration>
@@ -871,6 +945,34 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
             </Annotation>
           </Properties>
           <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="130">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="786" y="1434" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_2b45f13f411c465fa06fd2b550b63f58_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
         </Node>
       </ChildNodes>
     </Node>
@@ -1303,13 +1405,18 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_11280_062bcf14769b495fa682cba92fba333e_\Engine_2196_50490069a66e4deaaf44b498c8b98d52_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_ecace3679d604a7790b8dc3ee3328bde_.yxdb</TempFile>
+              <TempFileDataProfiling />
               <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
                 <View1>
+                  <DefaultTab>Profile</DefaultTab>
                   <Hints>
                     <Table />
                   </Hints>
                 </View1>
+                <View2 />
               </Layout>
             </Configuration>
             <Annotation DisplayMode="0">
@@ -1326,13 +1433,18 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_11280_062bcf14769b495fa682cba92fba333e_\Engine_2196_cbc41b0a40024a20981c98bd51d63b7a_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_6180637798c04b7d91c6782282a1dc7c_.yxdb</TempFile>
+              <TempFileDataProfiling />
               <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
                 <View1>
+                  <DefaultTab>Profile</DefaultTab>
                   <Hints>
                     <Table />
                   </Hints>
                 </View1>
+                <View2 />
               </Layout>
             </Configuration>
             <Annotation DisplayMode="0">
@@ -1349,13 +1461,18 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_11280_062bcf14769b495fa682cba92fba333e_\Engine_2196_8945104ae91c47ecbc80d797518fbe7f_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_8951860f53f04e86ac9b08ed466ff5a2_.yxdb</TempFile>
+              <TempFileDataProfiling />
               <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
                 <View1>
+                  <DefaultTab>Profile</DefaultTab>
                   <Hints>
                     <Table />
                   </Hints>
                 </View1>
+                <View2 />
               </Layout>
             </Configuration>
             <Annotation DisplayMode="0">
@@ -1372,13 +1489,18 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_11280_062bcf14769b495fa682cba92fba333e_\Engine_2196_026a175875f4455c93f81957636db9d4_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_186e398836d74b91b2f4608986774be2_.yxdb</TempFile>
+              <TempFileDataProfiling />
               <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
                 <View1>
+                  <DefaultTab>Profile</DefaultTab>
                   <Hints>
                     <Table />
                   </Hints>
                 </View1>
+                <View2 />
               </Layout>
             </Configuration>
             <Annotation DisplayMode="0">
@@ -1393,7 +1515,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
     </Node>
     <Node ToolID="100">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="54" y="54" width="1236" height="619" />
+        <Position x="54" y="53.99997" width="1332" height="619" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1411,7 +1533,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
       <ChildNodes>
         <Node ToolID="3">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="79.00005" y="174" />
+            <Position x="79.00014" y="174" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1513,7 +1635,7 @@ Table=Select o.stl_orders_pk, o.order_report_status, o.order_date, o.order_id, o
         </Node>
         <Node ToolID="8">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="534" y="518" />
+            <Position x="534.0001" y="518" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1558,7 +1680,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="10">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="234" y="170" />
+            <Position x="233.9999" y="170.0001" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1702,7 +1824,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="27">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="798" y="98" />
+            <Position x="798" y="97.99997" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1721,7 +1843,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="28">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="918" y="98.00003" />
+            <Position x="918" y="98" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1979,6 +2101,134 @@ year...</DefaultAnnotationText>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
         </Node>
+        <Node ToolID="125">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1014" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_6bf00288442947149dcb2bd515461e19_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="126">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="882" y="198" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_e55ebde2ac3d4cc085ca1a68a30d7edb_.yxdb</TempFile>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="127">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1074" y="294" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_fabd39fe708c479790316ab361528249_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="128">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1110" y="402" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_5e8be56f099146d6a2346dc0edb61ca8_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="129">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1302" y="498" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_f1fc7349e13047e39daac26a43e091a2_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
       </ChildNodes>
     </Node>
   </Nodes>
@@ -2012,8 +2262,24 @@ year...</DefaultAnnotationText>
       <Destination ToolID="119" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="75" Connection="Output" />
+      <Destination ToolID="124" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="119" Connection="Output" />
+      <Destination ToolID="121" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="121" Connection="True" />
+      <Destination ToolID="122" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="122" Connection="True" />
       <Destination ToolID="117" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="122" Connection="True" />
+      <Destination ToolID="123" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="117" Connection="Output" />
@@ -2117,27 +2383,19 @@ year...</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="70" Connection="True" />
-      <Destination ToolID="71" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="70" Connection="True" />
       <Destination ToolID="73" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="71" Connection="Output" />
-      <Destination ToolID="72" Connection="Input" />
-    </Connection>
-    <Connection name="#1" Wireless="True">
-      <Origin ToolID="72" Connection="Output" />
-      <Destination ToolID="75" Connection="Input" />
+      <Origin ToolID="73" Connection="Output" />
+      <Destination ToolID="74" Connection="Input" />
     </Connection>
     <Connection name="#2" Wireless="True">
       <Origin ToolID="74" Connection="Output" />
       <Destination ToolID="75" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="73" Connection="Output" />
-      <Destination ToolID="74" Connection="Input" />
+      <Origin ToolID="74" Connection="Output" />
+      <Destination ToolID="130" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="43" Connection="Output" />
@@ -2312,6 +2570,10 @@ year...</DefaultAnnotationText>
       <Destination ToolID="17" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="126" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="19" Connection="Output" />
       <Destination ToolID="20" Connection="Input" />
     </Connection>
@@ -2328,8 +2590,16 @@ year...</DefaultAnnotationText>
       <Destination ToolID="38" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="128" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="27" Connection="Output" />
       <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Output" />
+      <Destination ToolID="125" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="30" Connection="Output" />
@@ -2340,8 +2610,16 @@ year...</DefaultAnnotationText>
       <Destination ToolID="33" Connection="Input" />
     </Connection>
     <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="129" Connection="Input" />
+    </Connection>
+    <Connection>
       <Origin ToolID="34" Connection="Output" />
       <Destination ToolID="35" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="35" Connection="Output" />
+      <Destination ToolID="127" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="36" Connection="True" />

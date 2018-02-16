@@ -7,7 +7,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_630b7ad7ef84434395d1ee582b288397_.yxdb</TempFile>
+          <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_6412_79b094a789c844c58dfc6223176524a3_\Engine_15216_1d323973cadf4f2894b5e0de3eed8626_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -217,7 +217,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_31962231e6ad4e04961d79a056e98c46_.yxdb</TempFile>
+          <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_6412_79b094a789c844c58dfc6223176524a3_\Engine_15216_d7818da436c44cc68dd6be7de884b458_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -245,7 +245,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_38852133d4c149278277770586b094c5_.yxdb</TempFile>
+          <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_6412_79b094a789c844c58dfc6223176524a3_\Engine_15216_c6db797972b94065b51bcda142ac0d6a_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -267,9 +267,59 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
     </Node>
+    <Node ToolID="132">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="2969" y="562" width="156" height="190" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 132</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="131">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="2994" y="606" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">odbc:DSN=prod_edw_odbc|||edw.stl.stl_daily_summary</File>
+              <Passwords />
+              <FormatSpecificOptions>
+                <DistStyle>Even</DistStyle>
+                <SortStyle>None</SortStyle>
+                <TransactionMessages>False</TransactionMessages>
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <OutputOption>Delete</OutputOption>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DSN=prod_edw_odbc
+Table=edw.stl.stl_daily_summary</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
     <Node ToolID="120">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="3054" y="602" width="112.7585" height="19" />
+        <Position x="3138" y="378" width="112.7585" height="19" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -287,7 +337,7 @@
       <ChildNodes>
         <Node ToolID="117">
           <GuiSettings Plugin="LockInGui.LockInStreamIn.LockInStreamIn">
-            <Position x="3079" y="646" />
+            <Position x="3163" y="422" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -306,7 +356,7 @@ Temporary Table</DefaultAnnotationText>
         </Node>
         <Node ToolID="118">
           <GuiSettings Plugin="LockInGui.LockInOutput.LockInOutput">
-            <Position x="3199" y="658" />
+            <Position x="3283" y="434" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -801,9 +851,6 @@ Table=Select t.stl_taxes_pk, t.tax_report_status, t.error_code, edw.stl.stl_erro
 Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description, i.report_month, i.report_year From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
             <MetaInfo connection="Output">
               <RecordInfo>
                 <Field name="stl_items_pk" source="File: aka:prod_edw_odbc|||Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_error_codes.description, i.report_month, i.report_year From edw.stl.stl_items i Inner Join edw.stl.stl_error_codes On i.error_code = edw.stl.stl_error_codes.error_code" type="Int64" />
@@ -952,7 +999,7 @@ Table=Select i.stl_items_pk, i.error_code, i.item_report_status, edw.stl.stl_err
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_2b45f13f411c465fa06fd2b550b63f58_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_6412_79b094a789c844c58dfc6223176524a3_\Engine_15216_eb4e1ac62dcd4a77a4afd6776e21a674_.yxdb</TempFile>
               <TempFileDataProfiling />
               <Layout>
                 <ViewMode>Single</ViewMode>
@@ -1405,7 +1452,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_ecace3679d604a7790b8dc3ee3328bde_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_6412_79b094a789c844c58dfc6223176524a3_\Engine_15216_1a58c622450e42dfb270c295d62874f3_.yxdb</TempFile>
               <TempFileDataProfiling />
               <Layout>
                 <ViewMode>Single</ViewMode>
@@ -1433,7 +1480,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_6180637798c04b7d91c6782282a1dc7c_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_6412_79b094a789c844c58dfc6223176524a3_\Engine_15216_55ec7d05bc6345968a616d83840a8c27_.yxdb</TempFile>
               <TempFileDataProfiling />
               <Layout>
                 <ViewMode>Single</ViewMode>
@@ -1461,7 +1508,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_8951860f53f04e86ac9b08ed466ff5a2_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_6412_79b094a789c844c58dfc6223176524a3_\Engine_15216_99d4edcc3a554067bc3a7bca907e1875_.yxdb</TempFile>
               <TempFileDataProfiling />
               <Layout>
                 <ViewMode>Single</ViewMode>
@@ -1489,7 +1536,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_186e398836d74b91b2f4608986774be2_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_6412_79b094a789c844c58dfc6223176524a3_\Engine_15216_67ee9ce123594deb99453082bb75ed9a_.yxdb</TempFile>
               <TempFileDataProfiling />
               <Layout>
                 <ViewMode>Single</ViewMode>
@@ -1515,7 +1562,7 @@ Table=Select p.stl_practices_pk, p.error_code, p.practice_report_status, edw.stl
     </Node>
     <Node ToolID="100">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="54" y="53.99997" width="1332" height="619" />
+        <Position x="54" y="54" width="1332" height="619" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1824,7 +1871,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="27">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="798" y="97.99997" />
+            <Position x="798" y="98" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1843,7 +1890,7 @@ year...</DefaultAnnotationText>
         </Node>
         <Node ToolID="28">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="918" y="98" />
+            <Position x="918" y="98.00003" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -2107,7 +2154,7 @@ year...</DefaultAnnotationText>
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_6bf00288442947149dcb2bd515461e19_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_6412_79b094a789c844c58dfc6223176524a3_\Engine_15216_bcbad1651128402899519985c11fcbb2_.yxdb</TempFile>
               <TempFileDataProfiling />
               <Layout>
                 <ViewMode>Single</ViewMode>
@@ -2135,7 +2182,7 @@ year...</DefaultAnnotationText>
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_e55ebde2ac3d4cc085ca1a68a30d7edb_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_6412_79b094a789c844c58dfc6223176524a3_\Engine_15216_eed55f3c6c964680ac82d155f6e3591c_.yxdb</TempFile>
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
@@ -2151,7 +2198,7 @@ year...</DefaultAnnotationText>
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_fabd39fe708c479790316ab361528249_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_6412_79b094a789c844c58dfc6223176524a3_\Engine_15216_76555f31958b4a1681a4c641c8375f86_.yxdb</TempFile>
               <TempFileDataProfiling />
               <Layout>
                 <ViewMode>Single</ViewMode>
@@ -2179,7 +2226,7 @@ year...</DefaultAnnotationText>
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_5e8be56f099146d6a2346dc0edb61ca8_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_6412_79b094a789c844c58dfc6223176524a3_\Engine_15216_11c4adf32644497085c1b762872727e6_.yxdb</TempFile>
               <TempFileDataProfiling />
               <Layout>
                 <ViewMode>Single</ViewMode>
@@ -2207,7 +2254,7 @@ year...</DefaultAnnotationText>
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_12000_b251d17bb7d1457c83dee2139eeb3883_\Engine_10440_f1fc7349e13047e39daac26a43e091a2_.yxdb</TempFile>
+              <TempFile>D:\Users\jkoelker\AppData\Local\Temp\1\Engine_6412_79b094a789c844c58dfc6223176524a3_\Engine_15216_71fd6933986a4f0a96a0928c4f9b8311_.yxdb</TempFile>
               <TempFileDataProfiling />
               <Layout>
                 <ViewMode>Single</ViewMode>
@@ -2275,11 +2322,11 @@ year...</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="122" Connection="True" />
-      <Destination ToolID="117" Connection="Input" />
+      <Destination ToolID="123" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="122" Connection="True" />
-      <Destination ToolID="123" Connection="Input" />
+      <Destination ToolID="131" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="117" Connection="Output" />
