@@ -109,7 +109,7 @@ else (if [f...</DefaultAnnotationText>
             <SelectField field="new_title" selected="False" />
             <SelectField field="flag_it" selected="True" />
             <SelectField field="ingredients" selected="False" />
-            <SelectField field="temp_NDC" selected="True" />
+            <SelectField field="temp_NDC" selected="True" type="V_String" size="21" />
             <SelectField field="dosage_uom" selected="True" />
             <SelectField field="sku_facility_key" selected="True" />
             <SelectField field="product_group" selected="False" />
@@ -464,7 +464,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_6296_9c5f9fa0811d4cf399dd5e3d360b594f_\Engine_8528_94dc9f0859ae48f2b3ee358059054618_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_1732_3b993ee5fcbb4a0693f664db02856d7f_\Engine_8528_8fa9e55154084a8896bc9eae4d1388fc_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>

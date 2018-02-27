@@ -154,7 +154,7 @@ else (if [f...</DefaultAnnotationText>
           <FormulaFields>
             <FormulaField expression="&quot;mL&quot;" field="per_uom" size="20" type="V_WString" />
             <FormulaField expression="2" field="header_code_type" size="2" type="Int16" />
-            <FormulaField expression="&quot;Millilitres&quot;" field="description" size="20" type="V_WString" />
+            <FormulaField expression="&quot;Milliliters&quot;" field="description" size="20" type="V_WString" />
             <FormulaField expression="Contains([product_title], &quot;25mg&quot;,1)" field="25" size="2" type="Int16" />
             <FormulaField expression="Contains([product_title], &quot;50mg&quot;,1)" field="50" size="2" type="Int16" />
             <FormulaField expression="Contains([product_title], &quot;100mg&quot;,1)" field="100" size="2" type="Int16" />
@@ -164,7 +164,7 @@ else (if [f...</DefaultAnnotationText>
           <Name />
           <DefaultAnnotationText>per_uom = "mL"
 header_code_type = 2
-description = "Millilitres"
+description = "Milliliters"
 25 = Contains([p...</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
