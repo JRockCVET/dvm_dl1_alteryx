@@ -3,14 +3,14 @@
   <Nodes>
     <Node ToolID="54">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="1290" y="186" width="66.86784" height="19" />
+        <Position x="1344" y="158.0005" width="156" height="189.9995" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <Caption>Load</Caption>
           <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="True" />
-          <Folded value="True" />
+          <Disabled value="False" />
+          <Folded value="False" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -21,7 +21,7 @@
       <ChildNodes>
         <Node ToolID="53">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-            <Position x="1315" y="230" />
+            <Position x="1369" y="202.0005" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -54,7 +54,7 @@ Table=stl.vbs_deposit_exceptions</DefaultAnnotationText>
     </Node>
     <Node ToolID="33">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="-3.814697E-06" y="81.9995" width="1218" height="635.0005" />
+        <Position x="54" y="54" width="1218" height="635" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -72,7 +72,7 @@ Table=stl.vbs_deposit_exceptions</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="19">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="65.99998" y="270" />
+            <Position x="120" y="242.0005" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -94,9 +94,6 @@ Table=stl.vbs_deposit_exceptions</DefaultAnnotationText>
 Table=Select o.merchant_number, o.relationship_type_id, o.report_model_id, o.location_fk, o.practice_id, o.merchant_code, o.ship_date, o.report_month, o.report_year, 'Old' As source From edw.stl.stl_orders o Where o.report_model_id = 4 And o.report_month_id &gt; 201710 And o.order_report_status &lt;&gt; 4</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
             <MetaInfo connection="Output">
               <RecordInfo>
                 <Field name="merchant_number" source="File: aka:prod_edw_odbc|||Select o.merchant_number, o.relationship_type_id, o.report_model_id, o.location_fk, o.practice_id, o.merchant_code, o.ship_date, o.report_month, o.report_year, 'Old' As source From edw.stl.stl_orders o Where o.report_model_id = 4 And o.report_month_id &gt; 201710 And o.order_report_status &lt;&gt; 4" type="Int64" />
@@ -116,7 +113,7 @@ Table=Select o.merchant_number, o.relationship_type_id, o.report_model_id, o.loc
         </Node>
         <Node ToolID="43">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="162" y="270" />
+            <Position x="216" y="242.0005" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -137,7 +134,7 @@ Table=Select o.merchant_number, o.relationship_type_id, o.report_model_id, o.loc
         </Node>
         <Node ToolID="52">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="25" y="125.9995" />
+            <Position x="79" y="98" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -170,7 +167,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
         </Node>
         <Node ToolID="57">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="150" y="126" />
+            <Position x="204" y="98.0005" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -189,7 +186,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
         </Node>
         <Node ToolID="69">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-            <Position x="378.0002" y="209.9999" />
+            <Position x="432.0002" y="182.0004" />
           </GuiSettings>
           <Properties>
             <Configuration joinByRecordPos="False">
@@ -223,7 +220,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
         </Node>
         <Node ToolID="70">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="246" y="125.9999" />
+            <Position x="300" y="98.0004" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -246,7 +243,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
         </Node>
         <Node ToolID="71">
           <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-            <Position x="462.0001" y="210" />
+            <Position x="516.0001" y="182.0005" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -276,7 +273,7 @@ Table=`Sheet1$`</DefaultAnnotationText>
         </Node>
         <Node ToolID="75">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-            <Position x="558" y="210" />
+            <Position x="612" y="182.0005" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -296,7 +293,7 @@ merchant_code - Ascending</DefaultAnnotationText>
         </Node>
         <Node ToolID="76">
           <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-            <Position x="750" y="210" />
+            <Position x="804" y="182.0005" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -329,7 +326,7 @@ else
         </Node>
         <Node ToolID="77">
           <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-            <Position x="654" y="210" />
+            <Position x="708" y="182.0005" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -360,7 +357,7 @@ endif</Expression>
         </Node>
         <Node ToolID="78">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="846" y="210" />
+            <Position x="900" y="182.0005" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -383,7 +380,7 @@ endif</Expression>
         </Node>
         <Node ToolID="79">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1134" y="198" />
+            <Position x="1188" y="170.0005" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -427,7 +424,7 @@ endif</Expression>
         </Node>
         <Node ToolID="80">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1038" y="198" />
+            <Position x="1092" y="170.0005" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -454,7 +451,7 @@ ToString([report_...</DefaultAnnotationText>
         </Node>
         <Node ToolID="81">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="942" y="198" />
+            <Position x="996" y="170.0005" />
           </GuiSettings>
           <Properties>
             <Configuration>
