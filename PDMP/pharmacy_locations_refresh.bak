@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<AlteryxDocument yxmdVer="11.3">
+<AlteryxDocument yxmdVer="11.7">
   <Nodes>
     <Node ToolID="2">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
@@ -159,7 +159,7 @@ Is Not Null;
         <Configuration>
           <FormulaFields>
             <FormulaField expression="[first_name] + &quot; &quot; + [last_name]" field="primary_pharmacist" size="64" type="String" />
-            <FormulaField expression="if [facility_id] = 5 then &quot;FV6752439&quot; else&#xA;(if [facility_id] = 6 then &quot;FV5761071&quot; else&#xA;(if [facility_id] = 7 then &quot;BR6562183&quot; else&#xA;&quot;FV2327559&quot;&#xA;endif)&#xA;endif)&#xA;endif&#xA;" field="DEA" size="45" type="V_WString" />
+            <FormulaField expression="if [facility_id] = 5 then &quot;FV6752439&quot; else&#xA;(if [facility_id] = 6 then &quot;FV5761071&quot; else&#xA;(if [facility_id] = 7 then &quot;FR7329990&quot; else&#xA;&quot;FV2327559&quot;&#xA;endif)&#xA;endif)&#xA;endif&#xA;" field="DEA" size="45" type="V_WString" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
@@ -177,7 +177,7 @@ DEA = if [facility_id] = 5...</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_880_76cc898dba674a928436689e1caa58c8_\Engine_5308_02fc5433fd9c4f85bd210d7f8c0eec86_.yxdb</TempFile>
+          <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_10316_c0364c4e051f419a91298b125481d760_\Engine_7932_afc3e9b3a1b64dbebc81726b81fd7a76_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>

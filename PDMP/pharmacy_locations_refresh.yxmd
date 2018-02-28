@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<AlteryxDocument yxmdVer="11.3">
+<AlteryxDocument yxmdVer="11.7">
   <Nodes>
     <Node ToolID="2">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
@@ -201,14 +201,14 @@ DEA = if [facility_id] = 5...</DefaultAnnotationText>
     </Node>
     <Node ToolID="16">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="666" y="138" width="138.4538" height="19" />
+        <Position x="666" y="138" width="154" height="205" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <Caption>Delete and Append</Caption>
           <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="True" />
-          <Folded value="True" />
+          <Disabled value="False" />
+          <Folded value="False" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
