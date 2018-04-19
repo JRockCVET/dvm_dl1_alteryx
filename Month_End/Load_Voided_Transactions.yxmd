@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="37">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="162" y="330" />
+        <Position x="174" y="374" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -47,6 +47,7 @@ Table=Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transacti
             <Field name="order_voided_datetime" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="DateTime" />
             <Field name="merchant_number" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int64" />
             <Field name="report_month_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int32" />
+            <Field name="refund_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -54,7 +55,7 @@ Table=Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transacti
     </Node>
     <Node ToolID="44">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="306" y="330" />
+        <Position x="318" y="374" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -69,6 +70,7 @@ Table=Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transacti
             <SelectField field="merchant_id" selected="True" />
             <SelectField field="amount" selected="True" />
             <SelectField field="bank_note" selected="True" />
+            <SelectField field="refund_id" selected="True" />
             <SelectField field="Source" selected="True" />
             <SelectField field="*Unknown" selected="False" />
           </SelectFields>
@@ -83,14 +85,14 @@ Table=Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transacti
     </Node>
     <Node ToolID="45">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="318" y="174" />
+        <Position x="330" y="218" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <OrderChanged value="True" />
           <CommaDecimal value="False" />
           <SelectFields>
-            <SelectField field="Order #" selected="True" rename="order_id" type="Int32" size="4" />
+            <SelectField field="Order #" selected="True" rename="order_id" type="V_WString" size="30" />
             <SelectField field="Transaction Date" selected="True" rename="transaction_date" />
             <SelectField field="Type" selected="False" />
             <SelectField field="Status" selected="False" />
@@ -112,7 +114,7 @@ Table=Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transacti
             <SelectField field="order_id" selected="False" />
             <SelectField field="transaction_date" selected="False" />
             <SelectField field="Source" selected="True" />
-            <SelectField field="stl_voided_transactions_pk" selected="True" />
+            <SelectField field="stl_voided_transactions_pk" selected="False" />
             <SelectField field="*Unknown" selected="False" />
           </SelectFields>
         </Configuration>
@@ -126,7 +128,7 @@ Table=Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transacti
     </Node>
     <Node ToolID="46">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-        <Position x="786" y="138" />
+        <Position x="798" y="182" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -142,19 +144,21 @@ Table=Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transacti
                 <Field name="merchant_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int64" column="6" />
                 <Field name="amount" scale="2" size="21" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="FixedDecimal" column="7" />
                 <Field name="bank_note" size="500" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="V_WString" column="8" />
-                <Field name="Source" size="1073741823" source="Formula: 'Old'" type="V_WString" column="9" />
+                <Field name="refund_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int32" column="9" />
+                <Field name="Source" size="1073741823" source="Formula: 'Old'" type="V_WString" column="10" />
               </RecordInfo>
             </MetaInfo>
             <MetaInfo name="#1">
               <RecordInfo>
-                <Field name="stl_voided_transactions_pk" source="Formula: Null()" type="Int64" column="1" />
-                <Field name="order_id" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Load_Voided_Transactions.xlsx|||`Voided Transactions$`" type="Int32" column="2" />
+                <Field name="order_id" source="File: aka:prod_edw_odbc|||Select o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 4 And isnull(o.report_month_id,to_char(isnull(o.cc_capture_date,o.ship_date),'YYYYMM')::int) &gt; 201802 and not o.report_model_id in (1,3)&#xA;group by o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type" type="Int64" column="2" />
                 <Field name="transaction_date" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Load_Voided_Transactions.xlsx|||`Voided Transactions$`" type="V_String" column="5" />
                 <Field name="merchant_id" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Load_Voided_Transactions.xlsx|||`Voided Transactions$`" type="Int64" column="6" />
                 <Field name="Amount" scale="6" size="19" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Load_Voided_Transactions.xlsx|||`Voided Transactions$`" type="FixedDecimal" column="7" />
                 <Field name="bank_note" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Load_Voided_Transactions.xlsx|||`Voided Transactions$`" type="V_String" column="8" />
-                <Field name="Source" size="1073741823" source="Formula: 'New'" type="V_WString" column="9" />
-                <Field name="Trace ID" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Load_Voided_Transactions.xlsx|||`Voided Transactions$`" type="Double" column="10" />
+                <Field name="refund_id" source="File: aka:prod_edw_odbc|||Select o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 4 And isnull(o.report_month_id,to_char(isnull(o.cc_capture_date,o.ship_date),'YYYYMM')::int) &gt; 201802 and not o.report_model_id in (1,3)&#xA;group by o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type" type="Int32" column="9" />
+                <Field name="Source" size="1073741823" source="Formula: 'New'" type="V_WString" column="10" />
+                <Field name="payment_transaction_type" source="File: aka:prod_edw_odbc|||Select o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 4 And isnull(o.report_month_id,to_char(isnull(o.cc_capture_date,o.ship_date),'YYYYMM')::int) &gt; 201802 and not o.report_model_id in (1,3)&#xA;group by o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type" type="Int32" column="11" />
+                <Field name="Trace ID" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Load_Voided_Transactions.xlsx|||`Voided Transactions$`" type="Double" column="12" />
               </RecordInfo>
             </MetaInfo>
           </MultiMetaInfo>
@@ -173,7 +177,7 @@ Table=Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transacti
     </Node>
     <Node ToolID="62">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="246" y="174" />
+        <Position x="258" y="218" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -194,7 +198,7 @@ stl_voided_transactions_pk = Null()
     </Node>
     <Node ToolID="63">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="234" y="330" />
+        <Position x="246" y="374" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -213,7 +217,7 @@ stl_voided_transactions_pk = Null()
     </Node>
     <Node ToolID="67">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="846" y="138" />
+        <Position x="858" y="182" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -233,7 +237,7 @@ stl_voided_transactions_pk = Null()
     </Node>
     <Node ToolID="186">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="162" y="174" />
+        <Position x="174" y="218" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -265,7 +269,7 @@ Table=`Voided Transactions$`</DefaultAnnotationText>
             <Field name="F11" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Load_Voided_Transactions.xlsx|||`Voided Transactions$`" type="Double" />
             <Field name="F12" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Load_Voided_Transactions.xlsx|||`Voided Transactions$`" type="Double" />
             <Field name="F13" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Load_Voided_Transactions.xlsx|||`Voided Transactions$`" type="Double" />
-            <Field name="F14" size="255" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Load_Voided_Transactions.xlsx|||`Voided Transactions$`" type="V_String" />
+            <Field name="F14" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Load_Voided_Transactions.xlsx|||`Voided Transactions$`" type="Double" />
             <Field name="F15" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Load_Voided_Transactions.xlsx|||`Voided Transactions$`" type="Double" />
             <Field name="F16" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Load_Voided_Transactions.xlsx|||`Voided Transactions$`" type="Double" />
             <Field name="F17" source="File: C:\alteryx\alteryx_workflows\dvm_dl1_alteryx\Month_End\Load_Voided_Transactions.xlsx|||`Voided Transactions$`" type="Double" />
@@ -278,13 +282,14 @@ Table=`Voided Transactions$`</DefaultAnnotationText>
     </Node>
     <Node ToolID="188">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-        <Position x="42" y="114" />
+        <Position x="54" y="162" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <Passwords />
           <CachedCosmeticName />
-          <File RecordLimit="" FileFormat="23">aka:prod_edw_odbc|||Select o.order_id, o.vfc_reference_id From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 4 And o.ship_date &gt; '2018-01-01'</File>
+          <File RecordLimit="" FileFormat="23">aka:prod_edw_odbc|||Select o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 4 And isnull(o.report_month_id,to_char(isnull(o.cc_capture_date,o.ship_date),'YYYYMM')::int) &gt; 201802 and not o.report_model_id in (1,3)
+group by o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type</File>
           <FormatSpecificOptions>
             <PreSQL />
             <NoProgress>True</NoProgress>
@@ -297,7 +302,8 @@ Table=`Voided Transactions$`</DefaultAnnotationText>
         <Annotation DisplayMode="0">
           <Name />
           <DefaultAnnotationText>aka:prod_edw_odbc
-Table=Select o.order_id, o.vfc_reference_id From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 4 And o.ship_date &gt; '2018-01-01'</DefaultAnnotationText>
+Table=Select o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 4 And isnull(o.report_month_id,to_char(isnull(o.cc_capture_date,o.ship_date),'YYYYMM')::int) &gt; 201802 and not o.report_model_id in (1,3)
+group by o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
         <Dependencies>
@@ -305,8 +311,10 @@ Table=Select o.order_id, o.vfc_reference_id From edw.stl.stl_orders o Where o.or
         </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="order_id" source="File: aka:prod_edw_odbc|||Select o.order_id, o.vfc_reference_id From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 4 And o.ship_date &gt; '2018-01-01'" type="Int32" />
-            <Field name="vfc_reference_id" size="30" source="File: aka:prod_edw_odbc|||Select o.order_id, o.vfc_reference_id From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 4 And o.ship_date &gt; '2018-01-01'" type="V_WString" />
+            <Field name="order_id" source="File: aka:prod_edw_odbc|||Select o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 4 And isnull(o.report_month_id,to_char(isnull(o.cc_capture_date,o.ship_date),'YYYYMM')::int) &gt; 201802 and not o.report_model_id in (1,3)&#xA;group by o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type" type="Int32" />
+            <Field name="vfc_reference_id" size="30" source="File: aka:prod_edw_odbc|||Select o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 4 And isnull(o.report_month_id,to_char(isnull(o.cc_capture_date,o.ship_date),'YYYYMM')::int) &gt; 201802 and not o.report_model_id in (1,3)&#xA;group by o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type" type="V_WString" />
+            <Field name="refund_id" source="File: aka:prod_edw_odbc|||Select o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 4 And isnull(o.report_month_id,to_char(isnull(o.cc_capture_date,o.ship_date),'YYYYMM')::int) &gt; 201802 and not o.report_model_id in (1,3)&#xA;group by o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type" type="Int32" />
+            <Field name="payment_transaction_type" source="File: aka:prod_edw_odbc|||Select o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type From edw.stl.stl_orders o Where o.order_report_status &lt;&gt; 4 And isnull(o.report_month_id,to_char(isnull(o.cc_capture_date,o.ship_date),'YYYYMM')::int) &gt; 201802 and not o.report_model_id in (1,3)&#xA;group by o.order_id, o.vfc_reference_id, o.refund_id, o.payment_transaction_type" type="Int32" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -314,7 +322,7 @@ Table=Select o.order_id, o.vfc_reference_id From edw.stl.stl_orders o Where o.or
     </Node>
     <Node ToolID="189">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="426" y="126" />
+        <Position x="438" y="170" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -343,36 +351,16 @@ Table=Select o.order_id, o.vfc_reference_id From edw.stl.stl_orders o Where o.or
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
     </Node>
-    <Node ToolID="194">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="150" y="114" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <OrderChanged value="False" />
-          <CommaDecimal value="False" />
-          <SelectFields>
-            <SelectField field="vfc_reference_id" selected="True" type="Int32" size="4" />
-            <SelectField field="*Unknown" selected="True" />
-          </SelectFields>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-    </Node>
     <Node ToolID="195">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="558" y="126" />
+        <Position x="570" y="170" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <OrderChanged value="False" />
           <CommaDecimal value="False" />
           <SelectFields>
+            <SelectField field="order_id" selected="True" type="Int64" size="8" />
             <SelectField field="vfc_reference_id" selected="False" />
             <SelectField field="Right_order_id" selected="False" />
             <SelectField field="*Unknown" selected="True" />
@@ -386,9 +374,29 @@ Table=Select o.order_id, o.vfc_reference_id From edw.stl.stl_orders o Where o.or
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
     </Node>
+    <Node ToolID="196">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="150" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
     <Node ToolID="193">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="929" y="10.00001" width="2652" height="1122" />
+        <Position x="941" y="54.00002" width="2593" height="1122" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -406,7 +414,7 @@ Table=Select o.order_id, o.vfc_reference_id From edw.stl.stl_orders o Where o.or
       <ChildNodes>
         <Node ToolID="61">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-            <Position x="954" y="138.0001" />
+            <Position x="966" y="182.0002" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -428,7 +436,7 @@ Source - Descending</DefaultAnnotationText>
         </Node>
         <Node ToolID="65">
           <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-            <Position x="1026" y="138.0002" />
+            <Position x="1038" y="182.0002" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -454,7 +462,7 @@ ELSE 0 ENDIF</Expression>
         </Node>
         <Node ToolID="68">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="1362" y="138" />
+            <Position x="1374" y="182" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -477,7 +485,7 @@ ELSE 0 ENDIF</Expression>
         </Node>
         <Node ToolID="69">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="1098" y="138.0002" />
+            <Position x="1110" y="182" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -500,7 +508,7 @@ ELSE 0 ENDIF</Expression>
         </Node>
         <Node ToolID="71">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1458" y="138.0001" />
+            <Position x="1470" y="182" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -513,6 +521,8 @@ ELSE 0 ENDIF</Expression>
                 <SelectField field="merchant_id" selected="True" />
                 <SelectField field="Amount" selected="True" />
                 <SelectField field="bank_note" selected="True" />
+                <SelectField field="refund_id" selected="True" />
+                <SelectField field="payment_transaction_type" selected="True" />
                 <SelectField field="Trace ID" selected="True" />
                 <SelectField field="new_id" selected="False" rename="stl_voided_transactions_pk" />
                 <SelectField field="*Unknown" selected="False" />
@@ -528,7 +538,7 @@ ELSE 0 ENDIF</Expression>
         </Node>
         <Node ToolID="76">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="1290" y="282.0001" />
+            <Position x="1302" y="326.0001" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -565,7 +575,7 @@ Table=Select edw.intgn.transaction_header.transaction_header_pk, edw.intgn.trans
         </Node>
         <Node ToolID="80">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1374" y="281.9998" />
+            <Position x="1386" y="325.9997" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -586,7 +596,7 @@ Table=Select edw.intgn.transaction_header.transaction_header_pk, edw.intgn.trans
         </Node>
         <Node ToolID="81">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-            <Position x="1554" y="186.0001" />
+            <Position x="1566" y="230.0001" />
           </GuiSettings>
           <Properties>
             <Configuration joinByRecordPos="False">
@@ -616,12 +626,12 @@ Table=Select edw.intgn.transaction_header.transaction_header_pk, edw.intgn.trans
         </Node>
         <Node ToolID="96">
           <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
-            <Position x="1422" y="473.9999" />
+            <Position x="1434" y="517.9998" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <Passwords />
-              <File RecordLimit="" FileFormat="23">odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1</File>
+              <File RecordLimit="" FileFormat="23">odbc:DSN=prod_edw_odbc|||Select o.practice_id, o.order_date, o.merchant_number, o.relationship_type_id, o.order_id, o.order_report_status, o.payment_gateway_id, o.payment_transaction_type, o.merchant_number As merchant_number1, o.in_practice_payment From edw.stl.stl_orders o Where o.order_date &gt;= '2017-01-01' And o.merchant_number &gt; 0 And o.merchant_number Is Not Null And o.order_report_status &lt;&gt; 4 And o.order_report_status &lt;&gt; 3 And o.order_report_status &lt;&gt; 1 And o.in_practice_payment &lt;&gt; 1</File>
               <FormatSpecificOptions>
                 <PreSQL />
                 <NoProgress>True</NoProgress>
@@ -634,21 +644,21 @@ Table=Select edw.intgn.transaction_header.transaction_header_pk, edw.intgn.trans
             <Annotation DisplayMode="0">
               <Name />
               <DefaultAnnotationText>DSN=prod_edw_odbc
-Table=Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1</DefaultAnnotationText>
+Table=Select o.practice_id, o.order_date, o.merchant_number, o.relationship_type_id, o.order_id, o.order_report_status, o.payment_gateway_id, o.payment_transaction_type, o.merchant_number As merchant_number1, o.in_practice_payment From edw.stl.stl_orders o Where o.order_date &gt;= '2017-01-01' And o.merchant_number &gt; 0 And o.merchant_number Is Not Null And o.order_report_status &lt;&gt; 4 And o.order_report_status &lt;&gt; 3 And o.order_report_status &lt;&gt; 1 And o.in_practice_payment &lt;&gt; 1</DefaultAnnotationText>
               <Left value="False" />
             </Annotation>
             <MetaInfo connection="Output">
               <RecordInfo>
-                <Field name="practice_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1" type="Int32" />
-                <Field name="order_date" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1" type="DateTime" />
-                <Field name="merchant_number" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1" type="Int64" />
-                <Field name="relationship_type_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1" type="Int32" />
-                <Field name="order_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1" type="Int32" />
-                <Field name="order_report_status" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1" type="Int32" />
-                <Field name="payment_gateway_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1" type="Int32" />
-                <Field name="payment_transaction_type" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1" type="Int32" />
-                <Field name="merchant_number1" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1" type="Int64" />
-                <Field name="in_practice_payment" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1" type="Int16" />
+                <Field name="practice_id" source="File: odbc:DSN=prod_edw_odbc|||Select o.practice_id, o.order_date, o.merchant_number, o.relationship_type_id, o.order_id, o.order_report_status, o.payment_gateway_id, o.payment_transaction_type, o.merchant_number As merchant_number1, o.in_practice_payment From edw.stl.stl_orders o Where o.order_date &gt;= '2017-01-01' And o.merchant_number &gt; 0 And o.merchant_number Is Not Null And o.order_report_status &lt;&gt; 4 And o.order_report_status &lt;&gt; 3 And o.order_report_status &lt;&gt; 1 And o.in_practice_payment &lt;&gt; 1" type="Int32" />
+                <Field name="order_date" source="File: odbc:DSN=prod_edw_odbc|||Select o.practice_id, o.order_date, o.merchant_number, o.relationship_type_id, o.order_id, o.order_report_status, o.payment_gateway_id, o.payment_transaction_type, o.merchant_number As merchant_number1, o.in_practice_payment From edw.stl.stl_orders o Where o.order_date &gt;= '2017-01-01' And o.merchant_number &gt; 0 And o.merchant_number Is Not Null And o.order_report_status &lt;&gt; 4 And o.order_report_status &lt;&gt; 3 And o.order_report_status &lt;&gt; 1 And o.in_practice_payment &lt;&gt; 1" type="DateTime" />
+                <Field name="merchant_number" source="File: odbc:DSN=prod_edw_odbc|||Select o.practice_id, o.order_date, o.merchant_number, o.relationship_type_id, o.order_id, o.order_report_status, o.payment_gateway_id, o.payment_transaction_type, o.merchant_number As merchant_number1, o.in_practice_payment From edw.stl.stl_orders o Where o.order_date &gt;= '2017-01-01' And o.merchant_number &gt; 0 And o.merchant_number Is Not Null And o.order_report_status &lt;&gt; 4 And o.order_report_status &lt;&gt; 3 And o.order_report_status &lt;&gt; 1 And o.in_practice_payment &lt;&gt; 1" type="Int64" />
+                <Field name="relationship_type_id" source="File: odbc:DSN=prod_edw_odbc|||Select o.practice_id, o.order_date, o.merchant_number, o.relationship_type_id, o.order_id, o.order_report_status, o.payment_gateway_id, o.payment_transaction_type, o.merchant_number As merchant_number1, o.in_practice_payment From edw.stl.stl_orders o Where o.order_date &gt;= '2017-01-01' And o.merchant_number &gt; 0 And o.merchant_number Is Not Null And o.order_report_status &lt;&gt; 4 And o.order_report_status &lt;&gt; 3 And o.order_report_status &lt;&gt; 1 And o.in_practice_payment &lt;&gt; 1" type="Int32" />
+                <Field name="order_id" source="File: odbc:DSN=prod_edw_odbc|||Select o.practice_id, o.order_date, o.merchant_number, o.relationship_type_id, o.order_id, o.order_report_status, o.payment_gateway_id, o.payment_transaction_type, o.merchant_number As merchant_number1, o.in_practice_payment From edw.stl.stl_orders o Where o.order_date &gt;= '2017-01-01' And o.merchant_number &gt; 0 And o.merchant_number Is Not Null And o.order_report_status &lt;&gt; 4 And o.order_report_status &lt;&gt; 3 And o.order_report_status &lt;&gt; 1 And o.in_practice_payment &lt;&gt; 1" type="Int32" />
+                <Field name="order_report_status" source="File: odbc:DSN=prod_edw_odbc|||Select o.practice_id, o.order_date, o.merchant_number, o.relationship_type_id, o.order_id, o.order_report_status, o.payment_gateway_id, o.payment_transaction_type, o.merchant_number As merchant_number1, o.in_practice_payment From edw.stl.stl_orders o Where o.order_date &gt;= '2017-01-01' And o.merchant_number &gt; 0 And o.merchant_number Is Not Null And o.order_report_status &lt;&gt; 4 And o.order_report_status &lt;&gt; 3 And o.order_report_status &lt;&gt; 1 And o.in_practice_payment &lt;&gt; 1" type="Int32" />
+                <Field name="payment_gateway_id" source="File: odbc:DSN=prod_edw_odbc|||Select o.practice_id, o.order_date, o.merchant_number, o.relationship_type_id, o.order_id, o.order_report_status, o.payment_gateway_id, o.payment_transaction_type, o.merchant_number As merchant_number1, o.in_practice_payment From edw.stl.stl_orders o Where o.order_date &gt;= '2017-01-01' And o.merchant_number &gt; 0 And o.merchant_number Is Not Null And o.order_report_status &lt;&gt; 4 And o.order_report_status &lt;&gt; 3 And o.order_report_status &lt;&gt; 1 And o.in_practice_payment &lt;&gt; 1" type="Int32" />
+                <Field name="payment_transaction_type" source="File: odbc:DSN=prod_edw_odbc|||Select o.practice_id, o.order_date, o.merchant_number, o.relationship_type_id, o.order_id, o.order_report_status, o.payment_gateway_id, o.payment_transaction_type, o.merchant_number As merchant_number1, o.in_practice_payment From edw.stl.stl_orders o Where o.order_date &gt;= '2017-01-01' And o.merchant_number &gt; 0 And o.merchant_number Is Not Null And o.order_report_status &lt;&gt; 4 And o.order_report_status &lt;&gt; 3 And o.order_report_status &lt;&gt; 1 And o.in_practice_payment &lt;&gt; 1" type="Int32" />
+                <Field name="merchant_number1" source="File: odbc:DSN=prod_edw_odbc|||Select o.practice_id, o.order_date, o.merchant_number, o.relationship_type_id, o.order_id, o.order_report_status, o.payment_gateway_id, o.payment_transaction_type, o.merchant_number As merchant_number1, o.in_practice_payment From edw.stl.stl_orders o Where o.order_date &gt;= '2017-01-01' And o.merchant_number &gt; 0 And o.merchant_number Is Not Null And o.order_report_status &lt;&gt; 4 And o.order_report_status &lt;&gt; 3 And o.order_report_status &lt;&gt; 1 And o.in_practice_payment &lt;&gt; 1" type="Int64" />
+                <Field name="in_practice_payment" source="File: odbc:DSN=prod_edw_odbc|||Select o.practice_id, o.order_date, o.merchant_number, o.relationship_type_id, o.order_id, o.order_report_status, o.payment_gateway_id, o.payment_transaction_type, o.merchant_number As merchant_number1, o.in_practice_payment From edw.stl.stl_orders o Where o.order_date &gt;= '2017-01-01' And o.merchant_number &gt; 0 And o.merchant_number Is Not Null And o.order_report_status &lt;&gt; 4 And o.order_report_status &lt;&gt; 3 And o.order_report_status &lt;&gt; 1 And o.in_practice_payment &lt;&gt; 1" type="Int16" />
               </RecordInfo>
             </MetaInfo>
           </Properties>
@@ -656,7 +666,7 @@ Table=Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.
         </Node>
         <Node ToolID="101">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-            <Position x="2226" y="281.9999" />
+            <Position x="2238" y="325.9999" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -676,7 +686,7 @@ order_id - Ascending</DefaultAnnotationText>
         </Node>
         <Node ToolID="111">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1650" y="281.9998" />
+            <Position x="1662" y="325.9998" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -686,6 +696,9 @@ order_id - Ascending</DefaultAnnotationText>
                 <SelectField field="transaction_date" selected="True" rename="order_date" />
                 <SelectField field="merchant_id" selected="False" />
                 <SelectField field="amount" selected="False" />
+                <SelectField field="refund_id" selected="False" />
+                <SelectField field="payment_transaction_type" selected="False" />
+                <SelectField field="Trace ID" selected="False" />
                 <SelectField field="transaction_header_pk" selected="False" />
                 <SelectField field="location_fk" selected="False" />
                 <SelectField field="location_id" selected="True" rename="practice_id" />
@@ -697,7 +710,6 @@ order_id - Ascending</DefaultAnnotationText>
                 <SelectField field="transaction_header_fk" selected="False" />
                 <SelectField field="order_is_voided" selected="False" />
                 <SelectField field="trace_id" selected="False" />
-                <SelectField field="payment_transaction_type" selected="False" />
                 <SelectField field="process_code" selected="False" />
                 <SelectField field="event_id" selected="False" />
                 <SelectField field="*Unknown" selected="True" />
@@ -713,7 +725,7 @@ order_id - Ascending</DefaultAnnotationText>
         </Node>
         <Node ToolID="113">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1530" y="473.9998" />
+            <Position x="1542" y="517.9998" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -732,7 +744,7 @@ order_id - Ascending</DefaultAnnotationText>
         </Node>
         <Node ToolID="115">
           <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-            <Position x="2322" y="282" />
+            <Position x="2334" y="326" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -790,7 +802,7 @@ and
         </Node>
         <Node ToolID="117">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="2130" y="282" />
+            <Position x="2142" y="326" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -803,10 +815,13 @@ and
                 <SelectField field="relationship_type_id" selected="True" />
                 <SelectField field="voided_flag" selected="True" />
                 <SelectField field="merchant_number" selected="True" />
-                <SelectField field="order_report_status" selected="True" />
+                <SelectField field="order_report_status" selected="False" />
                 <SelectField field="payment_gateway_id" selected="True" />
                 <SelectField field="payment_transaction_type" selected="True" />
                 <SelectField field="bank_note" selected="True" />
+                <SelectField field="original_pk" selected="True" />
+                <SelectField field="Trace ID" selected="True" />
+                <SelectField field="refund_id" selected="True" />
                 <SelectField field="*Unknown" selected="True" />
               </SelectFields>
             </Configuration>
@@ -820,7 +835,7 @@ and
         </Node>
         <Node ToolID="143">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
-            <Position x="2034" y="282" />
+            <Position x="2046" y="325.9998" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -830,7 +845,7 @@ and
                   <RecordInfo>
                     <Field name="practice_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1" type="Int32" column="1" />
                     <Field name="order_date" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1" type="DateTime" column="2" />
-                    <Field name="merchant_number" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1" type="Int32" column="3" />
+                    <Field name="merchant_number" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1" type="Int64" column="3" />
                     <Field name="relationship_type_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1" type="Int32" column="4" />
                     <Field name="order_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1" type="Int32" column="5" />
                     <Field name="payment_gateway_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_orders.practice_id, edw.stl.stl_orders.order_date, edw.stl.stl_orders.merchant_number, edw.stl.stl_orders.relationship_type_id, edw.stl.stl_orders.order_id, edw.stl.stl_orders.order_report_status, edw.stl.stl_orders.payment_gateway_id, edw.stl.stl_orders.payment_transaction_type, edw.stl.stl_orders.merchant_number As merchant_number1, edw.stl.stl_orders.in_practice_payment From edw.stl.stl_orders Where edw.stl.stl_orders.order_date &gt;= '2017-01-01' And edw.stl.stl_orders.merchant_number &gt; 0 And edw.stl.stl_orders.merchant_number Is Not Null And edw.stl.stl_orders.order_report_status &lt;&gt; 4 And edw.stl.stl_orders.order_report_status &lt;&gt; 3 And edw.stl.stl_orders.order_report_status &lt;&gt; 1 And edw.stl.stl_orders.in_practice_payment &lt;&gt; 1" type="Int32" column="6" />
@@ -840,14 +855,15 @@ and
                 </MetaInfo>
                 <MetaInfo name="#1">
                   <RecordInfo>
-                    <Field name="practice_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.intgn.transaction_header.transaction_header_pk, edw.intgn.transaction_header.location_fk, edw.intgn.transaction_header.location_id, edw.intgn.transaction_header.source_system_row_id, edw.intgn.transaction_header.practice_relationship_type_name, edw.intgn.transaction_header.practice_payment_gateway_id From edw.intgn.transaction_header" type="Int32" column="1" />
+                    <Field name="practice_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.intgn.transaction_header.transaction_header_pk, edw.intgn.transaction_header.location_fk, edw.intgn.transaction_header.location_id, edw.intgn.transaction_header.source_system_row_id, edw.intgn.transaction_header.practice_relationship_type_name, edw.intgn.transaction_header.practice_payment_gateway_id, edw.intgn.transaction_header.practice_relationship_type_id From edw.intgn.transaction_header" type="Int32" column="1" />
                     <Field name="order_date" source="File: (Multiple Sources)" type="DateTime" column="2" />
-                    <Field name="merchant_number" source="Formula: if [payment_gateway_id]==7&#xA;then 7 &#xA;else&#xA;(if ([relationship_type_id]==1&#xA;or&#xA;[relationship_type_id]==3)&#xA;then 5985551&#xA;else 0&#xA;endif)&#xA;endif&#xA;" type="Int32" column="3" />
-                    <Field name="relationship_type_id" source="Formula: 4" type="Int32" column="4" />
-                    <Field name="order_id" source="File: (Multiple Sources)" type="Int32" column="5" />
-                    <Field name="payment_gateway_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.intgn.transaction_header.transaction_header_pk, edw.intgn.transaction_header.location_fk, edw.intgn.transaction_header.location_id, edw.intgn.transaction_header.source_system_row_id, edw.intgn.transaction_header.practice_relationship_type_name, edw.intgn.transaction_header.practice_payment_gateway_id From edw.intgn.transaction_header" type="Int32" column="6" />
+                    <Field name="merchant_number" source="Formula: if [payment_gateway_id]==7&#xA;then 7 &#xA;else&#xA;(if ([relationship_type_id]==1&#xA;or&#xA;[relationship_type_id]==3)&#xA;then 5985551&#xA;else 0&#xA;endif)&#xA;endif" type="Int32" column="3" />
+                    <Field name="relationship_type_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.intgn.transaction_header.transaction_header_pk, edw.intgn.transaction_header.location_fk, edw.intgn.transaction_header.location_id, edw.intgn.transaction_header.source_system_row_id, edw.intgn.transaction_header.practice_relationship_type_name, edw.intgn.transaction_header.practice_payment_gateway_id, edw.intgn.transaction_header.practice_relationship_type_id From edw.intgn.transaction_header" type="Int32" column="4" />
+                    <Field name="order_id" source="File: (Multiple Sources)" type="Int64" column="5" />
+                    <Field name="payment_gateway_id" source="File: odbc:DSN=prod_edw_odbc|||Select edw.intgn.transaction_header.transaction_header_pk, edw.intgn.transaction_header.location_fk, edw.intgn.transaction_header.location_id, edw.intgn.transaction_header.source_system_row_id, edw.intgn.transaction_header.practice_relationship_type_name, edw.intgn.transaction_header.practice_payment_gateway_id, edw.intgn.transaction_header.practice_relationship_type_id From edw.intgn.transaction_header" type="Int32" column="6" />
                     <Field name="voided_flag" source="Formula: 1" type="Int16" column="8" />
                     <Field name="bank_note" size="500" source="File: (Multiple Sources)" type="V_WString" column="9" />
+                    <Field name="original_pk" source="File: odbc:DSN=prod_edw_odbc|||Select edw.stl.stl_voided_transactions.* From edw.stl.stl_voided_transactions" type="Int64" column="10" />
                   </RecordInfo>
                 </MetaInfo>
               </MultiMetaInfo>
@@ -866,7 +882,7 @@ and
         </Node>
         <Node ToolID="150">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="1746" y="282" />
+            <Position x="1758" y="326" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -889,7 +905,7 @@ else
         </Node>
         <Node ToolID="152">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1614" y="474" />
+            <Position x="1626" y="517.9999" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -920,7 +936,7 @@ else
         </Node>
         <Node ToolID="153">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-            <Position x="2418" y="282" />
+            <Position x="2430" y="326" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -943,7 +959,7 @@ else
         </Node>
         <Node ToolID="155">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-            <Position x="1842" y="281.9999" />
+            <Position x="1854" y="325.9997" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -961,7 +977,7 @@ else
         </Node>
         <Node ToolID="158">
           <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-            <Position x="2514" y="270" />
+            <Position x="2526" y="314" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1010,7 +1026,7 @@ and
         </Node>
         <Node ToolID="161">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="1938" y="282" />
+            <Position x="1950" y="325.9998" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1020,7 +1036,7 @@ and
                 <SelectField field="practice_id" selected="True" type="Int32" size="4" />
                 <SelectField field="order_date" selected="True" />
                 <SelectField field="merchant_number" selected="True" type="Int32" size="4" />
-                <SelectField field="relationship_type_id" selected="True" type="Int32" size="4" />
+                <SelectField field="relationship_type_id" selected="True" />
                 <SelectField field="order_id" selected="True" />
                 <SelectField field="payment_gateway_id" selected="True" />
                 <SelectField field="practice_payment_gateway_id" selected="False" rename="payment_gateway_id" />
@@ -1029,6 +1045,7 @@ and
                 <SelectField field="original_pk" selected="True" />
                 <SelectField field="Trace ID" selected="True" />
                 <SelectField field="stl_voided_transactions_pk" selected="True" />
+                <SelectField field="refund_id" selected="True" />
                 <SelectField field="*Unknown" selected="True" />
               </SelectFields>
             </Configuration>
@@ -1042,7 +1059,7 @@ and
         </Node>
         <Node ToolID="163">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="2610" y="270" />
+            <Position x="2622" y="314" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1063,7 +1080,7 @@ else
         </Node>
         <Node ToolID="164">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="2706" y="270" />
+            <Position x="2718" y="314" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1075,6 +1092,8 @@ else
                 <SelectField field="merchant_number" selected="False" />
                 <SelectField field="payment_gateway_id" selected="False" />
                 <SelectField field="payment_transaction_type" selected="False" />
+                <SelectField field="Trace ID" selected="False" />
+                <SelectField field="refund_id" selected="False" />
                 <SelectField field="MN1" selected="False" />
                 <SelectField field="MN2" selected="False" />
                 <SelectField field="flag" selected="False" />
@@ -1091,7 +1110,7 @@ else
         </Node>
         <Node ToolID="165">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-            <Position x="2802" y="197.9999" />
+            <Position x="2814" y="241.9998" />
           </GuiSettings>
           <Properties>
             <Configuration joinByRecordPos="False">
@@ -1123,14 +1142,13 @@ else
         </Node>
         <Node ToolID="84">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="2994" y="198" />
+            <Position x="3006" y="242" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <FormulaFields>
                 <FormulaField expression="if [relationship_type_id] = 4 then &#xA;&quot;VBS&quot; else &#xA;(if [relationship_type_id] = 2 then &#xA;&quot;IMA&quot; else &#xA;if [relationship_type_id] = 6 then &#xA;&quot;CHASE&quot; else &#xA;&quot;REFERRAL&quot; &#xA;endif &#xA;endif)&#xA;endif" field="bank_abbreviation" size="20" type="V_WString" />
                 <FormulaField expression="1" field="order_is_voided" size="2" type="Int16" />
-                <FormulaField expression="1" field="payment_transaction_type" size="2" type="Int16" />
                 <FormulaField expression="&quot;Alteryx&quot;" field="process_code" size="10" type="V_WString" />
                 <FormulaField expression="Null()" field="event_id" size="10" type="V_WString" />
                 <FormulaField expression="DateTimeNow()" field="order_voided_datetime" size="19" type="DateTime" />
@@ -1148,67 +1166,13 @@ else
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
         </Node>
-        <Node ToolID="89">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="3186" y="198" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OrderChanged value="True" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="original_pk" selected="False" rename="stl_voided_transactions_pk" />
-                <SelectField field="stl_voided_transactions_pk" selected="False" />
-                <SelectField field="bank_abbreviation" selected="True" size="10" />
-                <SelectField field="transaction_header_fk" selected="True" />
-                <SelectField field="order_id" selected="True" type="Int64" size="8" />
-                <SelectField field="order_is_voided" selected="True" />
-                <SelectField field="Trace ID" selected="True" rename="trace_id" />
-                <SelectField field="location_fk" selected="True" />
-                <SelectField field="location_id" selected="True" rename="practice_id" type="Int64" size="8" />
-                <SelectField field="transaction_date" selected="True" />
-                <SelectField field="payment_transaction_type" selected="True" />
-                <SelectField field="merchant_id" selected="True" />
-                <SelectField field="old_merchant_number" selected="True" />
-                <SelectField field="Amount" selected="True" rename="amount" />
-                <SelectField field="bank_note" selected="True" />
-                <SelectField field="process_code" selected="True" size="2000" />
-                <SelectField field="event_id" selected="True" size="50" />
-                <SelectField field="order_voided_datetime" selected="True" />
-                <SelectField field="merged_merchant_numer" selected="True" rename="merchant_number" type="Int64" size="8" />
-                <SelectField field="report_month_id" selected="True" />
-                <SelectField field="source_system_row_id" selected="False" />
-                <SelectField field="order_id_voided" selected="False" rename="order_is_voided" />
-                <SelectField field="practice_relationship_type_name" selected="False" />
-                <SelectField field="practice_payment_gateway_id" selected="False" />
-                <SelectField field="Right_order_id" selected="False" />
-                <SelectField field="order_date" selected="False" />
-                <SelectField field="trace_id" selected="False" size="100" />
-                <SelectField field="practice_id" selected="False" />
-                <SelectField field="transaction_header_pk" selected="False" rename="transaction_header_fk" />
-                <SelectField field="merchant_number" selected="False" />
-                <SelectField field="MID" selected="False" />
-                <SelectField field="Right_bank_note" selected="False" />
-                <SelectField field="practice_relationship_type_id" selected="False" />
-                <SelectField field="relationship_type_id" selected="False" />
-                <SelectField field="*Unknown" selected="True" />
-              </SelectFields>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
-        </Node>
         <Node ToolID="93">
           <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="3438" y="54.00001" />
+            <Position x="3450" y="98.00002" />
           </GuiSettings>
           <Properties>
             <Configuration>
-              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_8492_570091a3275f471db5a5d8cc75ecd3b3_\Engine_7932_64a2004a7e0e4c54a37dea742720fb18_.yxdb</TempFile>
+              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_2912_1b5443c605274e529cd1bdec02ff53cf_\Engine_1984_b5c81bf1d9b24f9e84989ca768852cb0_.yxdb</TempFile>
               <TempFileDataProfiling />
               <Layout>
                 <ViewMode>Single</ViewMode>
@@ -1232,7 +1196,7 @@ else
         </Node>
         <Node ToolID="178">
           <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
-            <Position x="1266" y="138" />
+            <Position x="1278" y="182" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1261,7 +1225,7 @@ else [Row-1:new_id] + 1 endif) endif</Expression>
         </Node>
         <Node ToolID="181">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
-            <Position x="1194" y="137.9998" />
+            <Position x="1206" y="182.0002" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1281,7 +1245,7 @@ stl_voided_transactions_pk - Ascending</DefaultAnnotationText>
         </Node>
         <Node ToolID="184">
           <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-            <Position x="3090" y="198" />
+            <Position x="3102" y="242" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1298,37 +1262,9 @@ stl_voided_transactions_pk - Ascending</DefaultAnnotationText>
           </Properties>
           <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
         </Node>
-        <Node ToolID="185">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-            <Position x="3186" y="78.00005" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <TempFile>D:\Users\croberts\AppData\Local\Temp\1\Engine_8492_570091a3275f471db5a5d8cc75ecd3b3_\Engine_7932_6f360afa1cb1419da8ef810388b3c830_.yxdb</TempFile>
-              <TempFileDataProfiling />
-              <Layout>
-                <ViewMode>Single</ViewMode>
-                <ViewSize value="100" />
-                <View1>
-                  <DefaultTab>Profile</DefaultTab>
-                  <Hints>
-                    <Table />
-                  </Hints>
-                </View1>
-                <View2 />
-              </Layout>
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText />
-              <Left value="False" />
-            </Annotation>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
-        </Node>
         <Node ToolID="187">
           <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-            <Position x="2898" y="198" />
+            <Position x="2910" y="242" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1349,14 +1285,14 @@ stl_voided_transactions_pk - Ascending</DefaultAnnotationText>
         </Node>
         <Node ToolID="183">
           <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-            <Position x="3402" y="138" width="154" height="190" />
+            <Position x="3414" y="182" width="66.86784" height="19" />
           </GuiSettings>
           <Properties>
             <Configuration>
               <Caption>Load</Caption>
               <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-              <Disabled value="False" />
-              <Folded value="False" />
+              <Disabled value="True" />
+              <Folded value="True" />
             </Configuration>
             <Annotation DisplayMode="0">
               <Name />
@@ -1367,7 +1303,7 @@ stl_voided_transactions_pk - Ascending</DefaultAnnotationText>
           <ChildNodes>
             <Node ToolID="182">
               <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-                <Position x="3427" y="182" />
+                <Position x="3439" y="226" />
               </GuiSettings>
               <Properties>
                 <Configuration>
@@ -1398,6 +1334,64 @@ Table=stl.stl_voided_transactions</DefaultAnnotationText>
             </Node>
           </ChildNodes>
         </Node>
+        <Node ToolID="89">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="3198" y="242" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="True" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="original_pk" selected="False" rename="stl_voided_transactions_pk" />
+                <SelectField field="stl_voided_transactions_pk" selected="False" />
+                <SelectField field="bank_abbreviation" selected="True" size="10" />
+                <SelectField field="transaction_header_fk" selected="True" />
+                <SelectField field="order_id" selected="True" />
+                <SelectField field="order_is_voided" selected="True" />
+                <SelectField field="Trace ID" selected="True" rename="trace_id" />
+                <SelectField field="location_fk" selected="True" />
+                <SelectField field="location_id" selected="True" rename="practice_id" type="Int64" size="8" />
+                <SelectField field="transaction_date" selected="True" />
+                <SelectField field="payment_transaction_type" selected="True" />
+                <SelectField field="merchant_id" selected="True" />
+                <SelectField field="old_merchant_number" selected="True" />
+                <SelectField field="Amount" selected="True" rename="amount" />
+                <SelectField field="bank_note" selected="True" />
+                <SelectField field="process_code" selected="True" size="2000" />
+                <SelectField field="event_id" selected="True" size="50" />
+                <SelectField field="order_voided_datetime" selected="True" />
+                <SelectField field="merged_merchant_numer" selected="True" rename="merchant_number" type="Int64" size="8" />
+                <SelectField field="report_month_id" selected="True" />
+                <SelectField field="refund_id" selected="True" />
+                <SelectField field="source_system_row_id" selected="False" />
+                <SelectField field="order_id_voided" selected="False" rename="order_is_voided" />
+                <SelectField field="practice_relationship_type_name" selected="False" />
+                <SelectField field="practice_payment_gateway_id" selected="False" />
+                <SelectField field="Right_order_id" selected="False" />
+                <SelectField field="order_date" selected="False" />
+                <SelectField field="trace_id" selected="False" size="100" />
+                <SelectField field="practice_id" selected="False" />
+                <SelectField field="transaction_header_pk" selected="False" rename="transaction_header_fk" />
+                <SelectField field="merchant_number" selected="False" />
+                <SelectField field="MID" selected="False" />
+                <SelectField field="Right_bank_note" selected="False" />
+                <SelectField field="practice_relationship_type_id" selected="False" />
+                <SelectField field="relationship_type_id" selected="False" />
+                <SelectField field="Right_original_pk" selected="False" />
+                <SelectField field="Right_Trace ID" selected="False" />
+                <SelectField field="Right_refund_id" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
       </ChildNodes>
     </Node>
   </Nodes>
@@ -1419,7 +1413,7 @@ Table=stl.stl_voided_transactions</DefaultAnnotationText>
       <Destination ToolID="189" Connection="Right" />
     </Connection>
     <Connection>
-      <Origin ToolID="194" Connection="Output" />
+      <Origin ToolID="196" Connection="Output" />
       <Destination ToolID="189" Connection="Left" />
     </Connection>
     <Connection>
@@ -1444,7 +1438,7 @@ Table=stl.stl_voided_transactions</DefaultAnnotationText>
     </Connection>
     <Connection>
       <Origin ToolID="188" Connection="Output" />
-      <Destination ToolID="194" Connection="Input" />
+      <Destination ToolID="196" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="189" Connection="Join" />
@@ -1555,14 +1549,6 @@ Table=stl.stl_voided_transactions</DefaultAnnotationText>
       <Destination ToolID="184" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="89" Connection="Output" />
-      <Destination ToolID="93" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="89" Connection="Output" />
-      <Destination ToolID="182" Connection="Input" />
-    </Connection>
-    <Connection>
       <Origin ToolID="178" Connection="Output" />
       <Destination ToolID="68" Connection="Input" />
     </Connection>
@@ -1575,12 +1561,16 @@ Table=stl.stl_voided_transactions</DefaultAnnotationText>
       <Destination ToolID="89" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="184" Connection="Output" />
-      <Destination ToolID="185" Connection="Input" />
-    </Connection>
-    <Connection>
       <Origin ToolID="187" Connection="Output" />
       <Destination ToolID="84" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="89" Connection="Output" />
+      <Destination ToolID="182" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="89" Connection="Output" />
+      <Destination ToolID="93" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
